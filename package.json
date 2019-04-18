@@ -1,0 +1,22 @@
+{
+  "name": "bosm-2019",
+  "version": "1.0.0",
+  "description": "Website for BOSM 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvm-bitspilani/bosm-2019.git"
+  },
+  "keywords": [
+    "bosm"
+  ],
+  "author": "DVM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvm-bitspilani/bosm-2019/issues"
+  },
+  "homepage": "https://github.com/dvm-bitspilani/bosm-2019#readme"
+}
