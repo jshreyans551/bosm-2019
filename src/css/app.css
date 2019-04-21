@@ -1,9 +1,10 @@
 body, html{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 .wrapper{
-    background: linear-gradient(to right,#0033B5,#80A4FF);
+    background: #0033B5;
     height: 100vh;
     width: 100vw;
 }
@@ -59,10 +60,63 @@ body, html{
 .back-text {
     position: absolute;
     z-index: 3;
-    /* top: calc(50% - 183px); */
-    /* left: calc(50% - 573px); */
+    transform: translate(-130px,-180px);
     background-image: url('../images/GLORY.png');
     background-size: cover;
-    width: 90%;
-    height: 90%;
+    width: 116%;
+    height: 95%;
+}
+.dates {
+    position: absolute;
+    z-index: 10;
+    background-image: url('../images/dates.png');
+    background-size: cover;
+    height: 83px;
+    width: 267px;
+    top: 100px;
+    left: 100px;
+}
+
+.bottom {
+    width: 70%;
+    height: 40px;
+    margin: 0 auto;
+    position:relative;
+    top: 74%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.scroll-icon{
+    height: 34px;
+    width: 33px;
+    color: #fff;
+    /* border: 2px solid white; */
+    background-image: url('../images/mouse.png');
+    z-index: 5;
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px; */
+    /* display: flex; */
+    /* justify-content: center;  */
+}
+
+.social-icons{
+    color: white;
+    font-size: 1.1em;
+    margin: 2px;
+}
+
+.days-left {
+    font-size: 1.6em;
+    letter-spacing: 8px;
+    color: white;
+    font-weight: bold;
+    font-family: BigNoodleTitling;
+}
+
+.net-links > span {
+    font-size: 1.6em;
+    margin-right: 29px;
 }
