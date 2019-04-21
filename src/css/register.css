@@ -1,5 +1,5 @@
 .container{
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -14,17 +14,19 @@
     background-repeat: no-repeat;
     height: 85vh;
     width: 33vw;
+    z-index: 3;
 }
 .register{
-    margin-top: 12vh;
+    margin-top: 25vh;
     height: fit-content;
-    width: 45vw;
+    width: 39vw;
     font-family: 'BigNoodleTitling';
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     overflow: hidden;
+    margin-left: 11vw;
 }
 .register h1{
     font-size: 70px;
@@ -33,7 +35,7 @@
     margin-bottom: 2vh;
     color: #F5F5F5;
 }
-.register div{
+.register>div{
     width:100%;
     border-bottom: 1px solid #F5F5F5;
 }
@@ -69,7 +71,7 @@
     background: transparent;
     border: none;
     height: 40px;
-    width: 100%;
+    width: 90%;
 }
 .register input::placeholder{
     font-size: 20px;
@@ -79,4 +81,26 @@
 .register .contact-no,.register .email,.register .college{
     margin-top: 2%;
 }
-
+.register div.button{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-logo{
+    width: 180px;
+    height: 60px;
+    border-radius: 31px / 30px;
+    background-color: white;
+    line-height: 60px;
+    text-align: center;
+    color: #1F5DF7;
+    font-size: 33px;
+    margin-top: 40px;
+}
+#email{
+    background: url("/src/images/contact_icon.png");
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
