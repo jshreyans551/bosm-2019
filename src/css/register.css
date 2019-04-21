@@ -5,7 +5,7 @@
     width: 100vw;
     align-items: flex-start;
     background: #0033B5;
-
+    position: relative;
 }
 .sideImage{
     background: url(../images/basketball-manager-clipart-8.png);
@@ -18,7 +18,7 @@
 .register{
     margin-top: 12vh;
     height: fit-content;
-    width: 50vw;
+    width: 45vw;
     font-family: 'BigNoodleTitling';
     display: flex;
     flex-direction: column;
