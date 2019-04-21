@@ -8,17 +8,17 @@
 }
 .sideImage{
     background: url(../images/basketball-manager-clipart-8.png);
-    margin-top: 13vh;
-    margin-left: -5vw;
+    background-size: cover;
+    margin-top: 17vh;
     background-repeat: no-repeat;
-    height: 100vh;
-    transform: scale(0.75);
-    width: 50vw;
+    height: 85vh;
+    width: 33vw;
 }
 .about{
     display: flex;
     flex-direction: column;
     margin-top: 15vh;
+    margin-left: 12vw;
     height: 85vh;
     width: 50vw;
     justify-content: center;
