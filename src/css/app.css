@@ -102,11 +102,7 @@ body, html{
     /* justify-content: center;  */
 }
 
-.social-icons{
-    color: white;
-    font-size: 1.1em;
-    margin: 2px;
-}
+
 
 .days-left {
     font-size: 1.6em;
@@ -119,4 +115,69 @@ body, html{
 .net-links > span {
     font-size: 1.6em;
     margin-right: 29px;
+    color: #fff;
+}
+
+.scroll-downs {
+    width :8px;
+    height: 38px;
+    z-index: 5;
+}
+.mousey {
+  width: 3px;
+  padding: 6px 10px;
+  height: 25px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+.navigator{
+    height: 33vh;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%,-50%);
+}
+
+.navigation {
+    width: 12px;
+    height: 12px;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+.navigation > .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    background-color: white;
+}
+
+.navigation:nth-child(1) {
+    border: 4px solid white;
 }
