@@ -1,10 +1,9 @@
 body, html{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 .wraper{
-    background: #0033B5;
+    background: linear-gradient(to right,#0033B5,#80A4FF);
     height: 100vh;
     width: 100vw;
 }
@@ -21,10 +20,12 @@ body, html{
     width: 100vw;
     font-size: 35px;
     display: flex;
+    position: fixed;
     justify-content: space-evenly;
     align-items: center;
     color: white;
     padding-top: 20px;
+    letter-spacing: 3px;
     font-family: BigNoodleTitling;
 }
 .logo{
@@ -32,50 +33,4 @@ body, html{
     background-repeat: no-repeat;
     height: 142px;
     width: 142px;
-}
-
-.bottom
-{
-    width: 70%;
-    height: 40px;
-    margin: 0 auto;
-    position:relative;
-    top: 74%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
-.scroll-icon
-{
-    height: 22px;
-    width: 15px;
-    border: 2px solid white;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-   
-}
-
-.cursor
-{
-    height: 5px;
-    width: 2px;
-    background: white;
-    margin-top: 1px; 
-}
-
-.social-icons
-{
-    color: white;
-    font-size: 1.1em;
-    margin: 2px;
-}
-
-.days-left
-{
-    font-size: 1.2em;
-    color: white;
-    font-weight: bold;
-    font-family: BigNoodleTitling;
 }

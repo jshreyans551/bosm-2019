@@ -1,0 +1,38 @@
+.register{
+    background: linear-gradient(to right,rgb(169, 181, 0),rgb(175, 255, 128));
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.player{
+    background-image: url("../images/basketball-player.png");
+    height: 850px;
+    width: 600px;
+    background-size: cover;
+    margin-top: 3vh; 
+    float: left;
+    display: absolute;
+    float: left;    
+}
+.container{
+    height: calc(85vh - 20px);
+    overflow: hidden; 
+    /* display: flex; */
+    width: 100vw;
+    display: relative;
+}
+.form{
+    height: 700px;
+    width: 600px;
+    /* float: right; */
+    /* margin-right: ; */
+    display: absolute;
+    float:right;
+}
+.form .heading{
+    font-size: 80px;
+    font-family: BigNoodleTitling;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
