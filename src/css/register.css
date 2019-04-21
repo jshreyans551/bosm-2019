@@ -9,7 +9,8 @@
 }
 .sideImage{
     background: url(../images/basketball-manager-clipart-8.png);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     margin-top: 17vh;
     background-repeat: no-repeat;
     height: 85vh;
@@ -17,7 +18,7 @@
     z-index: 3;
 }
 .register{
-    margin-top: 25vh;
+    margin-top: 12vh;
     height: fit-content;
     width: 39vw;
     font-family: 'BigNoodleTitling';
