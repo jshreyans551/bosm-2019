@@ -4,6 +4,8 @@
     height: 100vh;
     width: 100vw;
     align-items: flex-start;
+    background: #0033B5;
+
 }
 .sideImage{
     background: url(../images/basketball-manager-clipart-8.png);
@@ -23,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    overflow: hidden;
 }
 .register h1{
     font-size: 70px;
