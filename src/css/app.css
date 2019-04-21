@@ -2,7 +2,7 @@ body, html{
     margin: 0;
     padding: 0;
 }
-.wraper{
+.wrapper{
     background: linear-gradient(to right,#0033B5,#80A4FF);
     height: 100vh;
     width: 100vw;
@@ -31,4 +31,38 @@ body, html{
     background-repeat: no-repeat;
     height: 142px;
     width: 142px;
+}
+
+.player {
+    position: absolute;
+    left: calc(50% - 360px);
+    top: 160px;
+    background-image: url('../images/player.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 525px;
+    height: 82%;
+    z-index: 5;
+}
+
+.bosm-heading {
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 183px);
+    left: calc(50% - 573px);
+    background-image: url('../images/bosm.png');
+    width: 1147px;
+    height: 366px;
+}
+
+.back-text {
+    position: absolute;
+    z-index: 3;
+    /* top: calc(50% - 183px); */
+    /* left: calc(50% - 573px); */
+    background-image: url('../images/GLORY.png');
+    background-size: cover;
+    width: 90%;
+    height: 90%;
 }
