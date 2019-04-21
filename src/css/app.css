@@ -7,6 +7,7 @@ body, html{
     background: #0033B5;
     height: 100vh;
     width: 100vw;
+    position: relative;
 }
 @font-face{
     font-family: 'Aero';
@@ -26,6 +27,7 @@ body, html{
     color: white;
     padding-top: 20px;
     font-family: BigNoodleTitling;
+    position: absolute;
 }
 .logo{
     background: url('../images/BOSM-LOGO_white.png');
@@ -66,6 +68,10 @@ body, html{
     width: 116%;
     height: 95%;
 }
+.landing-page{
+    display: relative;
+    height:100vh;
+}
 .dates {
     position: absolute;
     z-index: 10;
@@ -86,6 +92,9 @@ body, html{
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    position: absolute;
+    top: calc(93vh);
+    left: 14vw;
 }
 
 .scroll-icon{
