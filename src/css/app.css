@@ -15,6 +15,10 @@ body, html{
     font-family: 'BigNoodleTitling';
     src: url('../fonts/big_noodle_titling.ttf');
 }
+@font-face{
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
 .nav-bar{
     height: 15vh;
     width: 100vw;
