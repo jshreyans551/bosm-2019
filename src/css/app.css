@@ -1,9 +1,9 @@
 body, html{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
-.wraper{
+.wrapper{
     background: #0033B5;
     height: 100vh;
     width: 100vw;
@@ -34,8 +34,50 @@ body, html{
     width: 142px;
 }
 
-.bottom
-{
+.player {
+    position: absolute;
+    left: calc(50% - 360px);
+    top: 160px;
+    background-image: url('../images/player.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 525px;
+    height: 82%;
+    z-index: 5;
+}
+
+.bosm-heading {
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 183px);
+    left: calc(50% - 573px);
+    background-image: url('../images/bosm.png');
+    width: 1147px;
+    height: 366px;
+}
+
+.back-text {
+    position: absolute;
+    z-index: 3;
+    transform: translate(-130px,-180px);
+    background-image: url('../images/GLORY.png');
+    background-size: cover;
+    width: 116%;
+    height: 95%;
+}
+.dates {
+    position: absolute;
+    z-index: 10;
+    background-image: url('../images/dates.png');
+    background-size: cover;
+    height: 75px;
+    width: 254px;
+    top: 510px;
+    left: 66.5%;
+}
+
+.bottom {
     width: 70%;
     height: 40px;
     margin: 0 auto;
@@ -46,36 +88,35 @@ body, html{
     align-items: flex-end;
 }
 
-.scroll-icon
-{
-    height: 22px;
-    width: 15px;
-    border: 2px solid white;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-   
+.scroll-icon{
+    height: 34px;
+    width: 33px;
+    color: #fff;
+    /* border: 2px solid white; */
+    background-image: url('../images/mouse.png');
+    z-index: 5;
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px; */
+    /* display: flex; */
+    /* justify-content: center;  */
 }
 
-.cursor
-{
-    height: 5px;
-    width: 2px;
-    background: white;
-    margin-top: 1px; 
-}
-
-.social-icons
-{
+.social-icons{
     color: white;
     font-size: 1.1em;
     margin: 2px;
 }
 
-.days-left
-{
-    font-size: 1.2em;
+.days-left {
+    font-size: 1.6em;
+    letter-spacing: 8px;
     color: white;
     font-weight: bold;
     font-family: BigNoodleTitling;
+}
+
+.net-links > span {
+    font-size: 1.6em;
+    margin-right: 29px;
 }
