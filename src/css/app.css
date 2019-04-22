@@ -367,8 +367,8 @@ body, html{
 
     .logo
     {
-        height: 90px;
-        width: 90px;
+        height: 60px;
+        width: 60px;
     }
 
     .sideImage
@@ -377,9 +377,6 @@ body, html{
     }
 
    
-   .about p
-    {
-        font-size: 1.2em;
-    }
+   
 }
 

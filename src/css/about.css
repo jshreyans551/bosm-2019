@@ -80,3 +80,18 @@
         font-size: 40px;
     }
 }
+
+@media (max-width:400px)
+{
+    .about p
+    {
+        font-size: 0.9em;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .about h1 
+    {
+        font-size: 30px;
+    }
+}
