@@ -285,6 +285,11 @@ body, html{
     margin-top: 5px;
 }
 
+.bosm-des
+{
+    display: none;
+}
+
 @media (max-width:500px)
 {
    .nav-bar > .links{
