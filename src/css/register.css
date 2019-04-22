@@ -129,3 +129,59 @@
     width: 30px;
 } 
 
+@media (max-width:500px)
+{
+.container
+{
+    align-items: center;
+}    
+.register
+{
+    width: 78vh;
+    margin-top: 16vh;
+    margin-left:11vw;
+    margin-right: 11vw; 
+}
+
+.register h1 
+{
+    font-size: 30px;
+}
+
+.register div.button
+{
+    margin: 0;
+}
+
+.button-logo
+{
+    margin: 20px;
+}
+
+img 
+{
+    display: none;
+}
+
+}
+
+@media (max-width:400px)
+{
+    .register div.name .first{
+        float: none;
+        width: 40%;
+        border-bottom: 1px solid #F5F5F5;
+        margin-bottom: 2px;
+    }
+    .register div.name .last{
+        float: none;
+        width: 40%;
+        border-bottom: 1px solid #F5F5F5;
+    }
+    .register input{
+        
+        width: 100%;
+        
+    }
+}
+
