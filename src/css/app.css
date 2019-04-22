@@ -66,13 +66,13 @@ body, html{
     position: relative;
     left: 47%;
     top: 59%;
-    transform: translate(-55%,-50%);
+    transform: translate(-50%,-50%);
     background-image: url('../images/player.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 560px;
-    height: 80%;
+    width: 325px;
+    height: 78%;
     z-index: 5;
 }
 
