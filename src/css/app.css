@@ -29,6 +29,10 @@ body, html{
     font-family: 'Roboto';
     src: url('../fonts/Roboto/Roboto-Light.ttf');
 }
+@font-face{
+    font-family: 'Segoe';
+    src: url('../fonts/Segoe\ UI.woff');
+}
 .nav-bar{
     height: 15vh;
     width: 100vw;

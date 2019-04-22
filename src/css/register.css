@@ -73,11 +73,15 @@
     border: none;
     height: 40px;
     width: 90%;
+    font-family: Segoe;
+    font-size: 20px;
+    color: white;
 }
 .register input::placeholder{
     font-size: 20px;
     color: #F5F5F5;
     font-family: Roboto;
+    font-family: Segoe;
 }
 .register .contact-no,.register .email,.register .college{
     margin-top: 2%;
