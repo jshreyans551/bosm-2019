@@ -1,5 +1,5 @@
 .container{
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -98,7 +98,14 @@
     color: #1F5DF7;
     font-size: 33px;
     margin-top: 40px;
+    transition: all 0.3s ease-in-out;
 }
+
+.button-logo:hover{
+    background: #1F5DF7;
+    color: white;
+}
+
 #email{
     background: url("/src/images/contact_icon.png");
     height: 40px;
