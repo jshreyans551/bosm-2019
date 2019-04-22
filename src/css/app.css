@@ -179,7 +179,7 @@ body, html{
 @keyframes scroll {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0;}
+  100% { transform: translateY(15px); opacity: 1;}
 }
 
 .navigator{
@@ -216,3 +216,46 @@ body, html{
     border: 4px solid white;
 }
 
+.contact-us {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #0033B5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-wrapper {
+    height: 70vh;
+    width: 85vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact {
+    height: 33vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 60px 40px 60px;
+}
+
+.contacts-image {
+    background-image: url('../images/dvm.png');
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: cover;
+}
+
+.contacts-text {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
