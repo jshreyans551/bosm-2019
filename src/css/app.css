@@ -376,13 +376,8 @@ body, html{
         display: none;
     }
 
-    .about
-    {
-        margin: 0;
-        width: 100%;
-    }
-
-    .about > p
+   
+   .about p
     {
         font-size: 1.2em;
     }

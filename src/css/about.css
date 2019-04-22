@@ -60,3 +60,18 @@
     background-color: #1F5DF7;
     color: white;
 }
+
+@media (max-width:500px)
+{
+    .about p
+    {
+        font-size: 1em;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .about
+    {
+        margin-top: 12vh;
+    }
+}
