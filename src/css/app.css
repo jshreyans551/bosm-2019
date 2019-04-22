@@ -71,8 +71,8 @@ body, html{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 325px;
-    height: 78%;
+    width: 512px;
+    height: 80%;
     z-index: 5;
 }
 
