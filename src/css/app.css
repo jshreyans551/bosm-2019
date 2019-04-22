@@ -8,9 +8,15 @@ body, html{
 .wrapper{
     width: 100vw;
     height: 100vh;
-    overflow: scroll;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    scroll-snap-type: mandatory;
 }
+
+.section
+{
+    scroll-snap-align: start;
+}
+
 @font-face{
     font-family: 'Aero';
     src: url('../fonts/Aero.ttf');
@@ -48,16 +54,24 @@ body, html{
     width: 100px;
 }
 
+.play
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .player {
     position: relative;
     left: 47%;
     top: 59%;
-    transform: translate(-55%,-50%);
+    transform: translate(-50%,-50%);
     background-image: url('../images/player.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 560px;
+    width: 512px;
     height: 80%;
     z-index: 5;
 }
@@ -82,14 +96,14 @@ body, html{
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 3;
-    
     background-image: url('../images/GLORY.png');
     background-size: cover;
     background-position: center;
     width: 116%;
     height: 95%;
 }
-.landing-page{
+.landing-page
+{
     position: relative;
     height:100vh;
     background: #0033B5;
@@ -150,6 +164,13 @@ body, html{
     font-size: 1.6em;
     margin-right: 29px;
     color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a
+{
+    text-decoration: none;
+    color: white;
 }
 
 .scroll-downs {
@@ -259,3 +280,56 @@ body, html{
     font-size: 1.2em;
     margin-top: 5px;
 }
+
+@media (max-width:500px)
+{
+   .nav-bar > .links{
+        display: none;
+    }
+
+    .player
+    {
+        width: 50vw;
+        height: 50vh;
+        position: absolute;
+        top: 47%;
+        left: 47%;
+        transform: translate(-50%,-50%);
+    }
+
+    .bosm-heading
+    {
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%; 
+    }
+
+    .navigation,.dates,.back-text
+    {
+        display: none;
+    }
+
+    .bottom{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .bottom > .net-links
+    {
+        display: none;
+    }
+
+    .bottom > .days-left
+    {
+        font-size: 1em;
+    }
+
+    .bottom > .scroll-downs
+    {
+        display: none;
+    }
+}
+
