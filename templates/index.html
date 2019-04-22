@@ -25,13 +25,13 @@
             
         <div class="wrapper">
             <div class="landing-page">
-                    <div class="player"></div>
+                    <div class="player" id="player"></div>
                     <div class="bosm-heading"></div>
                     <div class="back-text"></div>
                     <div class="dates"></div>
             </div>
             <div class="aboutUs">
-                    <div class="sideImage"></div>
+                    <div class="sideImage" id="player2"></div>
                     <div class="about">
                         <h1>ABOUT US</h1>
                         <p>
@@ -42,7 +42,7 @@
                         </div>
             </div>
             <div class="container">
-                    <div class="sideImage"></div>
+                    <div class="sideImage" id="player3"></div>
                     <div class="register">
                         <div class="heading"><h1>REGISTER</h1></div>
                         <div class= "name">
@@ -80,13 +80,12 @@
     </div>
     </body>
     <script>
-//     var player = document.getElementById("player");
-// document.onmousemove = function()
-// {
-//     var x = (event.clientX * 100 / window.innerHeight)/20 + "%"
-//     var y = (event.clientY * 100 / window.innerHeight)/20 + "%"
-//     player.style.left = x;
-//     player.style.top  =y;
-// }
+    var player = document.getElementById("player");
+document.onmousemove = function()
+{
+    var x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
+    var y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
+    player.style.transform = "translate(-"+x+",-"+y+")";
+}
     </script>
 </html>
