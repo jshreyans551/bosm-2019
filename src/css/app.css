@@ -286,7 +286,7 @@ body, html{
     margin-top: 5px;
 }
 
-.bosm-des
+.bosm-des,.arrow
 {
     display: none;
 }
@@ -334,7 +334,7 @@ body, html{
 
     .bottom > .days-left
     {
-        font-size: 1em;
+        font-size: 0.7em;
     }
 
     .bottom > .scroll-downs
@@ -387,6 +387,30 @@ body, html{
        position: fixed;
        z-index: 5;
    }
+
+   .arrow
+   {
+       width: 5vh;
+       height: 5vh;
+       position: fixed;
+       top: 90%;
+       left: 50%;
+       transform:translate(-50%,-50%);
+       /* border: 2px solid black;  */
+       z-index: 5;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 1.2em;
+       color: white;
+       animation: anim 2s ease-in-out infinite;
+   }
+
+   @keyframes anim {
+       0%{opacity: 1;}
+       50%{opacity: 0;}
+       100%{opacity: 1;}
+   }
    
 }
 
@@ -410,7 +434,7 @@ body, html{
 
    .days-left
    {
-       font-size: 0.7em;
+       font-size: 0.5em;
    }
 }
 
