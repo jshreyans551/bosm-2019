@@ -21,7 +21,7 @@
 .about {
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
+    margin-top: 14vh;
     /* margin-left: 12vw; */
     height: 80vh;
     width: 50vw;
@@ -85,13 +85,24 @@
 {
     .about p
     {
-        font-size: 0.9em;
+        font-size: 0.7em;
         width: 80vw;
         text-align: center;
     }
 
     .about h1 
     {
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    .watch_teaser
+    {
+        margin-top: -15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 150px;
+        font-size: 1em;
     }
 }

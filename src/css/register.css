@@ -183,5 +183,22 @@ img
         width: 100%;
         
     }
+    
+    .register
+    {
+        margin-top: 10vh; 
+    }
+    
+    .button-logo
+    {
+        margin-top: -15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 150px;
+        font-size: 1em;
+        margin-top: 2vh;
+    }
 }
 

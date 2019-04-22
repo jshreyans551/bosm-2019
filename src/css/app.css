@@ -390,3 +390,27 @@ body, html{
    
 }
 
+@media (max-width:400px)
+{
+   .player
+   {
+       width: 50vw;
+       height: 50vh;
+   }
+
+   .bosm-heading
+   {
+       width: 70%;
+   }
+
+   .bosm-des > span 
+   {
+       font-size: 1.6em;
+   }
+
+   .days-left
+   {
+       font-size: 0.7em;
+   }
+}
+
