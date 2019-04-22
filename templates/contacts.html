@@ -11,11 +11,11 @@
             margin: 0;
             padding: 0;
             background: rgb(1, 1, 90);
-            color: #fff;
             font-family: sans-serif;
         }
 
-        body {
+        .contacts {
+            color: #fff;
             display: flex;
             align-items: center;
         }
@@ -54,82 +54,58 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registration</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div>
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registration</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div>
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registration</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div>    
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registration</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div> 
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registrationdiv</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div> 
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registrationdiv</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div>
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registrationdiv</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div>
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registrationdiv</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
-        </div>
-        <div class="contact">
-            <div class="image"></div>
-            <div class="text">Megh Thakkar</div>
-            <div class="text">Online Registrationdiv</div>
-            <div class="text">99999-99999</div>
-            <div class="text">webmaster@gmail.com</div>
+    <div class="contacts">
+        <div class="wrapper">
+            <!-- ------ -->
+            <!-- contact elements appended using script -->
+            <!-- ------ -->
         </div>
     </div>
 
     <script>
-        for (let i = 0; i < 10; i++) {
+
+        const wrapper = document.getElementsByClassName("wrapper")[0];
+
+        contact_names = ['Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
+
+        contact_posts = ['Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations'];
+
+        contact_phone = ['99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999'];
+
+        contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
+
+        for (let i = 0; i < 9; i++) {
             let contact = document.createElement('div');
             contact.classList.add("contact");
-                let image = contact.createElement('div');
+            //image
+                let image = document.createElement('div');
                 image.classList.add("image");
+            //name
+                let name = document.createElement('div');
+                name.classList.add("text");
+                name.innerHTML = contact_names[i];
+            //post
+                let post = document.createElement('div');
+                post.classList.add("text");
+                post.innerHTML = contact_posts[i];
+            //phone
+                let phone = document.createElement('div');
+                phone.classList.add("text");
+                phone.innerHTML = contact_phone[i];
+            //email
+                let mail = document.createElement('div');
+                mail.classList.add("text");
+                mail.innerHTML = contact_mail[i];
 
-                let name = contact.createElement('div');
-                details.classList.add("text");
-                
+            // add elements to contact
+            contact.appendChild(image);
+            contact.appendChild(name);
+            contact.appendChild(post); 
+            contact.appendChild(phone);
+            contact.appendChild(mail);
+
+            // append contact to DOM
+            wrapper.appendChild(contact)
         }
     </script>
 </body>
