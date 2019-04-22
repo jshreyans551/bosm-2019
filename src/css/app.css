@@ -293,11 +293,11 @@ body, html{
 
     .player
     {
-        width: 50vw;
-        height: 50vh;
+        width: 70vw;
+        height: 70vh;
         position: absolute;
         top: 47%;
-        left: 47%;
+        left: 42%;
         transform: translate(-50%,-50%);
     }
 
@@ -334,6 +334,57 @@ body, html{
     .bottom > .scroll-downs
     {
         display: none;
+    }
+
+    .bosm-des
+    {
+        width: 100%;
+        height: 10vh;
+        position: relative;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    .bosm-des > span{
+     color: white;
+     font-size: 2em;
+     font-family: BigNoodleTitling;
+     letter-spacing: 7px;
+    }
+
+    .bosm-des > .box
+    {
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius:50%; 
+    }
+
+    .logo
+    {
+        height: 90px;
+        width: 90px;
+    }
+
+    .sideImage
+    {
+        display: none;
+    }
+
+    .about
+    {
+        margin: 0;
+        width: 100%;
+    }
+
+    .about > p
+    {
+        font-size: 1.2em;
     }
 }
 

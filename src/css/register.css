@@ -18,7 +18,7 @@
     z-index: 3;
 }
 .register{
-    margin-top: 20vh;
+    margin-top: 10vh;
     height: fit-content;
     width: 39vw;
     font-family: 'BigNoodleTitling';
@@ -63,7 +63,7 @@
     border-bottom: 1px solid #F5F5F5;
 }
 .register div.email{
-    margin-top: 10%;
+    margin-top: 6%;
 }
 .register div.name .last input{
     width: 100%;
