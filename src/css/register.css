@@ -150,9 +150,11 @@
     }
 
     .register h1{
-        font-size: 60px;
+        font-size: 50px;
     }
-
+    .register input, .register input::placeholder{
+        font-size: 20px;
+    }
     .register div.button{
         margin: 0;
     }
@@ -167,8 +169,11 @@
 }
 
 @media (max-width:400px){
+    .register{
+        margin-top: 10.5vw;
+    }
     .register div.name{
-        margin-top: -2vw;
+        margin-top: -6vw;
     }
     .register div.name .first{
         float: none;
@@ -187,6 +192,9 @@
     .register input{    
         width: 100%;
     }
+    .register input, .register input::placeholder{
+        font-size: 15px;
+    }
     .register{
         margin-top: 8vw; 
     }
@@ -195,9 +203,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 56px;
-        width: 150px;
-        font-size: 34px;
+        height: 48px;
+        width: 140px;
+        font-size: 28px;
     }
     /* .register div{
         width:100%;
