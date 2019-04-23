@@ -129,70 +129,79 @@
     width: 30px;
 } 
 
-@media (max-width:500px)
-{
-.container{
-    align-items: center;
-}    
-.register{
-    width: 78vh;
-    margin-top: 16vh;
-    margin-left:11vw;
-    margin-right: 11vw; 
+@media (max-width:500px){
+    .register input{
+        width: 50vw;
+    }
+    /* .register div.email input, .register div.contact-no input, .register div.college input{
+        width: 100%;
+    }  */
+    .register div input{
+        width: 100%;
+    }
+    .container{
+        align-items: center;
+    }    
+    .register{
+        width: 78vw;
+        margin-top: -8vw;
+        margin-left:11vw;
+        margin-right: 11vw; 
+    }
+
+    .register h1{
+        font-size: 60px;
+    }
+
+    .register div.button{
+        margin: 0;
+    }
+
+    .button-logo{
+        margin: 20px;
+    }
+
+    img {
+        display: none;
+    }
 }
 
-.register h1 {
-    font-size: 30px;
-}
-
-.register div.button{
-    margin: 0;
-}
-
-.button-logo{
-    margin: 20px;
-}
-
-img {
-    display: none;
-}
-
-}
-
-@media (max-width:400px)
-{
+@media (max-width:400px){
+    .register div.name{
+        margin-top: -2vw;
+    }
     .register div.name .first{
         float: none;
-        width: 40%;
+        width: 100%;
         border-bottom: 1px solid #F5F5F5;
-        margin-bottom: 2px;
+        margin-top: 6%;
+        display: block;
     }
     .register div.name .last{
+        display: block;
         float: none;
-        width: 40%;
-        border-bottom: 1px solid #F5F5F5;
-    }
-    .register input{
-        
         width: 100%;
-        
+        border-bottom: 1px solid #F5F5F5;
+        margin-top: 3%;
     }
-    
-    .register
-    {
-        margin-top: 10vh; 
+    .register input{    
+        width: 100%;
     }
-    
-    .button-logo
-    {
-        margin-top: -15vh;
+    .register{
+        margin-top: 8vw; 
+    }
+    .button-logo{
+        margin-top: 8vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 56px;
         width: 150px;
-        font-size: 1em;
-        margin-top: 2vh;
+        font-size: 34px;
     }
+    /* .register div{
+        width:100%;
+        border-bottom: 1px solid #F5F5F5;
+    } */
 }
 
