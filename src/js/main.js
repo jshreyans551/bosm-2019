@@ -3,7 +3,6 @@ document.onmousemove = function() {
     var x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
     var y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
     player.style.transform = "translate(-"+x+",-"+y+")";
-    document.querySelectorAll(".navigator .navigation")[0].style.border ="none";
 }
 
 // -------------------------- DAYS COUNTDOWN -------------------------------
@@ -93,4 +92,3 @@ function change_navigator() {
         
 }
 
-document.addEventListener('scroll',change_navigator());

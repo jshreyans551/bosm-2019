@@ -20,8 +20,11 @@ function scrollY(e){
         console.log('down');
         step += 100;
         current_page--;
-        wraper.style.transform = `translateY(${step}vh)`;
         navigators[currentNavigator].style.border = "none";
+        wraper.style.transform = `translateY(${step}vh)`;
+        if(currentNavigator == 0){
+            navigators[currentNavigator].style.border = "none";        
+        }        
         if(currentNavigator > 0){
             currentNavigator--;
         }
@@ -37,7 +40,7 @@ function scrollY(e){
         step -= 100;
         current_page++;
         wraper.style.transform = `translateY(${step}vh)`;
-        navigators[currentNavigator].style.border = "none";
+        navigators[currentNavigator].style.border = "none";        
         if(currentNavigator < (noNavigation-1)){
             currentNavigator++;
         }
