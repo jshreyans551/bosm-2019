@@ -48,31 +48,7 @@ body, html{
     letter-spacing: 3px;
     font-family: BigNoodleTitling;
     position: absolute;
-<<<<<<< HEAD
     z-index: 4;
-=======
-    z-index: 20;
-}
-.links {
-    height: 50%;
-}
-/* .links a{
-    margin-bottom: 10px;
-    transition: all 0.5s ease;
-} */
-.links a {
-    text-decoration: none;
-    color: #fff;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-.links a:hover {
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-    border-bottom: 2px #fff solid;
-    opacity: 1;
->>>>>>> 70c9636d2e6b6602467379cc3cb24a1a88782212
 }
 .logo{
     background: url('../images/BOSM-LOGO_white.png');

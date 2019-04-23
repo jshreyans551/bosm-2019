@@ -3,7 +3,7 @@ var minDistance = 0;
 
 var current_page = 1;
 var step = 0, x = 0;
-var last_page = 3;
+var last_page = 4;
 var play = false;
 var sY, dY;
 

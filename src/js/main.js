@@ -49,7 +49,7 @@ const wrapper = document.getElementsByClassName("contact-wrapper")[0];
         wrapper.appendChild(contact)
     }
 
-function change-navigator() {
+function change_navigator() {
     const landing = document.getElementsByClassName(".landing-page")[0];
     const about = document.getElementsByClassName(".aboutUs")[0];
     const register = document.getElementsByClassName(".container")[0];
