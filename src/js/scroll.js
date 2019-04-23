@@ -13,13 +13,11 @@ wraper.addEventListener('wheel', scrollY);
 
 function scrollY(e){
     e.preventDefault();
-    console.log(e.deltaY);
     if(e.deltaY < -minDistance && current_page > 1&& !play){
-        console.log(play);
         play = true;
-        console.log('down');
         step += 100;
         current_page--;
+        changeBackground(current_page-1);
         navigators[currentNavigator].style.border = "none";
         wraper.style.transform = `translateY(${step}vh)`;
         if(currentNavigator == 0){
@@ -34,11 +32,10 @@ function scrollY(e){
         }, 1000);
     }
     else if(e.deltaY > minDistance && current_page < last_page && !play){
-        console.log(play);
-        console.log('up');
         play = true;
         step -= 100;
         current_page++;
+        changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
         navigators[currentNavigator].style.border = "none";        
         if(currentNavigator < (noNavigation-1)){
@@ -56,7 +53,6 @@ function navigate(x){
         var i = 0;
         play = true;
         step += (current_page - x) * 100;
-        console.log(step);
         current_page = x;
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
@@ -82,8 +78,6 @@ function end(e){
     var tchs = e.changedTouches[0];
     dY = tchs.pageY - sY;
     if(dY > minDistance && current_page > 1 && !play){
-        console.log(play);
-        console.log('up');
         play = true;
         step += 100;
         current_page--;
@@ -93,8 +87,6 @@ function end(e){
         }, 1000);
     }
     else if(dY < -minDistance && current_page < last_page && !play){
-        console.log(play);
-        console.log('down');
         play = true;
         step -= 100;
         current_page++;
@@ -103,4 +95,9 @@ function end(e){
             play = false;
         }, 1000);
     }
+}
+
+function changeBackground(colorIndex) {
+    let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
+    wraper.style.background = color[colorIndex];
 }
