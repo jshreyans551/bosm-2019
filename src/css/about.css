@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    background: #0033B5;
+    /* background: #0033B5; */
     position: relative;
 }
 .sideImage{
