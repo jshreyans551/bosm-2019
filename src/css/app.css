@@ -37,7 +37,7 @@ body, html{
     letter-spacing: 3px;
     font-family: BigNoodleTitling;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
 }
 .logo{
     background: url('../images/BOSM-LOGO_white.png');

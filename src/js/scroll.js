@@ -2,7 +2,7 @@ var wraper = document.getElementsByClassName('wrapper')[0];
 var minDistance = 50;
 
 var current_page = 1;
-var step = 0;
+var step = 0, x = 0;
 var last_page = 3;
 var play = false;
 
@@ -28,6 +28,20 @@ function scrollY(e){
         play = true;
         step += 100;
         current_page--;
+        wraper.style.transform = `translateY(${step}vh)`;
+        setTimeout(() => {
+            play = false;
+        }, 1000);
+    }
+}
+
+function navigate(x){
+    if(!play){
+        var i = 0;
+        play = true;
+        step += (current_page - x) * 100;
+        console.log(step);
+        current_page = x;
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
             play = false;
