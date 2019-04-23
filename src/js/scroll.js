@@ -2,6 +2,9 @@ var wraper = document.getElementsByClassName('wrapper')[0];
 var minDistance = 0;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
+var colorWrappers = document.querySelectorAll(".color-wrapper");
+var containers = document.querySelectorAll(".wrapper>div");
+var colors =["#0033B5","chartreuse","salmon","aquamarine"];
 var currentNavigator = 0;
 var current_page = 1;
 var step = 0, x = 0;
@@ -20,16 +23,17 @@ function scrollY(e){
         console.log('down');
         step += 100;
         current_page--;
-        navigators[currentNavigator].style.border = "none";
         wraper.style.transform = `translateY(${step}vh)`;
-        if(currentNavigator == 0){
-            navigators[currentNavigator].style.border = "none";        
-        }        
+        navigators[currentNavigator].style.border = "none";             
         if(currentNavigator > 0){
             currentNavigator--;
         }
+        colorWrappers[currentNavigator].style.backgroundColor = colors[currentNavigator];
+        containers[currentNavigator].style.backgroundColor = colors[currentNavigator+1];
+        colorWrappers[currentNavigator].style.opacity = 0;
         setTimeout(() => {
             navigators[currentNavigator].style.border = "4px solid white";
+            colorWrappers[currentNavigator].style.animation = "gradient-animate 0.5s forwards";
             play = false;
         }, 1000);
     }
@@ -40,12 +44,16 @@ function scrollY(e){
         step -= 100;
         current_page++;
         wraper.style.transform = `translateY(${step}vh)`;
-        navigators[currentNavigator].style.border = "none";        
+        navigators[currentNavigator].style.border = "none";    
         if(currentNavigator < (noNavigation-1)){
             currentNavigator++;
         }
+        colorWrappers[currentNavigator].style.backgroundColor = colors[currentNavigator];
+        containers[currentNavigator].style.backgroundColor = colors[currentNavigator-1];
+        colorWrappers[currentNavigator].style.opacity = 0;
         setTimeout(() => {
             navigators[currentNavigator].style.border = "4px solid white";
+            colorWrappers[currentNavigator].style.animation = "gradient-animate 0.5s forwards";
             play = false;
         }, 1000);
     }
