@@ -330,7 +330,20 @@ body, html{
         width: 90%; 
     }
 
-    .navigation,.dates,.back-text{
+    .back-text
+    {
+        width: 120vw;
+        height: 70vh;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .navigation,.dates{
         display: none;
     }
 
