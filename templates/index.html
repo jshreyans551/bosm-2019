@@ -14,27 +14,25 @@
          
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-    <body>
+
+    <body onload="updateCountdown()">
         <div class="nav-bar">
-                <span class="links" onclick="navigate(2)">ABOUT US</span>
-                <span class="links">SPONSORS</span>
-                <span class="icon"><div class="logo"></div></span>
-                <span class="links" onclick="navigate(3)">REGISTER</span>
-                <span class="links" onclick="navigate(4)">CONTACT US</span>
+            <div class="links" onclick="navigate(2)">
+                <span>ABOUT US</span>
             </div>
-            <!-- <div class="links">
-                <a href="">SPONSORS</a>
+            <div class="links">
+                <span>SPONSORS</span>
             </div>
-            <div class="icon">
+            <div class="icon" >
                 <div class="logo"></div>
             </div>
-            <div class="links">
-                <a href="">REGISTER</a>
+            <div class="links" onclick="navigate(3)">
+                <span>REGISTER</span>
             </div>
-            <div class="links">
-                <a href="">CONTACTS</a>
+            <div class="links" onclick="navigate(4)">
+                <span>CONTACTS</span>
             </div>
-        </div> -->
+        </div>
             
         <div class="wrapper">
 
@@ -61,7 +59,9 @@
                                 <div class="scroller"></div>
                             </div>
                         </div>
-                        <div class="days-left">35 Days Left</div>  
+                        <div class="days-left"> 
+                            <span id="daysLeft"></span> Days Left
+                        </div>  
                     </div>
                     <div class="arrow"><i class="fas fa-angle-down"></i></div>
 
@@ -103,21 +103,15 @@
             </div>
             
         </div>
-    <div class="navigator">
-        <div class="navigation"><div class="dot">.</div></div>
-        <div class="navigation"><div class="dot">.</div></div>
-        <div class="navigation"><div class="dot">.</div></div>
-        <div class="navigation"><div class="dot">.</div></div>
-    </div>
+        <div class="navigator">
+            <div class="navigation"><div class="dot">.</div></div>
+            <div class="navigation"><div class="dot">.</div></div>
+            <div class="navigation"><div class="dot">.</div></div>
+            <div class="navigation"><div class="dot">.</div></div>
+        </div>
+
     <script src="../src/js/scroll.js"></script>
     <script src="../src/js/main.js"></script>
-    <script>
-        var player = document.getElementById("player");
-    document.onmousemove = function() {
-        var x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
-        var y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
-        player.style.transform = "translate(-"+x+",-"+y+")";
-    }
-    </script>
+
     </body>
 </html>

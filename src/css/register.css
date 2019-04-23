@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100vw;
     align-items: flex-start;
-    background: #0033B5;
+    /* background: #0033B5; */
     position: relative;
 }
 .sideImage{
@@ -18,7 +18,7 @@
     z-index: 3;
 }
 .register{
-    margin-top: 10vh;
+    margin-top: 17vh;
     height: fit-content;
     width: 39vw;
     font-family: 'BigNoodleTitling';
@@ -27,7 +27,7 @@
     justify-content: center;
     align-content: center;
     overflow: hidden;
-    margin-left: 11vw;
+    margin-left: 15vw;
 }
 .register h1{
     font-size: 70px;
@@ -72,7 +72,7 @@
     background: transparent;
     border: none;
     height: 40px;
-    width: 90%;
+    width: 80%;
     font-family: Segoe;
     font-size: 22px;
     color: white;
@@ -94,10 +94,10 @@
     margin-top: 5%;
 }
 .register div.name{
-    margin-top: 3%;
+    margin-top: 3vh;
 }
 .register div.contact-no,.register div.college{
-    margin-top: 5%; 
+    margin-top: 2vh; 
 }
 
 .button-logo{
@@ -109,7 +109,7 @@
     text-align: center;
     color: #1F5DF7;
     font-size: 33px;
-    margin-top: 40px;
+    margin-top: 2vh;
     transition: all 0.3s ease-in-out;
 }
 
@@ -120,8 +120,8 @@
 
 .register img{
     height: 25px;
-    width: 32px;
-    transform: translateY(6px);
+    width: 37px;
+    transform: translateY(2px);
     margin-right: 30px;
 }
 .register .contact-no img{
@@ -129,76 +129,79 @@
     width: 30px;
 } 
 
-@media (max-width:500px)
-{
-.container
-{
-    align-items: center;
-}    
-.register
-{
-    width: 78vh;
-    margin-top: 16vh;
-    margin-left:11vw;
-    margin-right: 11vw; 
+@media (max-width:500px){
+    .register input{
+        width: 50vw;
+    }
+    /* .register div.email input, .register div.contact-no input, .register div.college input{
+        width: 100%;
+    }  */
+    .register div input{
+        width: 100%;
+    }
+    .container{
+        align-items: center;
+    }    
+    .register{
+        width: 78vw;
+        margin-top: -8vw;
+        margin-left:11vw;
+        margin-right: 11vw; 
+    }
+
+    .register h1{
+        font-size: 60px;
+    }
+
+    .register div.button{
+        margin: 0;
+    }
+
+    .button-logo{
+        margin: 20px;
+    }
+
+    img {
+        display: none;
+    }
 }
 
-.register h1 
-{
-    font-size: 30px;
-}
-
-.register div.button
-{
-    margin: 0;
-}
-
-.button-logo
-{
-    margin: 20px;
-}
-
-img 
-{
-    display: none;
-}
-
-}
-
-@media (max-width:400px)
-{
+@media (max-width:400px){
+    .register div.name{
+        margin-top: -2vw;
+    }
     .register div.name .first{
         float: none;
-        width: 40%;
+        width: 100%;
         border-bottom: 1px solid #F5F5F5;
-        margin-bottom: 2px;
+        margin-top: 6%;
+        display: block;
     }
     .register div.name .last{
+        display: block;
         float: none;
-        width: 40%;
-        border-bottom: 1px solid #F5F5F5;
-    }
-    .register input{
-        
         width: 100%;
-        
+        border-bottom: 1px solid #F5F5F5;
+        margin-top: 3%;
     }
-    
-    .register
-    {
-        margin-top: 10vh; 
+    .register input{    
+        width: 100%;
     }
-    
-    .button-logo
-    {
-        margin-top: -15vh;
+    .register{
+        margin-top: 8vw; 
+    }
+    .button-logo{
+        margin-top: 8vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 56px;
         width: 150px;
-        font-size: 1em;
-        margin-top: 2vh;
+        font-size: 34px;
     }
+    /* .register div{
+        width:100%;
+        border-bottom: 1px solid #F5F5F5;
+    } */
 }
 
