@@ -454,6 +454,35 @@ body, html{
        50%{opacity: 0;}
        100%{opacity: 1;}
    }
+
+   .contact {
+    height: 21vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 ;
+}
+
+.contacts-image {
+    background-image: url('../images/dvm.png');
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background-position: center;
+    background-size: cover;
+}
+
+.contacts-text {
+    font-size: 0.7em;
+    margin-top: 5px;
+}
+
+.contact-wrapper
+{
+    margin-top: 0;
+}
+
    
 }
 
@@ -490,5 +519,33 @@ body, html{
     height: 9vh;
     width: 20vw;
    }
+
+   .contact {
+    height: 20vh;
+    width: 147px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 ;
+}
+
+.contacts-image {
+    background-image: url('../images/dvm.png');
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+.contacts-text {
+    font-size: 0.5em;
+    margin-top: 5px;
+}
+
+.contact-wrapper
+{
+    margin-top: 0;
+}
 }
 

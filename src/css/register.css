@@ -172,6 +172,12 @@
     .register{
         margin-top: 10.5vw;
     }
+
+    .register h1
+    {
+        font-size: 20px;
+    }
+
     .register div.name{
         margin-top: -6vw;
     }
@@ -203,9 +209,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 48px;
-        width: 140px;
-        font-size: 28px;
+        height: 40px;
+        width: 150px;
+        font-size: 1em;
     }
     /* .register div{
         width:100%;
