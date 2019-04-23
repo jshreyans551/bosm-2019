@@ -129,9 +129,6 @@ body, html{
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 3;
-    background-image: url('../images/GLORY.png');
-    background-size: cover;
-    background-position: center;
     width: 116%;
     height: 95%;
 }
@@ -229,11 +226,6 @@ body, html{
   animation-timing-function: cubic-bezier(.15,.41,.69,.94);
   animation-iteration-count: infinite;
 }
-@keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 1;}
-}
 
 .navigator{
     height: 33vh;
@@ -318,6 +310,12 @@ body, html{
 }
 
 .bosm-des,.arrow {display: none;}
+
+
+
+/* ---------------------------------mobile view-------------------------------------- */
+
+
 
 @media (max-width:500px)
 {
@@ -450,12 +448,6 @@ body, html{
     width: 30vw;
    }
 
-   @keyframes anim {
-       0%{opacity: 1;}
-       50%{opacity: 0;}
-       100%{opacity: 1;}
-   }
-
    .contact {
     height: 21vh;
     width: 200px;
@@ -550,7 +542,7 @@ body, html{
 }
 }
 
-@media (max-width:800px) and (min-width:401px);
+@media (max-width:800px) and (min-width:401px)
 {
     .contact 
     {
@@ -583,3 +575,28 @@ body, html{
     }
 }
 
+
+
+/* -----------------------------------animation---------------------------------- */
+
+
+
+@keyframes anim {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 1;}
+}
+
+@keyframes flicker {
+    0% {opacity: 1;}
+    15% {opacity: 0;}
+    30% {opacity: 1;}
+    45% {opacity: 0;}
+    60% {opacity: 1;}
+}
