@@ -148,7 +148,7 @@ body, html{
     transform: translate(-50%,-50%);
     z-index: 10;
     background-image: url('../images/dates.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 9vh;
@@ -249,8 +249,8 @@ body, html{
 }
 
 .navigation {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     /* border: 2px solid white; */
     border-radius: 50%;
     display: flex;
@@ -299,8 +299,9 @@ body, html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 60px 40px 60px;
+    margin: 0 40px 35px 50px;
 }
+
 
 .contacts-image {
     background-image: url('../images/dvm.png');
@@ -312,7 +313,7 @@ body, html{
 }
 
 .contacts-text {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 5px;
 }
 
