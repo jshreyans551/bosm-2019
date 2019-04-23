@@ -14,12 +14,12 @@ wraper.addEventListener('wheel', scrollY);
 function scrollY(e){
     e.preventDefault();
     console.log(e.deltaY);
-    if(e.deltaY < -minDistance && current_page < last_page && !play){
+    if(e.deltaY < -minDistance && current_page > 1&& !play){
         console.log(play);
         play = true;
         console.log('down');
-        step -= 100;
-        current_page++;
+        step += 100;
+        current_page--;
         wraper.style.transform = `translateY(${step}vh)`;
         navigators[currentNavigator].style.border = "none";
         if(currentNavigator < (noNavigation-1)){
@@ -30,12 +30,12 @@ function scrollY(e){
             play = false;
         }, 1000);
     }
-    else if(e.deltaY > minDistance && current_page > 1 && !play){
+    else if(e.deltaY > minDistance && current_page < last_page && !play){
         console.log(play);
         console.log('up');
         play = true;
-        step += 100;
-        current_page--;
+        step -= 100;
+        current_page++;
         wraper.style.transform = `translateY(${step}vh)`;
         navigators[currentNavigator].style.border = "none";
         if(currentNavigator > 0){
