@@ -16,12 +16,22 @@
 </head>
     <body>
         <div class="nav-bar">
-                <span class="links">ABOUT US</span>
-                <span class="links">SPONSORS</span>
-                <span class="icon"><div class="logo"></div></span>
-                <span class="links">SUBSCRIBE</span>
-                <span class="links">CONTACT US</span>
+            <div class="links">
+                <a href="">ABOUT US</a>
             </div>
+            <div class="links">
+                <a href="">ABOUT US</a>
+            </div>
+            <div class="icon">
+                <div class="logo"></div>
+            </div>
+            <div class="links">
+                <a href="">ABOUT US</a>
+            </div>
+            <div class="links">
+                <a href="">ABOUT US</a>
+            </div>
+        </div>
             
         <div class="wrapper">
 
@@ -99,13 +109,4 @@
     <script src="../src/js/main.js"></script>
     
     </body>
-    <script>
-    var player = document.getElementById("player");
-document.onmousemove = function()
-{
-    var x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
-    var y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
-    player.style.transform = "translate(-"+x+",-"+y+")";
-}
-    </script>
 </html>
