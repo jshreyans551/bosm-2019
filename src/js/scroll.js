@@ -22,11 +22,11 @@ function scrollY(e){
         current_page--;
         wraper.style.transform = `translateY(${step}vh)`;
         navigators[currentNavigator].style.border = "none";
-        if(currentNavigator < (noNavigation-1)){
-            currentNavigator++;
+        if(currentNavigator > 0){
+            currentNavigator--;
         }
         setTimeout(() => {
-            navigators[currentNavigator].style.border = "4px solid white"
+            navigators[currentNavigator].style.border = "4px solid white";
             play = false;
         }, 1000);
     }
@@ -38,11 +38,11 @@ function scrollY(e){
         current_page++;
         wraper.style.transform = `translateY(${step}vh)`;
         navigators[currentNavigator].style.border = "none";
-        if(currentNavigator > 0){
-            currentNavigator--;
+        if(currentNavigator < (noNavigation-1)){
+            currentNavigator++;
         }
         setTimeout(() => {
-            navigators[currentNavigator].style.border = "4px solid white"
+            navigators[currentNavigator].style.border = "4px solid white";
             play = false;
         }, 1000);
     }
