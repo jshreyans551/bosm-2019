@@ -1,6 +1,8 @@
 var wraper = document.getElementsByClassName('wrapper')[0];
 var minDistance = 0;
-
+var noNavigation = 4;
+var navigators = document.querySelectorAll(".navigator .navigation");
+var currentNavigator = 0;
 var current_page = 1;
 var step = 0, x = 0;
 var last_page = 4;
@@ -19,7 +21,12 @@ function scrollY(e){
         step -= 100;
         current_page++;
         wraper.style.transform = `translateY(${step}vh)`;
+        navigators[currentNavigator].style.border = "none";
+        if(currentNavigator < (noNavigation-1)){
+            currentNavigator++;
+        }
         setTimeout(() => {
+            navigators[currentNavigator].style.border = "4px solid white"
             play = false;
         }, 1000);
     }
@@ -30,7 +37,12 @@ function scrollY(e){
         step += 100;
         current_page--;
         wraper.style.transform = `translateY(${step}vh)`;
+        navigators[currentNavigator].style.border = "none";
+        if(currentNavigator > 0){
+            currentNavigator--;
+        }
         setTimeout(() => {
+            navigators[currentNavigator].style.border = "4px solid white"
             play = false;
         }, 1000);
     }
@@ -60,7 +72,7 @@ function start(e){
 }
 
 function move(e){
-    e.preventDefault();
+    e.preventDefault();    
 }
 
 function end(e){
