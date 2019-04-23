@@ -31,7 +31,7 @@
     font-family: 'BigNoodleTitling';
 }
 .about h1{
-    font-size: 60px;
+    font-size: 45px;
     letter-spacing: 3px;
     margin-bottom: 0;
     margin-bottom: 2vh;
@@ -40,7 +40,8 @@
     width: 40vw;
     height: 35vh;
     font-family: 'Roboto', sans-serif;
-    font-size: 26px;
+    font-size: 1.2em;
+    text-align: center;
 }
 .watch_teaser{
     width: 180px;
