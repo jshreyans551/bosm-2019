@@ -92,3 +92,8 @@ function change_navigator() {
         
 }
 
+window.onscroll = function()
+{
+    alert(1);
+}
+
