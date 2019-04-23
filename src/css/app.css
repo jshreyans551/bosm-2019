@@ -51,6 +51,10 @@ body, html{
 .links {
     height: 50%;
 }
+/* .links a{
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+} */
 .links a {
     text-decoration: none;
     color: #fff;
@@ -60,6 +64,9 @@ body, html{
 }
 .links a:hover {
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border-bottom: 2px #fff solid;
+    opacity: 1;
 }
 .logo{
     background: url('../images/BOSM-LOGO_white.png');

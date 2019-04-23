@@ -48,3 +48,13 @@ const wrapper = document.getElementsByClassName("contact-wrapper")[0];
         // append contact to DOM
         wrapper.appendChild(contact)
     }
+
+function change-navigator() {
+    const landing = document.getElementsByClassName(".landing-page")[0];
+    const about = document.getElementsByClassName(".aboutUs")[0];
+    const register = document.getElementsByClassName(".container")[0];
+    const contacts = document.getElementsByClassName(".contact-us")[0];
+
+    if (landing.getBoundingClientRect().top <= document.documentElement.clientHeight && landing.getBoundingClientRect().top > (-landing.getBoundingClientRect().height))
+        document.getElementsByClassName(".navigation").style.border = 'none';
+}
