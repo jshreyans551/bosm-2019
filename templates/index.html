@@ -16,22 +16,64 @@
 </head>
     <body>
         <div class="nav-bar">
+<<<<<<< HEAD
                 <span class="links" onclick="navigate(2)">ABOUT US</span>
                 <span class="links">SPONSORS</span>
                 <span class="icon"><div class="logo"></div></span>
                 <span class="links" onclick="navigate(3)">REGISTER</span>
                 <span class="links">CONTACT US</span>
+=======
+            <div class="links">
+                <a href="">ABOUT US</a>
+>>>>>>> 70c9636d2e6b6602467379cc3cb24a1a88782212
             </div>
+            <div class="links">
+                <a href="">SPONSORS</a>
+            </div>
+            <div class="icon">
+                <div class="logo"></div>
+            </div>
+            <div class="links">
+                <a href="">REGISTER</a>
+            </div>
+            <div class="links">
+                <a href="">CONTACTS</a>
+            </div>
+        </div>
             
         <div class="wrapper">
+
             <div class="landing-page">
-                    <div class="player"></div>
+                    <div class="player" id="player"></div>
                     <div class="bosm-heading"></div>
                     <div class="back-text"></div>
                     <div class="dates"></div>
+                    <!-- <div class="bosm-des">
+                        <span>Grits</span>
+                        <div class="box"></div>
+                        <span>Guts</span>
+                        <div class="box"></div>
+                        <span>Glory</span>
+                    </div> -->
+                    <div class="bottom">
+                        <div class="net-links">
+                            <span class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a></span>
+                            <span class="social-icons"><a href="#"><i class="fab fa-twitter"></i></a></span>
+                            <span class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a></span>
+                        </div>
+                        <div class="scroll-downs">
+                            <div class="mousey">
+                                <div class="scroller"></div>
+                            </div>
+                        </div>
+                        <div class="days-left">35 Days Left</div>  
+                    </div>
+                    <div class="arrow"><i class="fas fa-angle-down"></i></div>
+
             </div>
+
             <div class="aboutUs">
-                    <div class="sideImage"></div>
+                    <div class="sideImage" id="player2"></div>
                     <div class="about">
                         <h1>ABOUT US</h1>
                         <p>
@@ -39,39 +81,33 @@
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae repellat quo rerum! Nemo tenetur laudantium error unde dolor quidem fuga ad, distinctio praesentium soluta ipsam, doloribus dolorum consequuntur. Inventore, quod!
                         </p>
                         <div class="watch_teaser">WATCH TEASER</div>
-                        </div>
+                    </div>
             </div>
+
             <div class="container">
-                    <div class="sideImage"></div>
+                    <div class="sideImage" id="player3"></div>
                     <div class="register">
                         <div class="heading"><h1>REGISTER</h1></div>
                         <div class= "name">
                             <span class="first"><input placeholder="First Name"></span>
                             <span class="last"><input placeholder="Last Name"></span>
                         </div>
-                        <div class="email"><span id="email"></span><input placeholder="Email Address"></div>
-                        <div class="contact-no"><span id="contact-no"></span><input placeholder="Contact No"></div>
-                        <div class="college"><span id="college"></span><input placeholder="College"></div>
+                        <div class="email"><img src="../Registration_assets/message_icon.png"><input placeholder="Email Address"></div>
+                        <div class="contact-no"><img src="../Registration_assets/contact_icon.png"><span id="contact-no"></span><input placeholder="Contact No"></div>
+                        <div class="college"><img src="../Registration_assets/message_icon.png"><span id="college"></span><input placeholder="College"></div>
                         <div class="button"><span></span><div class="button-logo">SUBMIT</div></div>
                     </div>
             </div>
-            <div class="bottom">
-                    <div class="net-links">
-                        <span class="social-icons"><i class="fab fa-facebook"></i></span>
-                        <span class="social-icons"><i class="fab fa-twitter"></i></span>
-                        <span class="social-icons"><i class="fab fa-instagram"></i></span>
-                    </div>
-                    <div class="scroll-downs">
-                        <div class="mousey">
-                            <div class="scroller"></div>
-                        </div>
-                    </div>
-                    <div class="days-left">35 Days Left</div>
-            </div>  
-    </div>
 
-    
-
+            <div class="contact-us">
+                <div class="contact-wrapper">
+                    <!-- ------ -->
+                    <!-- contact elements appended using script -->
+                    <!-- ------ -->
+                </div>
+            </div>
+            
+        </div>
     <div class="navigator">
         <div class="navigation"><div class="dot">.</div></div>
         <div class="navigation"><div class="dot">.</div></div>
@@ -79,6 +115,18 @@
         <div class="navigation"><div class="dot">.</div></div>
     </div>
 
+<<<<<<< HEAD
     <script src="../src/js/scroll.js"></script>
+=======
+    <script src="../src/js/main.js"></script>
+    <script>
+        var player = document.getElementById("player");
+document.onmousemove = function() {
+    var x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
+    var y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
+    player.style.transform = "translate(-"+x+",-"+y+")";
+}
+    </script>
+>>>>>>> 70c9636d2e6b6602467379cc3cb24a1a88782212
     </body>
 </html>

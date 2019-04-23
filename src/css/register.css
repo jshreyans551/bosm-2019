@@ -1,5 +1,5 @@
 .container{
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -18,7 +18,7 @@
     z-index: 3;
 }
 .register{
-    margin-top: 12vh;
+    margin-top: 10vh;
     height: fit-content;
     width: 39vw;
     font-family: 'BigNoodleTitling';
@@ -63,7 +63,7 @@
     border-bottom: 1px solid #F5F5F5;
 }
 .register div.email{
-    margin-top: 7%;
+    margin-top: 6%;
 }
 .register div.name .last input{
     width: 100%;
@@ -73,21 +73,33 @@
     border: none;
     height: 40px;
     width: 90%;
+    font-family: Segoe;
+    font-size: 22px;
+    color: white;
+    letter-spacing: 2px;
 }
 .register input::placeholder{
-    font-size: 20px;
+    font-size: 22px;
     color: #F5F5F5;
     font-family: Roboto;
+    font-family: Segoe;
+    letter-spacing: 1.5px;
 }
-.register .contact-no,.register .email,.register .college{
-    margin-top: 2%;
-}
+
 .register div.button{
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
+.register div.name{
+    margin-top: 3%;
+}
+.register div.contact-no,.register div.college{
+    margin-top: 5%; 
+}
+
 .button-logo{
     width: 180px;
     height: 60px;
@@ -98,10 +110,95 @@
     color: #1F5DF7;
     font-size: 33px;
     margin-top: 40px;
+    transition: all 0.3s ease-in-out;
 }
-#email{
-    background: url("/src/images/contact_icon.png");
-    height: 40px;
-    width: 40px;
-    background-size: cover;
+
+.button-logo:hover{
+    background: #1F5DF7;
+    color: white;
 }
+
+.register img{
+    height: 25px;
+    width: 32px;
+    transform: translateY(6px);
+    margin-right: 30px;
+}
+.register .contact-no img{
+    height: 30px;
+    width: 30px;
+} 
+
+@media (max-width:500px)
+{
+.container
+{
+    align-items: center;
+}    
+.register
+{
+    width: 78vh;
+    margin-top: 16vh;
+    margin-left:11vw;
+    margin-right: 11vw; 
+}
+
+.register h1 
+{
+    font-size: 30px;
+}
+
+.register div.button
+{
+    margin: 0;
+}
+
+.button-logo
+{
+    margin: 20px;
+}
+
+img 
+{
+    display: none;
+}
+
+}
+
+@media (max-width:400px)
+{
+    .register div.name .first{
+        float: none;
+        width: 40%;
+        border-bottom: 1px solid #F5F5F5;
+        margin-bottom: 2px;
+    }
+    .register div.name .last{
+        float: none;
+        width: 40%;
+        border-bottom: 1px solid #F5F5F5;
+    }
+    .register input{
+        
+        width: 100%;
+        
+    }
+    
+    .register
+    {
+        margin-top: 10vh; 
+    }
+    
+    .button-logo
+    {
+        margin-top: -15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 150px;
+        font-size: 1em;
+        margin-top: 2vh;
+    }
+}
+
