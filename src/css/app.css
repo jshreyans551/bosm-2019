@@ -325,7 +325,7 @@ body, html{
         transform: translate(-50%,-50%);
     }
 
-    .navigation,.dates{
+    .navigation{
         display: none;
     }
 
@@ -405,6 +405,21 @@ body, html{
        animation: anim 2s ease-in-out infinite;
    }
 
+   .dates
+   {
+    position: absolute;
+    top: 47%;
+    left: 77%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    background-image: url(../images/dates.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 9vh;
+    width: 30vw;
+   }
+
    @keyframes anim {
        0%{opacity: 1;}
        50%{opacity: 0;}
@@ -430,6 +445,21 @@ body, html{
 
    .days-left{
        font-size: 0.5em;
+   }
+
+   .dates
+   {
+    position: absolute;
+    top: 47%;
+    left: 74%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    background-image: url(../images/dates.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 9vh;
+    width: 20vw;
    }
 }
 
