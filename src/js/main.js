@@ -5,6 +5,34 @@ document.onmousemove = function() {
     player.style.transform = "translate(-"+x+",-"+y+")";
 }
 
+// -------------------------- DAYS COUNTDOWN -------------------------------
+
+// const final_date = new Date("Sep 24, 2019 23:59:59").getTime();
+
+// let x = setInterval(function() {
+//     let now = new Date().getTime();
+//     let distance = countDownDate - now;
+
+//     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+//     document.getElementById("daysLeft").innerHTML = days;
+
+// }, (60*60*1000));
+
+function updateCountdown() {
+    const final_date = new Date("Sep 24, 2019 23:59:59").getTime();
+    let now = new Date().getTime();
+    let distance = final_date - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    // let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    document.getElementById("daysLeft").innerHTML = days;
+}
+
+// ------------------------ CONTACT PAGE -------------------------------
+
 const wrapper = document.getElementsByClassName("contact-wrapper")[0];
 
         contact_names = ['Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
@@ -48,13 +76,20 @@ const wrapper = document.getElementsByClassName("contact-wrapper")[0];
         // append contact to DOM
         wrapper.appendChild(contact)
     }
+// --------------------------- CONTACTS PAGE END -------------------------------
 
-function changenavigator() {
-    const landing = document.getElementsByClassName(".landing-page")[0];
-    const about = document.getElementsByClassName(".aboutUs")[0];
-    const register = document.getElementsByClassName(".container")[0];
-    const contacts = document.getElementsByClassName(".contact-us")[0];
+function change_navigator() {
+    const landing = document.getElementsByClassName("landing-page")[0];
+    const about = document.getElementsByClassName("aboutUs")[0];
+    const register = document.getElementsByClassName("container")[0];
+    const contacts = document.getElementsByClassName("contact-us")[0];
 
-    if (landing.getBoundingClientRect().top <= document.documentElement.clientHeight && landing.getBoundingClientRect().top > (-landing.getBoundingClientRect().height))
-        document.getElementsByClassName(".navigation").style.border = 'none';
+    if (landing.getBoundingClientRect().top <= document.documentElement.clientHeight && landing.getBoundingClientRect().top > (-landing.getBoundingClientRect().height)){
+        const nav = document.getElementsByClassName("navigation")
+        nav[0].style.border = "5px solid #fff";
+        nav[1].style.border = "5px"
+    }
+        
 }
+
+document.addEventListener('scroll',change_navigator());
