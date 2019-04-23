@@ -21,7 +21,7 @@ function scrollY(e){
         navigators[currentNavigator].style.border = "none";
         wraper.style.transform = `translateY(${step}vh)`;
         if(currentNavigator == 0){
-            navigators[currentNavigator].style.border = "none";        
+            navigators[currentNavigator].style.border = "none";
         }        
         if(currentNavigator > 0){
             currentNavigator--;
@@ -54,6 +54,7 @@ function navigate(x){
         play = true;
         step += (current_page - x) * 100;
         current_page = x;
+        changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
             play = false;
