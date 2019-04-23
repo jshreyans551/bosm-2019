@@ -542,22 +542,22 @@ body, html{
 }
 }
 
-@media (max-width:800px) and (min-width:401px)
+@media (max-width:800px) and (min-width:415px)
 {
     .contact 
     {
      height: 20vh;
-     margin: 0;
+     margin: 3px;
      
     }
     .contacts-text
     {
-        font-size: 1em;
+        font-size: 0.7em;
     }
     .contacts-image
     {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     .dates
