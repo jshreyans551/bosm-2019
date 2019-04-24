@@ -2,7 +2,6 @@ var wraper = document.getElementsByClassName('wrapper')[0];
 var minDistance = 30;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
-var currentNavigator = 0;
 var current_page = 1;
 var step = 0, x = 0;
 var last_page = 4;
@@ -16,35 +15,20 @@ function scrollY(e){
     if(e.deltaY < -minDistance && current_page > 1&& !play){
         play = true;
         step += 100;
+        navigators[current_page-1].style.border = "none";
         current_page--;
         changeBackground(current_page-1);
-        navigators[currentNavigator].style.border = "none";
         wraper.style.transform = `translateY(${step}vh)`;
-        if(currentNavigator == 0){
-            navigators[currentNavigator].style.border = "none";
-        }        
-        if(currentNavigator > 0){
-            currentNavigator--;
-        }
-        setTimeout(() => {
-            navigators[currentNavigator].style.border = "4px solid white";
-            play = false;
-        }, 1000);
+        changeNavigator();    
     }
     else if(e.deltaY > minDistance && current_page < last_page && !play){
         play = true;
         step -= 100;
+        navigators[current_page-1].style.border = "none";
         current_page++;
         changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
-        navigators[currentNavigator].style.border = "none";        
-        if(currentNavigator < (noNavigation-1)){
-            currentNavigator++;
-        }
-        setTimeout(() => {
-            navigators[currentNavigator].style.border = "4px solid white";
-            play = false;
-        }, 1000);
+        changeNavigator();
     }
 }
 
@@ -53,12 +37,11 @@ function navigate(x){
         var i = 0;
         play = true;
         step += (current_page - x) * 100;
+        navigators[current_page-1].style.border = "none";
         current_page = x;
         changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
-        setTimeout(() => {
-            play = false;
-        }, 1000);
+        changeNavigator();
     }
 }
 
@@ -82,6 +65,7 @@ function end(e){
         play = true;
         step += 100;
         current_page--;
+        changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
             play = false;
@@ -91,6 +75,7 @@ function end(e){
         play = true;
         step -= 100;
         current_page++;
+        changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
             play = false;
@@ -101,6 +86,16 @@ function end(e){
 function changeBackground(colorIndex) {
     let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
     setTimeout(() => {
-    wraper.style.background = color[colorIndex];        
+    wraper.style.backgroundColor = color[colorIndex];        
     }, 200);
 }
+<<<<<<< HEAD
+=======
+
+function changeNavigator(dir) {
+    setTimeout(() => {
+        navigators[current_page-1].style.border = "4px solid white";
+        play = false;
+    }, 1000);
+}
+>>>>>>> 68825140d831ad51f04683e1914ed921624a01c9
