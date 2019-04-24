@@ -82,6 +82,7 @@ function end(e){
         play = true;
         step += 100;
         current_page--;
+        changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
             play = false;
@@ -91,6 +92,7 @@ function end(e){
         play = true;
         step -= 100;
         current_page++;
+        changeBackground(current_page-1);
         wraper.style.transform = `translateY(${step}vh)`;
         setTimeout(() => {
             play = false;
