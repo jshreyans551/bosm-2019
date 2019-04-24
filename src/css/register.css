@@ -165,8 +165,8 @@
         margin: 20px;
     }
 
-    img {
-        /* display: none; */
+    .icons {
+        display: none;
     }
 }
 input:focus {
