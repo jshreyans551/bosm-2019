@@ -515,7 +515,7 @@ body, html{
 
 .sidebar > div 
 {
-    height: 6px;
+    height: 4px;
     width: 100%;
     background-color: white;
     z-index: 16;
@@ -623,13 +623,13 @@ body, html{
 
 .sidebar > div 
 {
-    height: 4px;
+    height: 3px;
     width: 100%;
     background-color: white;
     z-index: 16;
     margin-bottom: 0.5vh;
     /* transform-origin: 7%; */
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     border-radius: 20px;
     position: absolute;
 }
