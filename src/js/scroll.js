@@ -98,15 +98,18 @@ function changeNavigator(dir) {
 }
 
 
-if(window.innerWidth < 500) {
+let isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+if(isAndroid) {
     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
+    
+    wraper.addEventListener("focus", shiftDown);
+    
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
     document.getElementById("email").addEventListener("focus", shiftUp);
     document.getElementById("contact-number").addEventListener("focus", shiftUp);
     document.getElementById("college-name").addEventListener("focus", shiftUp);
-
-    wraper.addEventListener("focusin", shiftDown);
+    
     document.getElementById("first-name").addEventListener("focusout", shiftDown);
     document.getElementById("last-name").addEventListener("focusout", shiftDown);
     document.getElementById("email").addEventListener("focusout", shiftDown);
