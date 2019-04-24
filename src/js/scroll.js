@@ -101,10 +101,12 @@ function changeNavigator(dir) {
 if(window.innerWidth < 500) {
     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
     
-    document.addEventListener("keypress", function(e){
-        if(e.keyCode == 4)
-        shiftDown();
-    });
+    $(window).on("navigate", function (event, data) {
+        var direction = data.state.direction;
+        if (direction == 'back') {
+          shiftDown();
+        }
+      });
     
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
