@@ -98,7 +98,6 @@ function changeNavigator(dir) {
 }
 
 
-let isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
 if(window.innerWidth < 500) {
     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
     
