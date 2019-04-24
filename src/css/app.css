@@ -315,7 +315,7 @@ body, html{
     margin-top: 5px;
 }
 
-.bosm-des,.arrow {display: none;}
+.bosm-des,.arrow,.hamburger{display: none;}
 
 
 
@@ -482,7 +482,81 @@ body, html{
     margin-top: -3.5vw;
 }
 
-   
+.hamburger
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: #222f3e;
+    z-index: 15;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar
+{
+    width: 8vw;
+    height: 8vh;
+    position: absolute;
+    top: 0;
+    left: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar > div 
+{
+    height: 6px;
+    width: 100%;
+    background-color: white;
+    z-index: 16;
+    margin-bottom: 0.5vh;
+    /* transform-origin: 7%; */
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.hamburger > .ham-links
+{
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    /* border: 1px solid white; */
+}
+
+.hamburger > .ham-links a
+{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger > .ham-logo
+{
+    width: 20vw;
+    height: 20vh;
+    background: url('../images/BOSM-LOGO_white.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 }
 
 @media (max-width:400px)
@@ -545,6 +619,29 @@ body, html{
 .contact-wrapper
 {
     margin-top: -20px;
+}
+
+.sidebar > div 
+{
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    z-index: 16;
+    margin-bottom: 0.5vh;
+    /* transform-origin: 7%; */
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.hamburger > .ham-links a
+{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
 }
 }
 
