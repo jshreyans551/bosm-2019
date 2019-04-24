@@ -109,7 +109,7 @@ function change_navigator() {
 //     else
 //     flickerIndex = 0;
 //     backText.style.animation = "flicker 0.75s ease 3 forwards";
-//     let flickerData = ['../src/images/GRIT.png', '../src/images/GUTS.png', '../src/images/GLORY.png'];
+//     let flickerData = ['../src/images/GRIT.svg', '../src/images/GUTS.svg', '../src/images/GLORY.svg'];
 //     setTimeout(function() {
 //         backText.src = flickerData[flickerIndex];
 //         backText.style.animation = "none";

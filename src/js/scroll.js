@@ -101,6 +101,6 @@ function end(e){
 function changeBackground(colorIndex) {
     let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
     setTimeout(() => {
-    wraper.style.background = color[colorIndex];        
+    wraper.style.backgroundColor = color[colorIndex];        
     }, 200);
 }
