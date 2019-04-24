@@ -118,6 +118,7 @@
     background: white;
     color: #009688;
     border: 2px solid #009688;
+    cursor: pointer;
 }
 
 .register img{
