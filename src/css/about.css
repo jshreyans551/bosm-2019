@@ -40,8 +40,9 @@
     width: 40vw;
     height: 35vh;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: center;
+    line-height: 1.5em;
 }
 .watch_teaser{
     width: 180px;
