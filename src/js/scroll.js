@@ -1,5 +1,5 @@
 var wraper = document.getElementsByClassName('wrapper')[0];
-var minDistance = 30;
+var minDistance = 0;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
 var current_page = 1;
@@ -11,6 +11,7 @@ var sY, dY;
 wraper.addEventListener('wheel', scrollY);
 
 function scrollY(e){
+    console.log(e.deltaY);
     e.preventDefault();
     if(e.deltaY < -minDistance && current_page > 1&& !play){
         play = true;
@@ -31,6 +32,7 @@ function scrollY(e){
         changeNavigator();
     }
 }
+
 
 function navigate(x){
     if(!play){
