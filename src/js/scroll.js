@@ -1,5 +1,5 @@
 var wraper = document.getElementsByClassName('wrapper')[0];
-var minDistance = 0;
+var minDistance = 30;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
 var current_page = 1;
@@ -11,7 +11,6 @@ var sY, dY;
 wraper.addEventListener('wheel', scrollY);
 
 function scrollY(e){
-    console.log(e.deltaY);
     e.preventDefault();
     if(e.deltaY < -minDistance && current_page > 1&& !play){
         play = true;
@@ -32,7 +31,6 @@ function scrollY(e){
         changeNavigator();
     }
 }
-
 
 function navigate(x){
     if(!play){
@@ -100,27 +98,30 @@ function changeNavigator(dir) {
 }
 
 
-let isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
-if(isAndroid) {
-    document.getElementById("first-name").addEventListener("focus", preventScroll);
-    document.getElementById("last-name").addEventListener("focus", preventScroll);
-    document.getElementById("email").addEventListener("focus", preventScroll);
-    document.getElementById("contact-number").addEventListener("focus", preventScroll);
-    document.getElementById("college-name").addEventListener("focus", preventScroll);
+if(window.innerWidth < 500) {
+    document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
+    document.getElementById("first-name").addEventListener("focus", shiftUp);
+    document.getElementById("last-name").addEventListener("focus", shiftUp);
+    document.getElementById("email").addEventListener("focus", shiftUp);
+    document.getElementById("contact-number").addEventListener("focus", shiftUp);
+    document.getElementById("college-name").addEventListener("focus", shiftUp);
     
-    document.getElementById("first-name").addEventListener("focusout", enableScroll);
-    document.getElementById("last-name").addEventListener("focusout", enableScroll);
-    document.getElementById("email").addEventListener("focusout", enableScroll);
-    document.getElementById("contact-number").addEventListener("focusout", enableScroll);
-    document.getElementById("college-name").addEventListener("focusout", enableScroll);
+    document.getElementById("first-name").addEventListener("focusout", shiftDown);
+    document.getElementById("last-name").addEventListener("focusout", shiftDown);
+    document.getElementById("email").addEventListener("focusout", shiftDown);
+    document.getElementById("contact-number").addEventListener("focusout", shiftDown);
+    document.getElementById("college-name").addEventListener("focusout", shiftDown);
 }
-function preventScroll() {
-    wraper.removeEventListener('touchstart', start);
-    wraper.removeEventListener('touchmove', move);
-    wraper.removeEventListener('touchend', end);
+
+function shiftUp() {
+    document.querySelector(".container").style.alignItems = "flex-start";
+    if(window.innerWidth < 400)
+    document.querySelector(".register").style.transform = "translateY(-11vw)";
+    document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
 }
-function enableScroll() {
-    wraper.addEventListener('touchstart', start);
-    wraper.addEventListener('touchmove', move);
-    wraper.addEventListener('touchend', end);
+
+function shiftDown() {
+    document.querySelector(".container").style.alignItems = "center";
+    document.querySelector(".register").style.transform = "translateY(0)";
+    document.querySelector(".nav-bar").style.transform = "translateY(0)";
 }
