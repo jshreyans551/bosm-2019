@@ -100,7 +100,7 @@ function change_navigator() {
 
 // -------------------------------back-text flicker animation-----------------------------
 
-setInterval(flickerAnimate, 3000);
+setInterval(flickerAnimate, 6000);
 let flickerIndex = 0;
 function flickerAnimate() {
     let backText = document.querySelector(".back-text");
