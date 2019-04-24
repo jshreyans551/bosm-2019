@@ -10,10 +10,11 @@ var last_page = 4;
 var play = false;
 var sY, dY;
 
-wraper.addEventListener('wheel', scrollY);
 input.onfocus = function () {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    }, 50)
 }
 
 function scrollY(e){
