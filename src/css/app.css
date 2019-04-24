@@ -477,9 +477,8 @@ body, html{
     margin-top: 2px;
 }
 
-.contact-wrapper
-{
-    margin-top: 0;
+.contact-wrapper{
+    margin-top: -3.5vw;
 }
 
    
