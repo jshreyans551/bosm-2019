@@ -100,18 +100,18 @@ function change_navigator() {
 
 // -------------------------------back-text flicker animation-----------------------------
 
-// setInterval(flickerAnimate, 3000);
-// let flickerIndex = 0;
-// function flickerAnimate() {
-//     let backText = document.querySelector(".back-text");
-//     if(flickerIndex < 2)
-//     flickerIndex++;
-//     else
-//     flickerIndex = 0;
-//     backText.style.animation = "flicker 0.75s ease 3 forwards";
-//     let flickerData = ['../src/images/GRIT.svg', '../src/images/GUTS.svg', '../src/images/GLORY.svg'];
-//     setTimeout(function() {
-//         backText.src = flickerData[flickerIndex];
-//         backText.style.animation = "none";
-//     }, 1875);
-// }
+setInterval(flickerAnimate, 3000);
+let flickerIndex = 0;
+function flickerAnimate() {
+    let backText = document.querySelector(".back-text");
+    if(flickerIndex < 2)
+    flickerIndex++;
+    else
+    flickerIndex = 0;
+    backText.style.animation = "flicker 0.75s ease 3 forwards";
+    let flickerData = ['../src/images/GRIT.svg', '../src/images/GUTS.svg', '../src/images/GLORY.svg'];
+    setTimeout(function() {
+        backText.src = flickerData[flickerIndex];
+        backText.style.animation = "none";
+    }, 1875);
+}
