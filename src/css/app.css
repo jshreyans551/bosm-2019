@@ -487,9 +487,10 @@ body, html{
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 60vw;
+    transform: translateX(-60vw);
     height: 100vh;
-    background-color: #222f3e;
+    background-color: #000066;
     z-index: 15;
     display: flex;
     justify-content: space-evenly;

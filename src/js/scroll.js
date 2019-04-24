@@ -85,8 +85,10 @@ function end(e){
 
 function changeBackground(colorIndex) {
     let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
+    let color2 = ["#000066","#ff0000"," #00cc66","#222f3e"];
     setTimeout(() => {
-    wraper.style.backgroundColor = color[colorIndex];        
+    wraper.style.backgroundColor = color[colorIndex];  
+    document.getElementsByClassName("hamburger")[0].style.backgroundColor = color2[colorIndex];      
     }, 200);
 }
 
