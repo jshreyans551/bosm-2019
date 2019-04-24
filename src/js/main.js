@@ -115,8 +115,3 @@ function flickerAnimate() {
         backText.style.animation = "none";
     }, 1875);
 }
-
-let isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
-if(isAndroid) {
-    document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
-}

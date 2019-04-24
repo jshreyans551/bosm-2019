@@ -98,3 +98,25 @@ function changeNavigator(dir) {
         play = false;
     }, 1000);
 }
+
+
+let isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+if(isAndroid) {
+    document.getElementById("first-name").addEventListener("focus", preventScroll);
+    document.getElementById("last-name").addEventListener("focus", preventScroll);
+    document.getElementById("email").addEventListener("focus", preventScroll);
+    document.getElementById("contact-number").addEventListener("focus", preventScroll);
+    document.getElementById("college-name").addEventListener("focus", preventScroll);
+    
+    document.getElementById("first-name").addEventListener("focusout", enableScroll);
+    document.getElementById("last-name").addEventListener("focusout", enableScroll);
+    document.getElementById("email").addEventListener("focusout", enableScroll);
+    document.getElementById("contact-number").addEventListener("focusout", enableScroll);
+    document.getElementById("college-name").addEventListener("focusout", enableScroll);
+}
+function preventScroll() {
+    wraper.removeEventListener("wheel", scrollY);
+}
+function enableScroll() {
+    wraper.addEventListener('wheel', scrollY);
+}
