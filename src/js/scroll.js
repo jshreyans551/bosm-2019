@@ -105,7 +105,8 @@ if(window.innerWidth < 500) {
     document.getElementById("email").addEventListener("focus", shiftUp);
     document.getElementById("contact-number").addEventListener("focus", shiftUp);
     document.getElementById("college-name").addEventListener("focus", shiftUp);
-    
+
+    wraper.addEventListener("focusin", shiftDown);
     document.getElementById("first-name").addEventListener("focusout", shiftDown);
     document.getElementById("last-name").addEventListener("focusout", shiftDown);
     document.getElementById("email").addEventListener("focusout", shiftDown);
