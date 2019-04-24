@@ -89,8 +89,6 @@ function changeBackground(colorIndex) {
     wraper.style.backgroundColor = color[colorIndex];        
     }, 200);
 }
-<<<<<<< HEAD
-=======
 
 function changeNavigator(dir) {
     setTimeout(() => {
@@ -98,4 +96,3 @@ function changeNavigator(dir) {
         play = false;
     }, 1000);
 }
->>>>>>> 68825140d831ad51f04683e1914ed921624a01c9
