@@ -253,6 +253,9 @@ body, html{
     box-sizing: border-box;
     transition: linear 0.25s;
 }
+.navigation:hover {
+    cursor: pointer;
+}
 .navigation > .dot {
     width: 12px;
     height: 12px;
