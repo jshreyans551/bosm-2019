@@ -102,7 +102,7 @@ let isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
 if(window.innerWidth < 500) {
     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
     
-    wraper.addEventListener("focus", shiftDown);
+    document.addEventListener("hidekeyboard", shiftDown);
     
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
