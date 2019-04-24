@@ -101,7 +101,10 @@ function changeNavigator(dir) {
 if(window.innerWidth < 500) {
     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
     
-    document.addEventListener("backbutton", shiftDown);
+    document.addEventListener("keypress", function(e){
+        if(e.keyCode == 4)
+        shiftDown();
+    });
     
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
