@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     height: 85vh;
     width: 33vw;
-    z-index: 3;
+    z-index: 5;
 }
 .register{
     margin-top: 17vh;
@@ -107,16 +107,16 @@
     background-color: white;
     line-height: 60px;
     text-align: center;
-    color: #1F5DF7;
+    color: #009688;
     font-size: 33px;
     margin-top: 2vh;
     transition: all 0.3s ease-in-out;
 }
 
-.button-logo:hover{
+/* .button-logo:hover{
     background: #1F5DF7;
     color: white;
-}
+} */
 
 .register img{
     height: 25px;
@@ -175,6 +175,12 @@ input:focus {
     .register{
         margin-top: 10.5vw;
     }
+
+    .register h1
+    {
+        font-size: 20px;
+    }
+
     .register div.name{
         margin-top: -6vw;
     }
@@ -206,9 +212,9 @@ input:focus {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 48px;
-        width: 140px;
-        font-size: 28px;
+        height: 40px;
+        width: 150px;
+        font-size: 1em;
     }
     /* .register div{
         width:100%;

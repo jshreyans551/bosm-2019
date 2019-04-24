@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BOSM 2019</title>
-        <link rel="stylesheet" href="../src/css/app.css" type="text/css">
-        <link rel="stylesheet" href="../src/css/about.css" type="text/css">
-        <link rel="stylesheet" href="../src/css/register.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BOSM 2019</title>
+            <link rel="stylesheet" href="../src/css/app.css" type="text/css">
+            <link rel="stylesheet" href="../src/css/about.css" type="text/css">
+            <link rel="stylesheet" href="../src/css/register.css" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
-    <body>
-         
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-</head>
-
     <body onload="updateCountdown()">
         <div class="nav-bar">
             <div class="links" onclick="navigate(2)">
@@ -39,7 +35,7 @@
             <div class="landing-page">
                     <div class="player" id="player"></div>
                     <div class="bosm-heading"></div>
-                    <div class="back-text"></div>
+                    <img src="../src/images/GLORY.png" class="back-text">
                     <div class="dates"></div>
                     <!-- <div class="bosm-des">
                         <span>Grits</span>
@@ -84,12 +80,12 @@
                     <div class="register">
                         <div class="heading"><h1>REGISTER</h1></div>
                         <div class= "name">
-                            <span class="first"><input placeholder="First Name" onfocus="this.style.webkitTransform = 'translate3d(0px,-10000px,0)'; webkitRequestAnimationFrame(function() { this.style.webkitTransform = ''; }.bind(this))"></span>
-                            <span class="last"><input placeholder="Last Name"></span>
+                            <span class="first"><input placeholder="First Name" style="outline:none;"></span>
+                            <span class="last"><input placeholder="Last Name" style="outline:none;"></span>
                         </div>
-                        <div class="email"><img src="../Registration_assets/message_icon.png"><input placeholder="Email Address"></div>
-                        <div class="contact-no"><img src="../Registration_assets/contact_icon.png"><span id="contact-no"></span><input placeholder="Contact No"></div>
-                        <div class="college"><img src="../Registration_assets/message_icon.png"><span id="college"></span><input placeholder="College"></div>
+                        <div class="email"><img src="../Registration_assets/message_icon.png"><input placeholder="Email Address" style="outline:none;"></div>
+                        <div class="contact-no"><img src="../Registration_assets/contact_icon.png"><span id="contact-no"></span><input placeholder="Contact No" style="outline:none;"></div>
+                        <div class="college"><img src="../Registration_assets/message_icon.png"><span id="college"></span><input placeholder="College" style="outline:none;"></div>
                         <div class="button"><span></span><div class="button-logo">SUBMIT</div></div>
                     </div>
             </div>
@@ -110,8 +106,7 @@
             <div class="navigation"><div class="dot">.</div></div>
         </div>
 
-    <script src="../src/js/scroll.js"></script>
-    <script src="../src/js/main.js"></script>
-
+        <script src="../src/js/scroll.js"></script>
+        <script src="../src/js/main.js"></script>
     </body>
 </html>

@@ -50,17 +50,17 @@
     background-color: white;
     line-height: 60px;
     text-align: center;
-    color: #1F5DF7;
+    color: #e91e63;
     font-size: 33px;
-   transition: all 0.3s ease-in-out;
-   cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.watch_teaser:hover
+/* .watch_teaser:hover
 {
     background-color: #1F5DF7;
     color: white;
-}
+} */
 
 @media (max-width:500px)
 {

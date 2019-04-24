@@ -1,7 +1,7 @@
-var player = document.getElementById("player");
+let player = document.getElementById("player");
 document.onmousemove = function() {
-    var x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
-    var y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
+    let x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
+    let y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
     player.style.transform = "translate(-"+x+",-"+y+")";
 }
 
@@ -92,3 +92,26 @@ function change_navigator() {
         
 }
 
+// window.onscroll = function()
+// {
+//     alert(1);
+// }
+
+
+// -------------------------------back-text flicker animation-----------------------------
+
+setInterval(flickerAnimate, 3000);
+let flickerIndex = 0;
+function flickerAnimate() {
+    let backText = document.querySelector(".back-text");
+    if(flickerIndex < 2)
+    flickerIndex++;
+    else
+    flickerIndex = 0;
+    backText.style.animation = "flicker 0.75s ease 3 forwards";
+    let flickerData = ['../src/images/GRIT.png', '../src/images/GUTS.png', '../src/images/GLORY.png'];
+    setTimeout(function() {
+        backText.src = flickerData[flickerIndex];
+        backText.style.animation = "none";
+    }, 1875);
+}
