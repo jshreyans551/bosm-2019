@@ -2,6 +2,7 @@ var wraper = document.getElementsByClassName('wrapper')[0];
 var minDistance = 30;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
+var input = document.getElementsByTagName("input");
 var currentNavigator = 0;
 var current_page = 1;
 var step = 0, x = 0;
@@ -10,6 +11,10 @@ var play = false;
 var sY, dY;
 
 wraper.addEventListener('wheel', scrollY);
+input.onfocus = function () {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+}
 
 function scrollY(e){
     e.preventDefault();
