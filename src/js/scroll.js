@@ -34,6 +34,7 @@ function scrollY(e){
         setTimeout(() => {
             navigators[currentNavigator].style.border = "4px solid white";
             colorWrappers[currentNavigator].style.animation = "gradient-animate 0.5s forwards";
+            colorWrappers[currentNavigator+1].style.opacity = 0;
             play = false;
         }, 1000);
     }
@@ -54,6 +55,7 @@ function scrollY(e){
         setTimeout(() => {
             navigators[currentNavigator].style.border = "4px solid white";
             colorWrappers[currentNavigator].style.animation = "gradient-animate 0.5s forwards";
+            colorWrappers[currentNavigator-1].style.opacity = 0;
             play = false;
         }, 1000);
     }
