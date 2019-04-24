@@ -115,8 +115,12 @@ if(isAndroid) {
     document.getElementById("college-name").addEventListener("focusout", enableScroll);
 }
 function preventScroll() {
-    wraper.removeEventListener("wheel", scrollY);
+    wraper.removeEventListener('touchstart', start);
+    wraper.removeEventListener('touchmove', move);
+    wraper.removeEventListener('touchend', end);
 }
 function enableScroll() {
-    wraper.addEventListener('wheel', scrollY);
+    wraper.addEventListener('touchstart', start);
+    wraper.addEventListener('touchmove', move);
+    wraper.addEventListener('touchend', end);
 }
