@@ -344,7 +344,7 @@ body, html{
     .back-text
     {
         width: 120vw;
-        height: 70vh;
+        height: 45vh;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -455,7 +455,7 @@ body, html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3px ;
+    margin: 2px ;
 }
 
 .contacts-image {
