@@ -1,5 +1,5 @@
 var wraper = document.getElementsByClassName('wrapper')[0];
-var minDistance = 0;
+var minDistance = 30;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
 var currentNavigator = 0;

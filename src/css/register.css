@@ -167,6 +167,9 @@
         display: none;
     }
 }
+input:focus {
+    outline:none;
+}
 
 @media (max-width:400px){
     .register{
