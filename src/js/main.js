@@ -142,7 +142,14 @@ else if (count == 1)
 // Change margin if browser is Firefox
 
 if (!!navigator.userAgent.match(/firefox/i)) {
-    document.querySelectorAll(".one, .two, .three, .four")[0].classList.add("ff");
+    for(var i = 0; i < document.querySelectorAll(".one").length; i++ )
+        document.querySelectorAll(".one")[i].classList.add("ff");
+    for(var i = 0; i < document.querySelectorAll(".two").length; i++ )
+        document.querySelectorAll(".two")[i].classList.add("ff");
+    for(var i = 0; i < document.querySelectorAll(".one").length; i++ )
+        document.querySelectorAll(".three")[i].classList.add("ff");
+    for(var i = 0; i < document.querySelectorAll(".one").length; i++ )
+        document.querySelectorAll(".four")[i].classList.add("ff");
   }
 
   
