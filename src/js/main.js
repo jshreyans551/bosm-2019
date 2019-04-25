@@ -146,6 +146,10 @@ if (!!navigator.userAgent.match(/firefox/i)) {
         if(window.innerWidth > 500)
         document.getElementsByClassName('navigator')[0].style.display = "flex";
         document.getElementsByClassName('loader_wraper')[0].style.display = "none";
+        if(window.innerWidth < 500)
+        {
+            document.getElementsByClassName('navigator')[0].style.display = "none";
+        }
     }, 1000);
     updateCountdown();
   }
