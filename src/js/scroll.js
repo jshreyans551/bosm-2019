@@ -115,10 +115,11 @@ if(window.innerWidth < 500) {
     document.getElementById("contact-no").addEventListener("focusout", shiftDown);
     document.getElementById("college").addEventListener("focusout", shiftDown);
 
-    if(window.innerHeight < (screen.height-200)){
-        alert(screen.height-window.innerHeight);
-        shiftDown();
-    }
+    window.addEventListener("resize", function() {
+        if(window.innerHeight > (screen.height-200)){
+            shiftDown();
+        }
+    });
 }
 
 function shiftUp() {
