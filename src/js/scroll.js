@@ -122,8 +122,8 @@ if(window.innerWidth < 500) {
             document.getElementById("first-name").blur();
             document.getElementById("last-name").blur();
             document.getElementById("email").blur();
-            document.getElementById("contact-no").blur();
-            document.getElementById("college").blur();
+            document.getElementById("contact-number").blur();
+            document.getElementById("college-name").blur();
         }
     });
 }
