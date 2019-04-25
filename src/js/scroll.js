@@ -114,6 +114,11 @@ if(window.innerWidth < 500) {
     document.getElementById("email").addEventListener("focusout", shiftDown);
     document.getElementById("contact-no").addEventListener("focusout", shiftDown);
     document.getElementById("college").addEventListener("focusout", shiftDown);
+
+    if(window.innerHeight < (screen.height-100)){
+        alert(screen.height-window.innerHeight);
+        shiftDown();
+    }
 }
 
 function shiftUp() {
@@ -121,7 +126,6 @@ function shiftUp() {
     if(window.innerWidth < 400)
     document.querySelector(".register").style.transform = "translateY(-11vw)";
     document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
-    setTimeout(function() {alert(window.innerHeight);}, 5000);
 }
 
 function shiftDown() {
