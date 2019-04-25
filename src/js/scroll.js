@@ -34,7 +34,10 @@ function scrollY(e){
 
 function navigate(x){
     if(!play){
-        var i = 0;
+        if(window.innerWidth < 500) {
+            count = 1;
+            navbar();
+        }
         play = true;
         step += (current_page - x) * 100;
         navigators[current_page-1].style.border = "none";
@@ -139,4 +142,27 @@ function shiftDown() {
     document.querySelector(".container").style.alignItems = "center";
     document.querySelector(".register").style.transform = "translateY(0)";
     document.querySelector(".nav-bar").style.transform = "translateY(0)";
+}
+
+
+// -------------------------------nav-bar-----------------------------
+
+var count = 0
+function navbar() {
+    if(count == 0)
+    {
+        document.getElementsByClassName("hamburger")[0].style.transform = "translateX(0vw)";
+        document.getElementsByClassName("ham")[0].style.transform = "rotate(135deg)";
+        document.getElementsByClassName("ham")[1].style.transform = "translateX(-60vw)";
+        document.getElementsByClassName("ham")[2].style.transform = "rotate(-135deg)";
+        count++;
+    }
+    else if (count == 1)
+    {
+        document.getElementsByClassName("hamburger")[0].style.transform = "translateX(-60vw)";
+        document.getElementsByClassName("ham")[0].style.transform = "translateY(-1.2vh) rotate(0deg)";
+        document.getElementsByClassName("ham")[1].style.transform = "translateX(0vw)";
+        document.getElementsByClassName("ham")[2].style.transform = "translateY(1.2vh) rotate(0deg)";
+        count--;
+    }
 }
