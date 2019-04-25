@@ -121,7 +121,7 @@ function shiftUp() {
     if(window.innerWidth < 400)
     document.querySelector(".register").style.transform = "translateY(-11vw)";
     document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
-    alert(window.innerHeight);
+    setTimeout(function() {alert(window.innerHeight);}, 1000);
 }
 
 function shiftDown() {
