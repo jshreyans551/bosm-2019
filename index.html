@@ -13,6 +13,7 @@
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
+        <div id="svgwraper"></div>
         <div class="loader_wraper">
             <div class='loader'>
                 <div class='circle small-wrap one'>
@@ -140,9 +141,9 @@
                             <span class="first"><input placeholder="First Name" style="outline:none;" id="first-name"></span>
                             <span class="last"><input placeholder="Last Name" style="outline:none;" id="last-name"></span>
                         </div>
-                        <div class="email"><img src="./Registration_assets/message_icon.png" class="icons"><input placeholder="Email Address" style="outline:none;" id="email"></div>
-                        <div class="contact-no"><img src="./Registration_assets/contact_icon.png" class="icons"><span id="contact-no"></span><input placeholder="Contact No" style="outline:none;" pattern="[1-9]{1}[0-9]{9}" id="contact-number"></div>
-                        <div class="college"><img src="./Registration_assets/message_icon.png" class="icons"><span id="college"></span><input placeholder="College" style="outline:none;" id="college-name"></div>
+                        <div class="email"><img src="./Registration_assets/message_icon.png" class="icons"><input id="email" placeholder="Email Address" style="outline:none;"></div>
+                        <div class="contact-no"><img src="./Registration_assets/contact_icon.png" class="icons"><span id="contact-no"></span><input placeholder="Contact No" style="outline:none;" pattern="[1-9]{1}[0-9]{9}"></div>
+                        <div class="college"><img src="./Registration_assets/message_icon.png" class="icons"><span id="college"></span><input placeholder="College" style="outline:none;"></div>
                         <div class="button"><span></span><div class="button-logo">SUBMIT</div></div>
                     </div>
             </div>
@@ -162,7 +163,6 @@
             <div class="navigation"><div class="dot" onclick="navigate(3)">.</div></div>
             <div class="navigation"><div class="dot" onclick="navigate(4)">.</div></div>
         </div>
-
         <script src="./src/js/scroll.js"></script>
         <script src="./src/js/main.js"></script>
     </body>

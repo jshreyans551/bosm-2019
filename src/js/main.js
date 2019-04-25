@@ -137,7 +137,7 @@ else if (count == 1)
 // Change margin if browser is Firefox
 
 if (!!navigator.userAgent.match(/firefox/i)) {
-    $(".one, .two, .three, .four").addClass("ff");
+    document.querySelectorAll(".one, .two, .three, .four")[0].classList.add("ff");
   }
 
   
