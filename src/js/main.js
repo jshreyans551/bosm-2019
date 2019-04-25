@@ -1,24 +1,15 @@
 let player = document.getElementById("player");
-document.onmousemove = function(event) {
-    let x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
-    let y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
-    player.style.transform = "translate(-"+x+",-"+y+")";
+
+if (window.innerWidth >= 500) {
+    console.log("working!");
+    document.onmousemove = function(event) {
+        let x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
+        let y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
+        player.style.transform = "translate(-"+x+",-"+y+")";
+    }
 }
 
 // -------------------------- DAYS COUNTDOWN -------------------------------
-
-// const final_date = new Date("Sep 24, 2019 23:59:59").getTime();
-
-// let x = setInterval(function() {
-//     let now = new Date().getTime();
-//     let distance = countDownDate - now;
-
-//     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-//     document.getElementById("daysLeft").innerHTML = days;
-
-// }, (60*60*1000));
 
 function updateCountdown() {
     const final_date = new Date("Sep 24, 2019 23:59:59").getTime();
@@ -101,15 +92,19 @@ function change_navigator() {
 // -------------------------------back-text flicker animation-----------------------------
 
 setInterval(flickerAnimate, 5000);
+
 let flickerIndex = 0;
+
 function flickerAnimate() {
     let backText = document.querySelector(".back-text");
     if(flickerIndex < 2)
-    flickerIndex++;
+        flickerIndex++;
     else
-    flickerIndex = 0;
+        flickerIndex = 0;
+
     backText.style.animation = "flicker 0.75s ease 3 forwards";
     let flickerData = ['./src/images/GRIT.png', './src/images/GUTS.png', './src/images/GLORY.png'];
+
     setTimeout(function() {
         backText.src = flickerData[flickerIndex];
         backText.style.animation = "none";
