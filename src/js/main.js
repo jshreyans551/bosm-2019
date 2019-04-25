@@ -138,3 +138,30 @@ else if (count == 1)
     count--;
 }
 }
+
+// Change margin if browser is Firefox
+
+if (!!navigator.userAgent.match(/firefox/i)) {
+    $(".one, .two, .three, .four").addClass("ff");
+  }
+
+  
+  window.onload = function(){
+      document.getElementsByClassName('loader')[0].style.animation = "fadeOut 1s ease-in-out";
+      document.getElementsByClassName('bosm-2019')[0].style.animation = "fadeOut 1s ease-in-out";
+      setTimeout(() => {
+      document.getElementsByClassName('loader')[0].style.display = "none";
+      document.getElementsByClassName('bosm-2019')[0].style.display = "none";
+    //   document.getElementsByClassName('loaderlogo')[0].style.animation = "fadeIn 1s ease-in";
+      }, 800);
+      setTimeout(() => {
+        document.getElementsByClassName('loader_wraper')[0].style.animation = "fadeOut 1s ease-in";
+    }, 1000);
+    setTimeout(() => {
+        document.getElementsByClassName('nav-bar')[0].style.display = "flex";
+        document.getElementsByClassName('sidebar')[0].style.display = "flex";
+        document.getElementsByClassName('navigator')[0].style.display = "flex";
+        document.getElementsByClassName('loader_wraper')[0].style.display = "none";
+    }, 1000);
+    updateCountdown();
+  }

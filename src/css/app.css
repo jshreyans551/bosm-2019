@@ -20,7 +20,7 @@ body, html{
     overflow-x: hidden; 
     background: #0033B5;
     transition: 1s cubic-bezier(0.5,0,0.5,1);
-    scroll-snap-type: mandatory;
+    /* scroll-snap-type: mandatory; */
 }
 
 .section
@@ -48,8 +48,7 @@ body, html{
     height: 15vh;
     width: 100vw;
     font-size: 1.7em;
-    display: flex;
-    position: fixed;
+    display: none;
     justify-content: space-evenly;
     align-items: center;
     color: white;
@@ -57,6 +56,7 @@ body, html{
     letter-spacing: 3px;
     font-family: BigNoodleTitling;
     position: absolute;
+    top: 0;
     z-index: 4;
 }
 
@@ -230,7 +230,7 @@ body, html{
 .navigator{
     height: 33vh;
     width: 100px;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     flex-flow: column;
@@ -365,6 +365,8 @@ body, html{
 
     .bottom{
         width: 100%;
+        position: absolute;
+        top: 85%;
         display: flex;
         justify-content: flex-end;
     }
@@ -374,7 +376,7 @@ body, html{
     }
 
     .bottom > .days-left{
-        font-size: 0.7em;
+        font-size: 1.2em;
     }
 
     .bottom > .scroll-downs{
@@ -507,7 +509,7 @@ body, html{
     position: absolute;
     top: 0;
     left: 4vw;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-flow: column;
