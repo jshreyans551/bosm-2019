@@ -118,6 +118,11 @@ if(window.innerWidth < 500) {
     window.addEventListener("resize", function() {
         if(window.innerHeight > (screen.height-200)){
             shiftDown();
+            document.getElementById("first-name").blur();
+            document.getElementById("last-name").blur();
+            document.getElementById("email").blur();
+            document.getElementById("contact-no").blur();
+            document.getElementById("college").blur();
         }
     });
 }
