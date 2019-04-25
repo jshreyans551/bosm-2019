@@ -489,10 +489,10 @@ body, html{
     position: absolute;
     top: 0;
     left: 0;
-    width: 60vw;
-    transform: translateX(-60vw);
+    width: 70vw;
+    transform: translateX(-70vw);
     height: 100vh;
-    background-color: #000066;
+    background-color:white;
     z-index: 15;
     display: flex;
     justify-content: space-evenly;
@@ -543,7 +543,7 @@ body, html{
 .hamburger > .ham-links a
 {
     text-decoration: none;
-    color: white;
+    color: #0033B5;
     font-family: sans-serif;
     font-size: 1em;
     font-weight: bold;
@@ -640,7 +640,7 @@ body, html{
 .hamburger > .ham-links a
 {
     text-decoration: none;
-    color: white;
+    color:  #0033B5;
     font-family: sans-serif;
     font-size: 0.7em;
     font-weight: bold;

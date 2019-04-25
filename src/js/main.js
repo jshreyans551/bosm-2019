@@ -113,26 +113,7 @@ function flickerAnimate() {
 
 // -------------------------------nav-bar-----------------------------
 
-var count = 0
-function navbar()
-{
-if(count == 0)
-{
-    document.getElementsByClassName("hamburger")[0].style.transform = "translateX(0vw)";
-    document.getElementsByClassName("ham")[0].style.transform = "rotate(135deg)";
-    document.getElementsByClassName("ham")[1].style.transform = "translateX(-60vw)";
-    document.getElementsByClassName("ham")[2].style.transform = "rotate(-135deg)";
-    count++;
-}
-else if (count == 1)
-{
-    document.getElementsByClassName("hamburger")[0].style.transform = "translateX(-60vw)";
-    document.getElementsByClassName("ham")[0].style.transform = "translateY(-1.2vh) rotate(0deg)";
-    document.getElementsByClassName("ham")[1].style.transform = "translateX(0vw)";
-    document.getElementsByClassName("ham")[2].style.transform = "translateY(1.2vh) rotate(0deg)";
-    count--;
-}
-}
+
 
 // Change margin if browser is Firefox
 

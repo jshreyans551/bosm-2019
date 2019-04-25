@@ -91,7 +91,11 @@ function changeBackground(colorIndex) {
     let color2 = ["#000066","#ff0000"," #00cc66","#222f3e"];
     setTimeout(() => {
     wraper.style.backgroundColor = color[colorIndex];  
-    document.getElementsByClassName("hamburger")[0].style.backgroundColor = color2[colorIndex];      
+    // document.getElementsByClassName("hamburger")[0].style.backgroundColor = color2[colorIndex];
+    for(var i = 0;i<4;i++)
+    {
+        document.getElementsByClassName("inner-links")[i].style.color = color[colorIndex];
+    }     
     }, 200);
 }
 
@@ -148,18 +152,45 @@ function shiftDown() {
 // -------------------------------nav-bar-----------------------------
 
 var count = 0
+var colorIndex2=0;
+
 function navbar() {
-    if(count == 0)
+    let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
+    if(wraper.style.transform == "translateY(0vh)")
     {
+    colorIndex2 = 0;
+    }
+    else if(wraper.style.transform == "translateY(-100vh)")
+    {
+    colorIndex2 = 1;
+    }
+    else if(wraper.style.transform == "translateY(-200vh)")
+    {
+    colorIndex2 = 2;
+    }
+    else if(wraper.style.transform == "translateY(-300vh)")
+    {
+    colorIndex2 = 3;
+    }
+
+    if(count == 0)
+    {   for(var i = 0;i<3;i++)
+        {
+            document.getElementsByClassName("ham")[i].style.backgroundColor = color[colorIndex2];
+        }
         document.getElementsByClassName("hamburger")[0].style.transform = "translateX(0vw)";
         document.getElementsByClassName("ham")[0].style.transform = "rotate(135deg)";
-        document.getElementsByClassName("ham")[1].style.transform = "translateX(-60vw)";
+        document.getElementsByClassName("ham")[1].style.transform = "translateX(-70vw)";
         document.getElementsByClassName("ham")[2].style.transform = "rotate(-135deg)";
         count++;
     }
     else if (count == 1)
-    {
-        document.getElementsByClassName("hamburger")[0].style.transform = "translateX(-60vw)";
+    {   
+        for(var i = 0;i<3;i++)
+        {
+            document.getElementsByClassName("ham")[i].style.backgroundColor = "white";
+        }
+        document.getElementsByClassName("hamburger")[0].style.transform = "translateX(-70vw)";
         document.getElementsByClassName("ham")[0].style.transform = "translateY(-1.2vh) rotate(0deg)";
         document.getElementsByClassName("ham")[1].style.transform = "translateX(0vw)";
         document.getElementsByClassName("ham")[2].style.transform = "translateY(1.2vh) rotate(0deg)";
