@@ -102,7 +102,7 @@ function changeNavigator(dir) {
 
 if(window.innerWidth < 500) {
     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
-    
+
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
     document.getElementById("email").addEventListener("focus", shiftUp);
@@ -121,6 +121,7 @@ function shiftUp() {
     if(window.innerWidth < 400)
     document.querySelector(".register").style.transform = "translateY(-11vw)";
     document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
+    setTimeout(function() {alert(window.innerHeight);}, 5000);
 }
 
 function shiftDown() {
