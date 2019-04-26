@@ -182,6 +182,7 @@ function navbar() {
         document.getElementsByClassName("ham")[0].style.transform = "rotate(135deg)";
         document.getElementsByClassName("ham")[1].style.transform = "translateX(-70vw)";
         document.getElementsByClassName("ham")[2].style.transform = "rotate(-135deg)";
+        document.getElementsByClassName("ham")[2].style.width = "100%";
         count++;
     }
     else if (count == 1)
@@ -194,6 +195,7 @@ function navbar() {
         document.getElementsByClassName("ham")[0].style.transform = "translateY(-1.2vh) rotate(0deg)";
         document.getElementsByClassName("ham")[1].style.transform = "translateX(0vw)";
         document.getElementsByClassName("ham")[2].style.transform = "translateY(1.2vh) rotate(0deg)";
+        document.getElementsByClassName("ham")[2].style.width = "50%";
         count--;
     }
 }
