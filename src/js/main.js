@@ -69,26 +69,6 @@ const wrapper = document.getElementsByClassName("contact-wrapper")[0];
     }
 // --------------------------- CONTACTS PAGE END -------------------------------
 
-function change_navigator() {
-    const landing = document.getElementsByClassName("landing-page")[0];
-    const about = document.getElementsByClassName("aboutUs")[0];
-    const register = document.getElementsByClassName("container")[0];
-    const contacts = document.getElementsByClassName("contact-us")[0];
-
-    if (landing.getBoundingClientRect().top <= document.documentElement.clientHeight && landing.getBoundingClientRect().top > (-landing.getBoundingClientRect().height)){
-        const nav = document.getElementsByClassName("navigation")
-        nav[0].style.border = "5px solid #fff";
-        nav[1].style.border = "5px"
-    }
-        
-}
-
-// window.onscroll = function()
-// {
-//     alert(1);
-// }
-
-
 // -------------------------------back-text flicker animation-----------------------------
 
 setInterval(flickerAnimate, 5000);
