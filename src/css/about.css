@@ -113,3 +113,11 @@
         font-size: 1em;
     }
 }
+
+@media (max-width:1200px) and (min-width:815px)
+{
+.about p 
+{
+    font-size: 1.7em;
+}
+}

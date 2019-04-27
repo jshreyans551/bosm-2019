@@ -225,3 +225,26 @@ input:focus {
     } */
 }
 
+@media (max-width:800px) and (min-width:415px)
+{
+    .sideImage
+    {
+        margin-top: 10vh;
+        width: 34vw;
+    }
+}
+
+@media (max-width:1200px) and (min-width:815px)
+{
+.sideImage
+{
+    margin-top: 12vh;
+    width: 34vw;
+}
+
+.register
+{
+    margin-top: 27vh;
+}
+
+}

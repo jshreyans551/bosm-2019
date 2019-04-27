@@ -515,7 +515,7 @@ body, html{
 
    .contact {
     height: 21vh;
-    width: 200px;
+    width: 174px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -749,6 +749,29 @@ body, html{
     {
         width: 100%;
     }
+
+    .back-text
+    {
+        height: 50%;
+    }
+
+
+}
+
+@media (max-width:1200px) and (min-width:815px)
+{
+.back-text
+{
+    height: 50%;
+}
+.dates
+{
+    top: 54%;
+}
+.contact
+{
+    height: 26vh;
+}
 }
 
 

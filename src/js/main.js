@@ -136,7 +136,7 @@ if (!!navigator.userAgent.match(/firefox/i)) {
 
   function changeopa(i)
   {
-      document.getElementsByClassName("hover-link")[i].style.opacity = "1";
+      document.getElementsByClassName("hover-link")[i].style.opacity = "0.4";
   }
 
   function decopa(i)
