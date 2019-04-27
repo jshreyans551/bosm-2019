@@ -338,7 +338,7 @@ body, html{
 
 .contact-wrapper {
     height: 75vh;
-    width: 80vw;
+    width: 85vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -539,6 +539,9 @@ body, html{
 
 .contact-wrapper{
     margin-top: -3.5vw;
+    height: 75vh;
+    width: 103vw;
+    flex-direction: row ;
 }
 
 .hamburger
