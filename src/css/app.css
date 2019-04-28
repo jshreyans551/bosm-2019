@@ -73,10 +73,10 @@ body, html{
 }
 
 .links span:hover {
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
     border-bottom: 2px solid #fff;
     cursor: pointer;
-    padding: 3px 0;
+    padding-bottom: 3px;
     opacity: 1;
 }
 
