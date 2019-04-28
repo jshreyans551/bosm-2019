@@ -1,7 +1,6 @@
 let player = document.getElementById("player");
 
 if (window.innerWidth >= 500) {
-    console.log("working!");
     document.onmousemove = function(event) {
         let x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
         let y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
