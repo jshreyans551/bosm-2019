@@ -88,14 +88,26 @@ function end(e){
 
 function changeBackground(colorIndex) {
     let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
-    let color2 = ["#000066","#ff0000"," #00cc66","#222f3e"];
     setTimeout(() => {
-    wraper.style.backgroundColor = color[colorIndex];  
-    // document.getElementsByClassName("hamburger")[0].style.backgroundColor = color2[colorIndex];
+    wraper.style.backgroundColor = color[colorIndex];
     for(var i = 0;i<4;i++)
     {
         document.getElementsByClassName("inner-links")[i].style.color = color[colorIndex];
-    }     
+    }
+    if(count == 1) {
+        for(var i = 0;i<3;i++)
+        {
+            document.getElementsByClassName("ham")[i].style.backgroundColor = color[colorIndex];
+        }
+    }
+    let svgPath = document.querySelectorAll(".ham-logo .cls-1");
+    let svgPath2 = document.querySelectorAll(".ham-logo .cls-2");
+    for(let i = 0; i < svgPath.length; i++){
+        svgPath[i].style.fill = color[colorIndex];
+    }
+    for(let i = 0; i < svgPath2.length; i++){
+        svgPath2[i].style.fill = color[colorIndex];
+    }
     }, 200);
 }
 
@@ -151,32 +163,14 @@ function shiftDown() {
 
 // -------------------------------nav-bar-----------------------------
 
-var count = 0
-var colorIndex2=0;
-
+var count = 0;
 function navbar() {
-    let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
-    if(wraper.style.transform == "translateY(0vh)")
-    {
-    colorIndex2 = 0;
-    }
-    else if(wraper.style.transform == "translateY(-100vh)")
-    {
-    colorIndex2 = 1;
-    }
-    else if(wraper.style.transform == "translateY(-200vh)")
-    {
-    colorIndex2 = 2;
-    }
-    else if(wraper.style.transform == "translateY(-300vh)")
-    {
-    colorIndex2 = 3;
-    }
-
     if(count == 0)
-    {   for(var i = 0;i<3;i++)
+    {
+        let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
+        for(var i = 0;i<3;i++)
         {
-            document.getElementsByClassName("ham")[i].style.backgroundColor = color[colorIndex2];
+            document.getElementsByClassName("ham")[i].style.backgroundColor = color[current_page-1];
         }
         document.getElementsByClassName("hamburger")[0].style.transform = "translateX(0vw)";
         document.getElementsByClassName("ham")[0].style.transform = "rotate(135deg)";
@@ -186,10 +180,10 @@ function navbar() {
         count++;
     }
     else if (count == 1)
-    {   
+    {
         for(var i = 0;i<3;i++)
         {
-            document.getElementsByClassName("ham")[i].style.backgroundColor = "white";
+            document.getElementsByClassName("ham")[i].style.backgroundColor = "#ffffff";
         }
         document.getElementsByClassName("hamburger")[0].style.transform = "translateX(-70vw)";
         document.getElementsByClassName("ham")[0].style.transform = "translateY(-1.2vh) rotate(0deg)";
@@ -199,3 +193,4 @@ function navbar() {
         count--;
     }
 }
+
