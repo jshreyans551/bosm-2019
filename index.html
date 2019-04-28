@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">      
         <title>BOSM 2019</title>
+        <link rel="icon" href="src/images/Black.png">
         <link rel="stylesheet" href="./src/css/loader.css" type="text/css">
         <link rel="stylesheet" href="./src/css/app.css" type="text/css">
         <link rel="stylesheet" href="./src/css/about.css" type="text/css">
@@ -68,7 +69,8 @@
                 <a href="#" onclick="navigate(3)" class="inner-links">REGISTER</a>
                 <a href="#" onclick="navigate(4)" class="inner-links">CONTACTS</a>
             </div>
-            <div class="ham-logo"></div>
+            <div class="ham-logo"><object class="logo-svg" data="src/images/White.svg" type="image/svg+xml"></object>
+            </div>
         </div>
         <div class="nav-bar">
             <div class="links" onclick="navigate(2)">
@@ -158,10 +160,10 @@
             
         </div>
         <div class="navigator">
-            <div class="navigation"><div class="dot" onclick="navigate(1)"></div></div>
-            <div class="navigation"><div class="dot" onclick="navigate(2)"></div></div>
-            <div class="navigation"><div class="dot" onclick="navigate(3)"></div></div>
-            <div class="navigation"><div class="dot" onclick="navigate(4)"></div></div>
+            <div class="navigation"><div class="dot" onclick="navigate(1)" onmouseover="changeopa(0)" onmouseout="decopa(0)"><span class="hover-link">Home</span></div></div>
+            <div class="navigation"><div class="dot" onclick="navigate(2)" onmouseover="changeopa(1)" onmouseout="decopa(1)"><span class="hover-link">About</span></div></div>
+            <div class="navigation"><div class="dot" onclick="navigate(3)" onmouseover="changeopa(2)" onmouseout="decopa(2)"><span class="hover-link">Register</span></div></div>
+            <div class="navigation"><div class="dot" onclick="navigate(4)" onmouseover="changeopa(3)" onmouseout="decopa(3)"><span class="hover-link">Contacts</span></div></div>
         </div>
 
         <script src="./src/js/scroll.js"></script>

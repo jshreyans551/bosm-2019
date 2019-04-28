@@ -87,7 +87,7 @@ function end(e){
 }
 
 function changeBackground(colorIndex) {
-    let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
+    let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
     let color2 = ["#000066","#ff0000"," #00cc66","#222f3e"];
     setTimeout(() => {
     wraper.style.backgroundColor = color[colorIndex];  
@@ -155,7 +155,7 @@ var count = 0
 var colorIndex2=0;
 
 function navbar() {
-    let color = ["#0033B5", "#e91e63", "#009688", "#3e2723"];
+    let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
     if(wraper.style.transform == "translateY(0vh)")
     {
     colorIndex2 = 0;
@@ -182,6 +182,7 @@ function navbar() {
         document.getElementsByClassName("ham")[0].style.transform = "rotate(135deg)";
         document.getElementsByClassName("ham")[1].style.transform = "translateX(-70vw)";
         document.getElementsByClassName("ham")[2].style.transform = "rotate(-135deg)";
+        document.getElementsByClassName("ham")[2].style.width = "100%";
         count++;
     }
     else if (count == 1)
@@ -194,6 +195,7 @@ function navbar() {
         document.getElementsByClassName("ham")[0].style.transform = "translateY(-1.2vh) rotate(0deg)";
         document.getElementsByClassName("ham")[1].style.transform = "translateX(0vw)";
         document.getElementsByClassName("ham")[2].style.transform = "translateY(1.2vh) rotate(0deg)";
+        document.getElementsByClassName("ham")[2].style.width = "50%";
         count--;
     }
 }

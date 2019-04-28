@@ -8,7 +8,6 @@
     position: relative;
 }
 .sideImage{
-    background: url(../images/player.png);
     background-size: contain;
     background-position: center;
     margin-top: 17vh;
@@ -17,6 +16,18 @@
     width: 33vw;
     z-index: 5;
 }
+
+#player3
+{
+    background: url(../images/player.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 30vw;
+    margin-left: 4vw;
+}
+
 .register{
     margin-top: 17vh;
     height: fit-content;
@@ -116,8 +127,8 @@
 
 .button-logo:hover{
     background: white;
-    color: #009688;
-    border: 2px solid #009688;
+    color: #FF4500;
+    border: 2px solid #FF4500;
     cursor: pointer;
 }
 
@@ -225,3 +236,26 @@ input:focus {
     } */
 }
 
+@media (max-width:800px) and (min-width:415px)
+{
+    .sideImage
+    {
+        margin-top: 10vh;
+        width: 34vw;
+    }
+}
+
+@media (max-width:1050px) and (min-width:815px)
+{
+.sideImage
+{
+    margin-top: 12vh;
+    width: 34vw;
+}
+
+.register
+{
+    margin-top: 27vh;
+}
+
+}
