@@ -70,14 +70,14 @@ body, html{
     display: flex;
     align-items: center;
     padding-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
 .links span:hover {
-    transition: all 0.3s ease;
     border-bottom: 2px solid #fff;
     cursor: pointer;
     padding-bottom: 3px;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .logo{
@@ -626,11 +626,15 @@ body, html{
 {
     width: 20vw;
     height: 20vh;
-    background: url('../images/BOSM-LOGO_white.png');
+    /* background: url('../images/BOSM-LOGO_white.svg'); */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
+#layer1 path.cls-1{
+    fill: black;
+}
+
 
 }
 
