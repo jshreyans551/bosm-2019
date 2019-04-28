@@ -69,12 +69,14 @@ body, html{
     color: #fff;
     display: flex;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .links span:hover {
     transition: all 0.1s ease;
     border-bottom: 2px solid #fff;
     cursor: pointer;
+    padding: 3px 0;
     opacity: 1;
 }
 
