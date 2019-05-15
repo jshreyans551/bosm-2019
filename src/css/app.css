@@ -438,6 +438,9 @@ body, html{
 
     .bottom > .days-left{
         font-size: 1.2em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .bottom > .scroll-downs{
@@ -642,13 +645,13 @@ body, html{
 @media (max-width:370px)
 {
    .player{
-       width: 50vw;
-       height: 50vh;
+       width: 70vw;
+       height: 70vh;
    }
 
-   .bosm-heading{
+   /* .bosm-heading{
        width: 70%;
-   }
+   } */
 
    .bosm-des > span {
        font-size: 1.6em;
@@ -658,7 +661,7 @@ body, html{
        font-size: 0.5em;
    }
 
-   .dates
+   /* .dates
    {
     position: absolute;
     top: 47%;
@@ -671,7 +674,7 @@ body, html{
     background-repeat: no-repeat;
     height: 9vh;
     width: 20vw;
-   }
+   } */
 
    .contact {
     height: 20vh;

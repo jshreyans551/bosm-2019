@@ -18,7 +18,7 @@ function updateCountdown() {
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     // let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-    document.getElementById("daysLeft").innerHTML = days;
+    document.getElementById("daysLeft").innerHTML = days + " Days" + " Left";
 }
 
 // ------------------------ CONTACT PAGE -------------------------------
