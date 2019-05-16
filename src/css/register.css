@@ -19,7 +19,7 @@
 
 #player3
 {
-    background: url(../images/player.png);
+    background: url(../images/neymar-png-44969.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,8 +127,8 @@
 
 .button-logo:hover{
     background: white;
-    color: #FF4500;
-    border: 2px solid #FF4500;
+    color: #FFBB00;
+    border: 2px solid #FFBB00;
     cursor: pointer;
 }
 

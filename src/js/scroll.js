@@ -87,7 +87,7 @@ function end(e){
 }
 
 function changeBackground(colorIndex) {
-    let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
+    let color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
     setTimeout(() => {
     wraper.style.backgroundColor = color[colorIndex];
     for(var i = 0;i<4;i++)
@@ -167,7 +167,7 @@ var count = 0;
 function navbar() {
     if(count == 0)
     {
-        let color = ["#0033B5", "#47D1E7", "#FF4500", "#3e2723"];
+        let color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
         for(var i = 0;i<3;i++)
         {
             document.getElementsByClassName("ham")[i].style.backgroundColor = color[current_page-1];
