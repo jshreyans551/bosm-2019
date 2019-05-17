@@ -88,12 +88,13 @@
     height: 40px;
     width: 80%;
     font-family: Segoe;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     color: white;
     letter-spacing: 2px;
+    transform: translateY(-5px);
 }
 .register input::placeholder{
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     color: #F5F5F5;
     font-family: Roboto;
     font-family: Segoe;
@@ -137,7 +138,7 @@
 
 .register img{
     height: 1.6vw;
-    width: 2vw;
+    width: 2.05vw;
     transform: translateY(2px);
     margin-right: 30px;
 }
