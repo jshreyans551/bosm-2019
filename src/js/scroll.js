@@ -7,6 +7,8 @@ var step = 0, x = 0;
 var last_page = 4;
 var play = false;
 var sY, dY;
+const color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
+
 
 wraper.addEventListener('wheel', scrollY);
 
@@ -87,7 +89,7 @@ function end(e){
 }
 
 function changeBackground(colorIndex) {
-    let color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
+    document.documentElement.style.setProperty('--bg-color', color[colorIndex]);
     setTimeout(() => {
     wraper.style.backgroundColor = color[colorIndex];
     for(var i = 0;i<4;i++)
@@ -167,7 +169,6 @@ var count = 0;
 function navbar() {
     if(count == 0)
     {
-        let color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
         for(var i = 0;i<3;i++)
         {
             document.getElementsByClassName("ham")[i].style.backgroundColor = color[current_page-1];
