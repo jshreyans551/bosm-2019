@@ -36,7 +36,7 @@ function navigate(x){
     if(!play){
         if(window.innerWidth < 500) {
             count = 1;
-            navbar();
+            // navbar();
         }
         play = true;
         step += (current_page - x) * 100;
