@@ -164,6 +164,9 @@ function shiftDown() {
 // -------------------------------nav-bar-----------------------------
 
 var count = 0;
+
+window.addEventListener('click', navbar);
+
 function navbar() {
     if(count == 0)
     {
@@ -193,4 +196,3 @@ function navbar() {
         count--;
     }
 }
-
