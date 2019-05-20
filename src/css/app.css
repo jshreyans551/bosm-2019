@@ -625,6 +625,8 @@ body, html{
     font-size: 1em;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
+    width: 100%;
+    text-align: center;
 }
 
 .hamburger > .ham-logo
