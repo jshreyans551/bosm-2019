@@ -206,6 +206,7 @@ body, html{
     top: 95%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 20;
 }
 
 .scroll-icon{
@@ -606,6 +607,10 @@ body, html{
     flex-flow: column;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+}
+
+.social-icons:hover {
+    cursor: pointer;
 }
 
 .sidebar
