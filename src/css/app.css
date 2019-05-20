@@ -1,3 +1,7 @@
+:root {
+    --bg-color : #3175FF;
+}
+
 body, html{
     margin: 0;
     padding: 0;
@@ -61,24 +65,59 @@ body, html{
 }
 
 .links {
-    height: 30%;
-}
-.links span{
-    height: 100%;
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
-    transition: all 0.3s ease;
+    height: 35%;
 }
 
-.links span:hover {
-    border-bottom: 2px solid #fff;
-    cursor: pointer;
-    padding-bottom: 3px;
-    /* opacity: 1; */
+.links span{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
 }
+
+.links > span > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+    -webkit-transition: all 0.2s ease-in-out 0.3s;
+    transition: all 0.2s ease-in-out 0.3s;
+}
+
+.links > span > a:hover {
+    color: var(--bg-color);
+    /* color: black; */
+}
+
+.links > span > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.links > span > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    animation: fill 0.2s ease 0.3s 1 forwards;
+    -webkit-animation: fill 0.2s ease 0.3s 1 forwards;
+}
+
+/* .links span:hover {
+    opacity: 1;
+} */
 
 
 .logo{
@@ -258,7 +297,7 @@ body, html{
     box-sizing: border-box;
     transition: linear 0.25s;
 }
-.navigation .dot:hover {
+.navigation{
     cursor: pointer;
 }
 .navigation > .dot {
@@ -625,6 +664,12 @@ body, html{
     font-size: 1em;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger > .ham-logo
@@ -808,4 +853,9 @@ body, html{
     30% {opacity: 1;}
     45% {opacity: 0;}
     60% {opacity: 1;}
+}
+
+@keyframes fill {
+    0% {height: 2px;}
+    100% {height: 100%;}
 }
