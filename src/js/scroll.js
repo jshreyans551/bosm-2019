@@ -38,7 +38,7 @@ function navigate(x){
     if(!play){
         if(window.innerWidth < 500) {
             count = 1;
-            navbar();
+            // navbar();
         }
         play = true;
         step += (current_page - x) * 100;
@@ -166,6 +166,9 @@ function shiftDown() {
 // -------------------------------nav-bar-----------------------------
 
 var count = 0;
+
+window.addEventListener('click', navbar);
+
 function navbar() {
     if(count == 0)
     {
@@ -194,4 +197,3 @@ function navbar() {
         count--;
     }
 }
-
