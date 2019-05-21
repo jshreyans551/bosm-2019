@@ -122,8 +122,8 @@ function changeNavigator(dir) {
 
 
 if(window.innerWidth < 500) {
-    // android:windowSoftInputMode="adjustPan";
-    // document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
+    android:windowSoftInputMode="adjustPan";
+    document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
 
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
@@ -150,23 +150,16 @@ if(window.innerWidth < 500) {
 }
 
 function shiftUp() {
-    // document.querySelector(".container").style.alignItems = "flex-start";
-    // if(window.innerWidth < 400)
-    // document.querySelector(".register").style.transform = "translateY(-11vw)";
-    // document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
-    wraper.removeEventListener('touchstart', start);
-    wraper.removeEventListener('touchmove', move);
-    wraper.removeEventListener('touchend', end);
-
+    document.querySelector(".container").style.alignItems = "flex-start";
+    if(window.innerWidth < 400)
+    document.querySelector(".register").style.transform = "translateY(-11vw)";
+    document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
 }
 
 function shiftDown() {
-    // document.querySelector(".container").style.alignItems = "center";
-    // document.querySelector(".register").style.transform = "translateY(0)";
-    // document.querySelector(".nav-bar").style.transform = "translateY(0)";
-    wraper.addEventListener('touchstart', start);
-    wraper.addEventListener('touchmove', move);
-    wraper.addEventListener('touchend', end);
+    document.querySelector(".container").style.alignItems = "center";
+    document.querySelector(".register").style.transform = "translateY(0)";
+    document.querySelector(".nav-bar").style.transform = "translateY(0)";
 }
 
 
