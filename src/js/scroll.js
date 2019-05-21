@@ -122,8 +122,8 @@ function changeNavigator(dir) {
 
 
 if(window.innerWidth < 500) {
-    android:windowSoftInputMode="adjustPan";
-    document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
+    // android:windowSoftInputMode="adjustPan";
+    // document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
 
     document.getElementById("first-name").addEventListener("focus", shiftUp);
     document.getElementById("last-name").addEventListener("focus", shiftUp);
