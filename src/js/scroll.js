@@ -164,9 +164,9 @@ function shiftDown() {
     // document.querySelector(".container").style.alignItems = "center";
     // document.querySelector(".register").style.transform = "translateY(0)";
     // document.querySelector(".nav-bar").style.transform = "translateY(0)";
-    wraper.removeEventListener('touchstart', start);
-    wraper.removeEventListener('touchmove', move);
-    wraper.removeEventListener('touchend', end);
+    wraper.addEventListener('touchstart', start);
+    wraper.addEventListener('touchmove', move);
+    wraper.addEventListener('touchend', end);
 }
 
 
