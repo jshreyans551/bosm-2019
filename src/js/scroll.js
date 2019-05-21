@@ -167,7 +167,7 @@ function shiftDown() {
 
 var count = 0;
 
-window.addEventListener('click', navbar);
+document.getElementsByClassName("sidebar")[0].addEventListener('click', navbar);
 
 function navbar() {
     if(count == 0)
