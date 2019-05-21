@@ -147,3 +147,54 @@ if (!!navigator.userAgent.match(/firefox/i)) {
   {
     document.getElementsByClassName("hover-link")[i].style.opacity = "0";
   }
+
+  // ------------------------ REGISTER PAGE -------------------------------
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+  function validatePhoneNo(phone){
+    var phoneNum = phone.replace(/[^\d]/g, '');
+    if(phoneNum.length > 6 && phoneNum.length < 11) {  return true;  }else{return false;}
+  }
+
+  function getData(){
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var contactNo = document.getElementById("contact-number").value;
+      var collegeName = document.getElementById("college-name").value;
+      if(firstName == "" || lastName == "" || email == "" || contactNo == "" || collegeName == ""){
+        alert("Please fill all mentioned fields");
+        return;
+      }
+      if(!validateEmail(email)){
+          alert("Please enter valid email address");
+          return;
+      }
+      if(!validatePhoneNo(contactNo)){
+        alert("Please enter valid phoneNo");
+        return;
+    }
+      console.log(firstName,lastName , email, contactNo , collegeName);
+  
+}
+  var submitButton = document.getElementsByClassName("button-logo")[0];
+  submitButton.addEventListener("click",function(){
+    getData();
+  });
+//   function sendRequest(quesNo,key){
+//         var data = $.ajax( {
+//             type: 'POST',
+//             url: `request link here`,
+//             data: {
+//                  "firstName" :......
+//             },
+//             success: function(data) {   
+//             }
+//         });
+// }
+
+
+  // ----------------------------------------------------------------------
