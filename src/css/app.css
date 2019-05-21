@@ -206,6 +206,7 @@ body, html{
     top: 95%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 20;
 }
 
 .scroll-icon{
@@ -399,7 +400,6 @@ body, html{
     margin: 0 40px 35px 50px;
 }
 
-
 .contacts-image {
     background-image: url('../images/dvm.png');
     border-radius: 50%;
@@ -414,7 +414,7 @@ body, html{
     font-size: 1em;
     margin-top: 5px;
 }
-
+    
 .bosm-des,.arrow,.hamburger{display: none;}
 
 
@@ -606,6 +606,10 @@ body, html{
     flex-flow: column;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+}
+
+.social-icons:hover {
+    cursor: pointer;
 }
 
 .sidebar

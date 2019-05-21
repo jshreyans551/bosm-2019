@@ -24,21 +24,26 @@ function updateCountdown() {
 // ------------------------ CONTACT PAGE -------------------------------
 
 const wrapper = document.getElementsByClassName("contact-wrapper")[0];
+const path = "../images";
 
-        contact_names = ['Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
+        contact_names = ['Raihan Riaz','Amol Dalal','Mansi Mittal','Mayank Kulkarni','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
 
-        contact_posts = ['Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations'];
+        contact_posts = ['Online Registrations','Sponsorships','Joint Sports Secretary','Sports Secretary','Online Registrations','Online Registrations','Online Registrations','Online Registrations'];
 
-        contact_phone = ['99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999'];
+        contact_phone = ['+91-9989401360','+91-7020141770','+91-9602775333','+91-9929855583','99999-99999','99999-99999','99999-99999','99999-99999'];
 
-        contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
+        contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
 
-    for (let i = 0; i < 7; i++) {
+        num = contact_names.length;
+
+    for (let i = 0; i < num; i++) {
         let contact = document.createElement('div');
         contact.classList.add("contact");
         //image
             let image = document.createElement('div');
             image.classList.add("contacts-image");
+            // document.getElementsByClassName("contact")[i].firstElementChild.style.backgroundImage = `${path}/spons.png`
+            // image.style.backgroundImage = `${path}/spons.png`;
         //name
             let name = document.createElement('div');
             name.classList.add("contacts-text");
@@ -142,3 +147,54 @@ if (!!navigator.userAgent.match(/firefox/i)) {
   {
     document.getElementsByClassName("hover-link")[i].style.opacity = "0";
   }
+
+  // ------------------------ REGISTER PAGE -------------------------------
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+  function validatePhoneNo(phone){
+    var phoneNum = phone.replace(/[^\d]/g, '');
+    if(phoneNum.length > 6 && phoneNum.length < 11) {  return true;  }else{return false;}
+  }
+
+  function getData(){
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var contactNo = document.getElementById("contact-number").value;
+      var collegeName = document.getElementById("college-name").value;
+      if(firstName == "" || lastName == "" || email == "" || contactNo == "" || collegeName == ""){
+        alert("Please fill all mentioned fields");
+        return;
+      }
+      if(!validateEmail(email)){
+          alert("Please enter valid email address");
+          return;
+      }
+      if(!validatePhoneNo(contactNo)){
+        alert("Please enter valid phoneNo");
+        return;
+    }
+      console.log(firstName,lastName , email, contactNo , collegeName);
+  
+}
+  var submitButton = document.getElementsByClassName("button-logo")[0];
+  submitButton.addEventListener("click",function(){
+    getData();
+  });
+//   function sendRequest(quesNo,key){
+//         var data = $.ajax( {
+//             type: 'POST',
+//             url: `request link here`,
+//             data: {
+//                  "firstName" :......
+//             },
+//             success: function(data) {   
+//             }
+//         });
+// }
+
+
+  // ----------------------------------------------------------------------
