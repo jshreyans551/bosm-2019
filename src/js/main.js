@@ -160,8 +160,8 @@ if (!!navigator.userAgent.match(/firefox/i)) {
   }
 
   function getData(){
-      var firstName = document.getElementById("firstName").value;
-      var lastName = document.getElementById("lastName").value;
+      var firstName = document.getElementById("first-name").value;
+      var lastName = document.getElementById("last-name").value;
       var email = document.getElementById("email").value;
       var contactNo = document.getElementById("contact-number").value;
       var collegeName = document.getElementById("college-name").value;

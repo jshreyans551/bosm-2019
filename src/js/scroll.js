@@ -9,7 +9,7 @@ var play = false;
 var sY, dY;
 const color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
 
-
+if(window.innerWidth > 500)
 wraper.addEventListener('wheel', scrollY);
 
 function scrollY(e){
@@ -167,8 +167,7 @@ function shiftDown() {
 
 var count = 0;
 
-// window.addEventListener('click', navbar);
-
+document.getElementsByClassName("sidebar")[0].addEventListener('click', navbar);
 function navbar() {
     if(count == 0)
     {
