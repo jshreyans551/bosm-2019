@@ -24,21 +24,26 @@ function updateCountdown() {
 // ------------------------ CONTACT PAGE -------------------------------
 
 const wrapper = document.getElementsByClassName("contact-wrapper")[0];
+const path = "../images";
 
-        contact_names = ['Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
+        contact_names = ['Raihan Riaz','Amol Dalal','Mansi Mittal','Mayank Kulkarni','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
 
-        contact_posts = ['Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations','Online Registrations'];
+        contact_posts = ['Online Registrations','Sponsorships','Joint Sports Secretary','Sports Secretary','Online Registrations','Online Registrations','Online Registrations','Online Registrations'];
 
-        contact_phone = ['99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999'];
+        contact_phone = ['+91-9989401360','+91-7020141770','+91-9602775333','+91-9929855583','99999-99999','99999-99999','99999-99999','99999-99999'];
 
-        contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
+        contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
 
-    for (let i = 0; i < 7; i++) {
+        num = contact_names.length;
+
+    for (let i = 0; i < num; i++) {
         let contact = document.createElement('div');
         contact.classList.add("contact");
         //image
             let image = document.createElement('div');
             image.classList.add("contacts-image");
+            // document.getElementsByClassName("contact")[i].firstElementChild.style.backgroundImage = `${path}/spons.png`
+            // image.style.backgroundImage = `${path}/spons.png`;
         //name
             let name = document.createElement('div');
             name.classList.add("contacts-text");
