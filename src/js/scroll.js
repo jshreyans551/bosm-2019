@@ -121,33 +121,33 @@ function changeNavigator(dir) {
 }
 
 
-if(window.innerWidth < 500) {
-    android:windowSoftInputMode="adjustPan";
-    document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
+// if(window.innerWidth < 500) {
+//     android:windowSoftInputMode="adjustPan";
+//     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
 
-    document.getElementById("first-name").addEventListener("focus", shiftUp);
-    document.getElementById("last-name").addEventListener("focus", shiftUp);
-    document.getElementById("email").addEventListener("focus", shiftUp);
-    document.getElementById("contact-number").addEventListener("focus", shiftUp);
-    document.getElementById("college-name").addEventListener("focus", shiftUp);
+//     document.getElementById("first-name").addEventListener("focus", shiftUp);
+//     document.getElementById("last-name").addEventListener("focus", shiftUp);
+//     document.getElementById("email").addEventListener("focus", shiftUp);
+//     document.getElementById("contact-number").addEventListener("focus", shiftUp);
+//     document.getElementById("college-name").addEventListener("focus", shiftUp);
     
-    document.getElementById("first-name").addEventListener("focusout", shiftDown);
-    document.getElementById("last-name").addEventListener("focusout", shiftDown);
-    document.getElementById("email").addEventListener("focusout", shiftDown);
-    document.getElementById("contact-number").addEventListener("focusout", shiftDown);
-    document.getElementById("college-name").addEventListener("focusout", shiftDown);
+//     document.getElementById("first-name").addEventListener("focusout", shiftDown);
+//     document.getElementById("last-name").addEventListener("focusout", shiftDown);
+//     document.getElementById("email").addEventListener("focusout", shiftDown);
+//     document.getElementById("contact-number").addEventListener("focusout", shiftDown);
+//     document.getElementById("college-name").addEventListener("focusout", shiftDown);
 
-    window.addEventListener("resize", function() {
-        if(window.innerHeight > (screen.height-200)){
-            shiftDown();
-            document.getElementById("first-name").blur();
-            document.getElementById("last-name").blur();
-            document.getElementById("email").blur();
-            document.getElementById("contact-number").blur();
-            document.getElementById("college-name").blur();
-        }
-    });
-}
+//     window.addEventListener("resize", function() {
+//         if(window.innerHeight > (screen.height-200)){
+//             shiftDown();
+//             document.getElementById("first-name").blur();
+//             document.getElementById("last-name").blur();
+//             document.getElementById("email").blur();
+//             document.getElementById("contact-number").blur();
+//             document.getElementById("college-name").blur();
+//         }
+//     });
+// }
 
 function shiftUp() {
     document.querySelector(".container").style.alignItems = "flex-start";
