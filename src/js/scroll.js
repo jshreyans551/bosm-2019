@@ -9,7 +9,7 @@ var play = false;
 var sY, dY;
 const color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
 
-if(window.innerWidth > 500)
+
 wraper.addEventListener('wheel', scrollY);
 
 function scrollY(e){
@@ -121,45 +121,52 @@ function changeNavigator(dir) {
 }
 
 
-// if(window.innerWidth < 500) {
-//     android:windowSoftInputMode="adjustPan";
-//     document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
+if(window.innerWidth < 500) {
+    android:windowSoftInputMode="adjustPan";
+    document.write('<meta name="viewport" content="width=device-width, height='+window.innerHeight+', initial-scale=1.0">');
 
-//     document.getElementById("first-name").addEventListener("focus", shiftUp);
-//     document.getElementById("last-name").addEventListener("focus", shiftUp);
-//     document.getElementById("email").addEventListener("focus", shiftUp);
-//     document.getElementById("contact-number").addEventListener("focus", shiftUp);
-//     document.getElementById("college-name").addEventListener("focus", shiftUp);
+    document.getElementById("first-name").addEventListener("focus", shiftUp);
+    document.getElementById("last-name").addEventListener("focus", shiftUp);
+    document.getElementById("email").addEventListener("focus", shiftUp);
+    document.getElementById("contact-number").addEventListener("focus", shiftUp);
+    document.getElementById("college-name").addEventListener("focus", shiftUp);
     
-//     document.getElementById("first-name").addEventListener("focusout", shiftDown);
-//     document.getElementById("last-name").addEventListener("focusout", shiftDown);
-//     document.getElementById("email").addEventListener("focusout", shiftDown);
-//     document.getElementById("contact-number").addEventListener("focusout", shiftDown);
-//     document.getElementById("college-name").addEventListener("focusout", shiftDown);
+    document.getElementById("first-name").addEventListener("focusout", shiftDown);
+    document.getElementById("last-name").addEventListener("focusout", shiftDown);
+    document.getElementById("email").addEventListener("focusout", shiftDown);
+    document.getElementById("contact-number").addEventListener("focusout", shiftDown);
+    document.getElementById("college-name").addEventListener("focusout", shiftDown);
 
-//     window.addEventListener("resize", function() {
-//         if(window.innerHeight > (screen.height-200)){
-//             shiftDown();
-//             document.getElementById("first-name").blur();
-//             document.getElementById("last-name").blur();
-//             document.getElementById("email").blur();
-//             document.getElementById("contact-number").blur();
-//             document.getElementById("college-name").blur();
-//         }
-//     });
-// }
+    window.addEventListener("resize", function() {
+        if(window.innerHeight > (screen.height-200)){
+            shiftDown();
+            document.getElementById("first-name").blur();
+            document.getElementById("last-name").blur();
+            document.getElementById("email").blur();
+            document.getElementById("contact-number").blur();
+            document.getElementById("college-name").blur();
+        }
+    });
+}
 
 function shiftUp() {
-    document.querySelector(".container").style.alignItems = "flex-start";
-    if(window.innerWidth < 400)
-    document.querySelector(".register").style.transform = "translateY(-11vw)";
-    document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
+    // document.querySelector(".container").style.alignItems = "flex-start";
+    // if(window.innerWidth < 400)
+    // document.querySelector(".register").style.transform = "translateY(-11vw)";
+    // document.querySelector(".nav-bar").style.transform = "translateY(-100%)";
+    wraper.removeEventListener('touchstart', start);
+    wraper.removeEventListener('touchmove', move);
+    wraper.removeEventListener('touchend', end);
+
 }
 
 function shiftDown() {
-    document.querySelector(".container").style.alignItems = "center";
-    document.querySelector(".register").style.transform = "translateY(0)";
-    document.querySelector(".nav-bar").style.transform = "translateY(0)";
+    // document.querySelector(".container").style.alignItems = "center";
+    // document.querySelector(".register").style.transform = "translateY(0)";
+    // document.querySelector(".nav-bar").style.transform = "translateY(0)";
+    wraper.removeEventListener('touchstart', start);
+    wraper.removeEventListener('touchmove', move);
+    wraper.removeEventListener('touchend', end);
 }
 
 
