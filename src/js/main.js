@@ -33,7 +33,7 @@ const wrapper = document.getElementsByClassName("contact-wrapper")[0];
 
     contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
 
-    imgPath = "../images/contacts";
+    imgPath = "src/images/contacts/cosaccan-";
     images = ['controls.png', 'spons.png', 'ss.png', 'jss.png', 'dvm.png', 'dvm.png','dvm.png', 'dvm.png', 'dvm.png'];
     
     num = contact_names.length;
@@ -42,8 +42,9 @@ for (let i = 0; i < num; i++) {
     let contact = document.createElement('div');
     contact.classList.add("contact");
     //image
-        let image = document.createElement('div');
+        let image = document.createElement('img');
         image.classList.add("contacts-image");
+        image.src = imgPath + (i+1) + ".png";
     //name
         let name = document.createElement('div');
         name.classList.add("contacts-text");
