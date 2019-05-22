@@ -113,13 +113,13 @@ html {
 } */
 
 .logo {
-  background: url("../images/BOSM-LOGO_white.png");
+  background: url("../images/White.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 5px;
-  height: 100px;
-  width: 100px;
+  height: 95px;
+  width: 95px;
   cursor: pointer;
 }
 
@@ -461,7 +461,7 @@ html {
     justify-content: center;
   }
 
-  .nav-net-links > span {
+  .nav-net-links > .nav-social-icons > .ham-social {
     color: #3175ff;
     font-size: 2em;
     margin: 20px;
@@ -667,6 +667,7 @@ html {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
   #layer1 path.cls-1 {
     fill: black;
   }

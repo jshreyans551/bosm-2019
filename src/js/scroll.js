@@ -96,6 +96,10 @@ function changeBackground(colorIndex) {
     {
         document.getElementsByClassName("inner-links")[i].style.color = color[colorIndex];
     }
+    for(var i =0;i<3;i++)
+    {
+        document.getElementsByClassName("ham-social")[i].style.color = color[colorIndex];
+    }
     if(count == 1) {
         for(var i = 0;i<3;i++)
         {
