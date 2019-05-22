@@ -459,6 +459,18 @@ html {
     display: none;
   }
 
+  .nav-net-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-net-links > span {
+    color: #3175ff;
+    font-size: 2em;
+    margin: 20px;
+  }
+
   .bottom > .days-left {
     font-size: 1.2em;
     width: 100%;
