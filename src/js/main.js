@@ -188,24 +188,34 @@ window.onload = function(){
         alert("Please enter valid phoneNo");
         return;
     }
-      console.log(firstName,lastName , email, contactNo , collegeName);
+     sendRequest(firstName,lastName,collegeName,email,contactNo);
   
 }
   var submitButton = document.getElementsByClassName("button-logo")[0];
   submitButton.addEventListener("click",function(){
     getData();
   });
-//   function sendRequest(quesNo,key){
-//         var data = $.ajax( {
-//             type: 'POST',
-//             url: `request link here`,
-//             data: {
-//                  "firstName" :......
-//             },
-//             success: function(data) {   
-//             }
-//         });
-// }
+  function sendRequest(firstName,lastName,college,email,phoneNo){
+    var data = $.ajax( {
+        type: 'POST',
+        url: `/IntroReg/`,
+        data: {
+             "firstName" : firstName,
+             "lasname":lastName,
+             "college":college,
+             "email":email,
+             "phone":phoneNo
+        },
+        success: function(msg,status) { 
+            if(status == "1"){
+                alert("Successfully Registered");
+            }
+            else{
+                alert("Not Registered-\n"+msg)
+            }
+        }
+    });
+}
 
 
   // ----------------------------------------------------------------------
