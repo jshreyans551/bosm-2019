@@ -185,7 +185,7 @@ window.onload = function(){
           return;
       }
       if(!validatePhoneNo(contactNo)){
-        alert("Please enter valid phoneNo");
+        alert("Please enter valid phone number");
         return;
     }
      sendRequest(firstName,lastName,collegeName,email,contactNo);
