@@ -7,6 +7,7 @@ var step = 0, x = 0;
 var last_page = 4;
 var play = false;
 var sY, dY;
+var isMenuOpen = 0;
 const color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
 
 
@@ -37,7 +38,7 @@ function scrollY(e){
 function navigate(x){
     if(!play){
         if(window.innerWidth < 500) {
-            count = 1;
+            isMenuOpen = 1;
             navbar();
         }
         play = true;
@@ -100,7 +101,7 @@ function changeBackground(colorIndex) {
     {
         document.getElementsByClassName("ham-social")[i].style.color = color[colorIndex];
     }
-    if(count == 1) {
+    if(isMenuOpen == 1) {
         for(var i = 0;i<3;i++)
         {
             document.getElementsByClassName("ham")[i].style.backgroundColor = color[colorIndex];
@@ -169,11 +170,10 @@ function shiftDown() {
 
 // -------------------------------nav-bar-----------------------------
 
-var count = 0;
 
 document.getElementsByClassName("sidebar")[0].addEventListener('click', navbar);
 function navbar() {
-    if(count == 0)
+    if(isMenuOpen == 0)
     {
         for(var i = 0;i<3;i++)
         {
@@ -184,9 +184,9 @@ function navbar() {
         document.getElementsByClassName("ham")[1].style.transform = "translateX(-70vw)";
         document.getElementsByClassName("ham")[2].style.transform = "rotate(-135deg)";
         document.getElementsByClassName("ham")[2].style.width = "100%";
-        count++;
+        isMenuOpen = 1;
     }
-    else if (count == 1)
+    else if (isMenuOpen == 1)
     {
         for(var i = 0;i<3;i++)
         {
@@ -197,6 +197,6 @@ function navbar() {
         document.getElementsByClassName("ham")[1].style.transform = "translateX(0vw)";
         document.getElementsByClassName("ham")[2].style.transform = "translateY(1.2vh) rotate(0deg)";
         document.getElementsByClassName("ham")[2].style.width = "50%";
-        count--;
+        isMenuOpen = 0;
     }
 }
