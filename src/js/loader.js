@@ -2,7 +2,7 @@ var count = 3;
 
 var circles = [];
 var lines = [];
-var colors = ['#0084c7', '#00a24a', '#e01e26'];
+var colors = ['#03AFEF', '#00a24a', '#e01e26'];
 var reverse = [false, false, false, true, true];
 
 for (var i = 1; i <= count; i++) 
