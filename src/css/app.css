@@ -700,7 +700,7 @@ html {
   .slide > .info
   {
     height: 33vh;
-    width: 158px;
+    width: 173px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -821,6 +821,29 @@ html {
     font-weight: bold;
     transition: all 0.5s ease-in-out;
   }
+
+  .slide > .info
+  {
+    width: 151px;
+  }
+
+  .slide > .info > .pic
+  {
+    height: 70px;
+    width: 70px;
+  }
+
+  .slide > .info > .description
+  {
+    margin-top: 0;
+  }
+
+  .slide > .info > .description p
+  {
+    font-size: 0.7em;
+  }
+
+
 }
 
 @media (max-width: 800px) and (min-width: 415px) {

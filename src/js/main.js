@@ -272,7 +272,7 @@ function slidedown()
         case 2:
         slides[0].style.transform = "translateY(-140vh)";
         slides[1].style.transform = "translateY(-140vh)";
-        slides[1].style.opacity = "1";
+        slides[1].style.opacity = "0";
         slides[2].style.transform = "translateY(-140vh)";
         slides[2].style.opacity = "1";
         break;
