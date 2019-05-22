@@ -687,14 +687,18 @@ html {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    transition: all 0.5s ease-in;
-    
-    
+    transition: all 0.35s ease-in;
   }
 
   .slide:nth-child(2),.slide:nth-child(3)
   {
     opacity: 0;
+  }
+  .slide:nth-child(2){
+    transform: translateY(-95vh);
+  }
+  .slide:nth-child(3){
+    transform: translateY(-165vh);
   }
 
   .slide > .info
