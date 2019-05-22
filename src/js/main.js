@@ -198,7 +198,7 @@ window.onload = function(){
   function sendRequest(firstName,lastName,college,email,phoneNo){
     var data = $.ajax( {
         type: 'POST',
-        url: `/IntroReg/`,
+        url: '/bits-bosm/registrations/introreg',
         data: {
              "firstName" : firstName,
              "lasname":lastName,
