@@ -1,5 +1,5 @@
 var wraper = document.getElementsByClassName('wrapper')[0];
-var minDistance = 0;
+var minDistance = 50;
 var noNavigation = 4;
 var navigators = document.querySelectorAll(".navigator .navigation");
 var current_page = 1;
@@ -14,7 +14,7 @@ wraper.addEventListener('wheel', scrollY);
 
 function scrollY(e){
     e.preventDefault();
-    if(e.deltaY < -minDistance && current_page > 1&& !play){
+    if(e.deltaY < 0 && current_page > 1&& !play){
         play = true;
         step += 100;
         navigators[current_page-1].style.border = "none";
@@ -23,7 +23,7 @@ function scrollY(e){
         wraper.style.transform = `translateY(${step}vh)`;
         changeNavigator();    
     }
-    else if(e.deltaY > minDistance && current_page < last_page && !play){
+    else if(e.deltaY > 0 && current_page < last_page && !play){
         play = true;
         step -= 100;
         navigators[current_page-1].style.border = "none";
