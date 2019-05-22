@@ -551,7 +551,7 @@ html {
   }
 
   .contact {
-    height: 21vh;
+    height: 17vh;
     width: 174px;
     display: flex;
     flex-direction: column;
@@ -562,8 +562,8 @@ html {
   .contacts-image {
     background-image: url("../images/dvm.png");
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    height: 67px;
+    width: 67px;
     background-position: center;
     background-size: cover;
     border: 2px solid white;
@@ -689,18 +689,18 @@ html {
   }
 
   .contact {
-    height: 20vh;
+    height: 16vh;
     width: 147px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 7px;
   }
 
   .contacts-image {
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     background-position: center;
     background-size: cover;
   }
