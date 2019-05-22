@@ -208,6 +208,7 @@ html {
   z-index: 5;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
   /* border-radius: 7px; */
   /* display: flex; */
   /* justify-content: center;  */
