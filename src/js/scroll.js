@@ -38,7 +38,7 @@ function navigate(x){
     if(!play){
         if(window.innerWidth < 500) {
             count = 1;
-            // navbar();
+            navbar();
         }
         play = true;
         step += (current_page - x) * 100;
@@ -95,6 +95,10 @@ function changeBackground(colorIndex) {
     for(var i = 0;i<4;i++)
     {
         document.getElementsByClassName("inner-links")[i].style.color = color[colorIndex];
+    }
+    for(var i =0;i<3;i++)
+    {
+        document.getElementsByClassName("ham-social")[i].style.color = color[colorIndex];
     }
     if(count == 1) {
         for(var i = 0;i<3;i++)

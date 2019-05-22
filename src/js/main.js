@@ -24,53 +24,52 @@ function updateCountdown() {
 // ------------------------ CONTACT PAGE -------------------------------
 
 const wrapper = document.getElementsByClassName("contact-wrapper")[0];
-const path = "../images";
 
-        contact_names = ['Raihan Riaz','Amol Dalal','Mansi Mittal','Mayank Kulkarni','Megh Thakkar','Megh Thakkar','Megh Thakkar','Megh Thakkar'];
+    contact_names = ['Raihan Riaz','Amol Dalal','Mayank Kulkarni','Mansi Mittal','Divyam Goel','Megh Thakkar','Megh Thakkar','Megh Thakkar', 'Megh Thakkar'];
 
-        contact_posts = ['Online Registrations','Sponsorships','Joint Sports Secretary','Sports Secretary','Online Registrations','Online Registrations','Online Registrations','Online Registrations'];
+    contact_posts = ['Controls','Sponsorships','Sports Secretary','Joint Sports Secretary','Online Registrations','Online Registrations','OnlineRegistrations','Online Registrations','Online Registrations'];
 
-        contact_phone = ['+91-9989401360','+91-7020141770','+91-9602775333','+91-9929855583','99999-99999','99999-99999','99999-99999','99999-99999'];
+    contact_phone = ['+91-9989401360','+91-7020141770','+91-9929855583','+91-9602775333','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999'];
 
-        contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
+    contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
 
-        num = contact_names.length;
+    imgPath = "src/images/contacts/cosaccan-";
+    images = ['controls.png', 'spons.png', 'ss.png', 'jss.png', 'dvm.png', 'dvm.png','dvm.png', 'dvm.png', 'dvm.png'];
+    
+    num = contact_names.length;
 
-    for (let i = 0; i < num; i++) {
-        let contact = document.createElement('div');
-        contact.classList.add("contact");
-        //image
-            let image = document.createElement('div');
-            image.classList.add("contacts-image");
-            // document.getElementsByClassName("contact")[i].firstElementChild.style.backgroundImage = `${path}/spons.png`
-            // image.style.backgroundImage = `${path}/spons.png`;
-        //name
-            let name = document.createElement('div');
-            name.classList.add("contacts-text");
-            name.innerHTML = contact_names[i];
-        //post
-            let post = document.createElement('div');
-            post.classList.add("contacts-text");
-            post.innerHTML = contact_posts[i];
-        //phone
-            let phone = document.createElement('div');
-            phone.classList.add("contacts-text");
-            phone.innerHTML = contact_phone[i];
-        //email
-            let mail = document.createElement('div');
-            mail.classList.add("contacts-text");
-            mail.innerHTML = contact_mail[i];
-
-        // add elements to contact
-        contact.appendChild(image);
-        contact.appendChild(name);
-        contact.appendChild(post); 
-        contact.appendChild(phone);
-        contact.appendChild(mail);
-
-        // append contact to DOM
-        wrapper.appendChild(contact)
-    }
+for (let i = 0; i < num; i++) {
+    let contact = document.createElement('div');
+    contact.classList.add("contact");
+    //image
+        let image = document.createElement('img');
+        image.classList.add("contacts-image");
+        image.src = imgPath + (i+1) + ".png";
+    //name
+        let name = document.createElement('div');
+        name.classList.add("contacts-text");
+        name.innerHTML = contact_names[i];
+    //post
+        let post = document.createElement('div');
+        post.classList.add("contacts-text");
+        post.innerHTML = contact_posts[i];
+    //phone
+        let phone = document.createElement('div');
+        phone.classList.add("contacts-text");
+        phone.innerHTML = contact_phone[i];
+    //email
+        let mail = document.createElement('div');
+        mail.classList.add("contacts-text");
+        mail.innerHTML = contact_mail[i];
+    // add elements to contact
+    contact.appendChild(image);
+    contact.appendChild(name);
+    contact.appendChild(post); 
+    contact.appendChild(phone);
+    contact.appendChild(mail);
+    // append contact to DOM
+    wrapper.appendChild(contact);
+}
 // --------------------------- CONTACTS PAGE END -------------------------------
 
 // -------------------------------back-text flicker animation-----------------------------
@@ -160,8 +159,8 @@ if (!!navigator.userAgent.match(/firefox/i)) {
   }
 
   function getData(){
-      var firstName = document.getElementById("firstName").value;
-      var lastName = document.getElementById("lastName").value;
+      var firstName = document.getElementById("first-name").value;
+      var lastName = document.getElementById("last-name").value;
       var email = document.getElementById("email").value;
       var contactNo = document.getElementById("contact-number").value;
       var collegeName = document.getElementById("college-name").value;
