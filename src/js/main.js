@@ -185,7 +185,7 @@ window.onload = function(){
           return;
       }
       if(!validatePhoneNo(contactNo)){
-        alert("Please enter valid phone number");
+        alert("Please enter valid phoneNo");
         return;
     }
      sendRequest(firstName,lastName,collegeName,email,contactNo);
@@ -217,5 +217,73 @@ window.onload = function(){
     });
 }
 
+// ------------------------ Contact Carousel -------------------------------
+var flag = 0;
+var slides = document.getElementsByClassName("slide");
+function slideup()
+{
+    flag++
+    if(flag==3)
+    {
+        flag = 0;
+    }
+    switch(flag)
+    {
+        case 1:
+        slides[0].style.transform = "translateY(-70vh)";
+        slides[0].style.opacity = "0";
+        slides[1].style.transform = "translateY(-70vh)";
+        slides[1].style.opacity = "1";
+        slides[2].style.transform = "translateY(-70vh)";
+        break;
+        case 2:
+        slides[0].style.transform = "translateY(-140vh)";
+        slides[1].style.transform = "translateY(-140vh)";
+        slides[1].style.opacity = "1";
+        slides[2].style.transform = "translateY(-140vh)";
+        slides[2].style.opacity = "1";
+        break;
+        default:
+        slides[0].style.transform = "translateY(0vh)";
+        slides[0].style.opacity = "1";
+        slides[1].style.transform = "translateY(0vh)";
+        slides[1].style.opacity = "0";
+        slides[2].style.transform = "translateY(0vh)";
+        slides[2].syyle.opacity = "0";   
+    }
+}
+
+function slidedown()
+{
+    flag--
+    if(flag < 0)
+    {
+        flag = 0;
+    }
+    switch(flag)
+    {
+        case 1:
+        slides[0].style.transform = "translateY(-70vh)";
+        slides[0].style.opacity = "0";
+        slides[1].style.transform = "translateY(-70vh)";
+        slides[1].style.opacity = "1";
+        slides[2].style.transform = "translateY(-70vh)";
+        break;
+        case 2:
+        slides[0].style.transform = "translateY(-140vh)";
+        slides[1].style.transform = "translateY(-140vh)";
+        slides[1].style.opacity = "1";
+        slides[2].style.transform = "translateY(-140vh)";
+        slides[2].style.opacity = "1";
+        break;
+        default:
+        slides[0].style.transform = "translateY(0vh)";
+        slides[0].style.opacity = "1";
+        slides[1].style.transform = "translateY(0vh)";
+        slides[1].style.opacity = "0";
+        slides[2].style.transform = "translateY(0vh)";
+        slides[2].syyle.opacity = "0";   
+    }
+}
 
   // ----------------------------------------------------------------------
