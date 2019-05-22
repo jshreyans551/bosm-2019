@@ -27,7 +27,7 @@ const wrapper = document.getElementsByClassName("contact-wrapper")[0];
 
     contact_names = ['Raihan Riaz','Amol Dalal','Mayank Kulkarni','Mansi Mittal','Divyam Goel','Megh Thakkar','Megh Thakkar','Megh Thakkar', 'Megh Thakkar'];
 
-    contact_posts = ['Controls','Sponsorships','Sports Secretary','Joint Sports Secretary','Online Registrations','Online Registrations','OnlineRegistrations','Online Registrations','Online Registrations'];
+    contact_posts = ['Online Registrations','Sponsorships','Sports Secretary','JointSports Secretary','Online Registrations','Online Registrations','OnlineRegistrations','Online Registrations','Online Registrations'];
 
     contact_phone = ['+91-9989401360','+91-7020141770','+91-9929855583','+91-9602775333','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999'];
 
@@ -112,7 +112,7 @@ if (!!navigator.userAgent.match(/firefox/i)) {
   }
 
   
-  window.onload = function(){
+window.onload = function(){
     //    document.getElementsByClassName('loader')[0].style.animation = "fadeOut 1s ease-in-out";
     // //   document.getElementsByClassName('bosm-2019')[0].style.animation = "fadeOut 1s ease-in-out";
     //   setTimeout(() => {
@@ -147,7 +147,7 @@ if (!!navigator.userAgent.match(/firefox/i)) {
         }
     }, 4500);
     updateCountdown();
-  }
+}
 
   function changeopa(i)
   {
@@ -188,34 +188,24 @@ if (!!navigator.userAgent.match(/firefox/i)) {
         alert("Please enter valid phoneNo");
         return;
     }
-      sendRequest(firstName,lastName,collegeName,email,contactNo);
+      console.log(firstName,lastName , email, contactNo , collegeName);
   
 }
   var submitButton = document.getElementsByClassName("button-logo")[0];
   submitButton.addEventListener("click",function(){
     getData();
   });
-  function sendRequest(firstName,lastName,college,email,phoneNo){
-        var data = $.ajax( {
-            type: 'POST',
-            url: `/IntroReg/`,
-            data: {
-                 "firstName" : firstName,
-                 "lasname":lastName,
-                 "college":college,
-                 "email":email,
-                 "phone":phoneNo
-            },
-            success: function(msg,status) { 
-                if(status == "1"){
-                    alert("Successfully Registered");
-                }
-                else{
-                    alert("Not Registered-\n"+msg)
-                }
-            }
-        });
-}
+//   function sendRequest(quesNo,key){
+//         var data = $.ajax( {
+//             type: 'POST',
+//             url: `request link here`,
+//             data: {
+//                  "firstName" :......
+//             },
+//             success: function(data) {   
+//             }
+//         });
+// }
 
 
   // ----------------------------------------------------------------------

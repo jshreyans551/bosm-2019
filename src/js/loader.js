@@ -32,10 +32,10 @@ var delayStep = 0.2;
 animate();
 setInterval(function() {
     var a = document.getElementById("black");
-    a.style.transition="";
+    a.style.animation = "logoFadeOut 0.00001s ease-in forwards";
     a.style.opacity = 0;
     animate();
-  }, 5000);
+  }, 6000);
   
 function animate() 
 {
@@ -68,9 +68,8 @@ function animate()
 		});
     }
     var svg = document.getElementById("black");
-    svg.style.transition = "ease-in 1s";
     setTimeout(() => {
-			svg.style.opacity = 1;
+			svg.style.animation = "logoFadeIn 1s ease-in forwards";
 		}, 3000);
 		// setTimeout(() => {
 		// 	svg.style.transition = "none";

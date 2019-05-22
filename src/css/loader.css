@@ -54,7 +54,7 @@ body
 #black{
     position: absolute;
     transform: translate(-2.8vw,3.5vw);
-    /* transition: opacity ease-in 1s; */
+	/* transition: opacity ease-in 1s; */
     opacity: 0;
 }
 .layer1{
@@ -99,5 +99,23 @@ body
 	#black{
 		transform-origin: 46% 50%;
 		transform: translate(-3.5vw,7vw) scale(2.1);
+	}
+}
+
+
+@keyframes logoFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes logoFadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
