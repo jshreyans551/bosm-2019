@@ -398,17 +398,15 @@ html {
   margin-top: 5px;
 }
 
-.slider
-{
+.slider {
   height: 70vh;
   width: 100%;
   display: inline;
   /* border: 1px solid black; */
   /* background-color: white; */
-  overflow: hidden; 
+  overflow: hidden;
 }
-.slider > .slide
-{
+.slider > .slide {
   height: 100%;
   width: 100%;
   display: flex;
@@ -418,19 +416,18 @@ html {
   transition: all 0.35s ease-in;
 }
 
-.slide:nth-child(2),.slide:nth-child(3)
-{
+.slide:nth-child(2),
+.slide:nth-child(3) {
   opacity: 0;
 }
-.slide:nth-child(2){
+.slide:nth-child(2) {
   transform: translateY(-95vh);
 }
-.slide:nth-child(3){
+.slide:nth-child(3) {
   transform: translateY(-165vh);
 }
 
-.slide > .info
-{
+.slide > .info {
   height: 40vh;
   width: 190px;
   display: flex;
@@ -441,20 +438,18 @@ html {
   /* background-color: black; */
 }
 
-.info > .pic
-{
-  height: 120px;
-  width: 120px;
+.info > .pic {
+  height: 190px;
+  width: 190px;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 2px solid white;
   /* background-image: url("cosaccan-5.png.png");     */
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 
-.info > .description
-{
+.info > .description {
   height: 100px;
   width: 100%;
   /* border: 1px solid white; */
@@ -465,16 +460,12 @@ html {
   flex-flow: column;
 }
 
-.info > .description  p
-{
+.info > .description p {
   margin: 0;
   font-size: 1.2em;
 }
 
-
-
-.slider-arrows
-{
+.slider-arrows {
   height: 50px;
   width: 100px;
   border: 1px solid white;
@@ -483,23 +474,21 @@ html {
   align-items: center;
   background-color: white;
   border-radius: 30px;
-  
 }
 
-.contact-us
-{
+.contact-us {
   flex-flow: column;
 }
 
-.slider-arrows a
-{
-  color: #272C52;
+.slider-arrows a {
+  color: #272c52;
   font-size: 1.5em;
 }
 
 .bosm-des,
 .arrow,
-.hamburger,.contact-wrapper{
+.hamburger,
+.contact-wrapper {
   display: none;
 }
 
@@ -674,7 +663,7 @@ html {
   }
 
   .contact-wrapper {
-   display: none;
+    display: none;
   }
 
   .hamburger {
@@ -744,7 +733,7 @@ html {
   .hamburger > .ham-links a {
     text-decoration: none;
     color: #3175ff;
-    font-family: 'BigNoodleTitling';
+    font-family: "BigNoodleTitling";
     font-size: 2em;
     letter-spacing: 3px;
     /* font-weight: bold; */
@@ -769,17 +758,15 @@ html {
     fill: black;
   }
 
-  .slider
-  {
+  .slider {
     height: 70vh;
     width: 100%;
     display: inline;
     /* border: 1px solid black; */
     /* background-color: white; */
-    overflow: hidden; 
+    overflow: hidden;
   }
-  .slider > .slide
-  {
+  .slider > .slide {
     height: 100%;
     width: 100%;
     display: flex;
@@ -789,19 +776,18 @@ html {
     transition: all 0.35s ease-in;
   }
 
-  .slide:nth-child(2),.slide:nth-child(3)
-  {
+  .slide:nth-child(2),
+  .slide:nth-child(3) {
     opacity: 0;
   }
-  .slide:nth-child(2){
+  .slide:nth-child(2) {
     transform: translateY(-95vh);
   }
-  .slide:nth-child(3){
+  .slide:nth-child(3) {
     transform: translateY(-165vh);
   }
 
-  .slide > .info
-  {
+  .slide > .info {
     height: 33vh;
     width: 173px;
     display: flex;
@@ -812,8 +798,7 @@ html {
     /* background-color: black; */
   }
 
-  .info > .pic
-  {
+  .info > .pic {
     height: 90px;
     width: 90px;
     border-radius: 50%;
@@ -821,11 +806,10 @@ html {
     /* background-image: url("cosaccan-5.png.png");     */
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
   }
-  
-  .info > .description
-  {
+
+  .info > .description {
     height: 100px;
     width: 90%;
     /* border: 1px solid white; */
@@ -836,34 +820,23 @@ html {
     flex-flow: column;
   }
 
-  .info > .description  p
-  {
+  .info > .description p {
     margin: 0;
     font-size: 1em;
   }
 
-  .contact-us
-  {
+  .contact-us {
     flex-flow: column;
   }
 
-  
-
-  .slider-arrows
-  {
+  .slider-arrows {
     height: 50px;
     width: 100px;
     border: 1px solid white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
   }
-
-
-
-
-
 }
 
 @media (max-width: 370px) {
@@ -927,46 +900,37 @@ html {
     transition: all 0.5s ease-in-out;
   }
 
-  .slider
-  {
+  .slider {
     margin-top: 6vh;
   }
 
-  .slide > .info
-  {
+  .slide > .info {
     width: 151px;
     height: 30vh;
   }
 
-  .slide > .info > .pic
-  {
+  .slide > .info > .pic {
     height: 65px;
     width: 65px;
   }
 
-  .slide > .info > .description
-  {
+  .slide > .info > .description {
     margin-top: 0;
     height: 75px;
   }
 
-  .slide > .info > .description p
-  {
+  .slide > .info > .description p {
     font-size: 0.7em;
   }
- 
-  .slider-arrows
-  {
-   height: 40px;
-   width: 80px;
+
+  .slider-arrows {
+    height: 40px;
+    width: 80px;
   }
 
-  .slider-arrows a
-  {
+  .slider-arrows a {
     font-size: 1.1em;
   }
-
-
 }
 
 @media (max-width: 800px) and (min-width: 415px) {
