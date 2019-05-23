@@ -398,9 +398,108 @@ html {
   margin-top: 5px;
 }
 
+.slider
+{
+  height: 70vh;
+  width: 100%;
+  display: inline;
+  /* border: 1px solid black; */
+  /* background-color: white; */
+  overflow: hidden; 
+}
+.slider > .slide
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.35s ease-in;
+}
+
+.slide:nth-child(2),.slide:nth-child(3)
+{
+  opacity: 0;
+}
+.slide:nth-child(2){
+  transform: translateY(-95vh);
+}
+.slide:nth-child(3){
+  transform: translateY(-165vh);
+}
+
+.slide > .info
+{
+  height: 40vh;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  /* border: 1px solid black; */
+  /* background-color: black; */
+}
+
+.info > .pic
+{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 5px solid white;
+  /* background-image: url("cosaccan-5.png.png");     */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+.info > .description
+{
+  height: 100px;
+  width: 100%;
+  /* border: 1px solid white; */
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.info > .description  p
+{
+  margin: 0;
+  font-size: 1.2em;
+}
+
+
+
+.slider-arrows
+{
+  height: 50px;
+  width: 100px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  
+}
+
+.contact-us
+{
+  flex-flow: column;
+}
+
+.slider-arrows a
+{
+  color: #272C52;
+  font-size: 1.5em;
+}
+
 .bosm-des,
 .arrow,
-.hamburger,.slider,.slider-arrows{
+.hamburger,.contact-wrapper{
   display: none;
 }
 
@@ -684,7 +783,7 @@ html {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     transition: all 0.35s ease-in;
@@ -719,7 +818,7 @@ html {
     width: 90px;
     border-radius: 50%;
     border: 5px solid white;
-    background-image: url("/src/images/contacts/cosaccan-5.png");    
+    /* background-image: url("cosaccan-5.png.png");     */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 
@@ -760,6 +859,8 @@ html {
     align-items: center;
     
   }
+
+
 
 
 
@@ -826,25 +927,43 @@ html {
     transition: all 0.5s ease-in-out;
   }
 
+  .slider
+  {
+    margin-top: 6vh;
+  }
+
   .slide > .info
   {
     width: 151px;
+    height: 30vh;
   }
 
   .slide > .info > .pic
   {
-    height: 70px;
-    width: 70px;
+    height: 65px;
+    width: 65px;
   }
 
   .slide > .info > .description
   {
     margin-top: 0;
+    height: 75px;
   }
 
   .slide > .info > .description p
   {
     font-size: 0.7em;
+  }
+ 
+  .slider-arrows
+  {
+   height: 40px;
+   width: 80px;
+  }
+
+  .slider-arrows a
+  {
+    font-size: 1.1em;
   }
 
 
