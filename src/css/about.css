@@ -42,6 +42,7 @@
     letter-spacing: 3px;
     margin-bottom: 0;
     margin-bottom: 2vh;
+    font-weight: 100;
 }
 .about p{
     width: 40vw;
@@ -88,7 +89,7 @@
     }
 
     .about h1 
-    {
+    {   
         font-size: 40px;
         margin-bottom: -3vh;
     }

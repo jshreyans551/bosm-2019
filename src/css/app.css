@@ -719,7 +719,7 @@ html {
     width: 90px;
     border-radius: 50%;
     border: 5px solid white;
-    background-image: url("cosaccan-5.png.png");    
+    background-image: url("/src/images/contacts/cosaccan-5.png");    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 

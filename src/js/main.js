@@ -229,31 +229,59 @@ function slideup()
     }
     switch(flag)
     {
+        // case 1:
+        // slides[0].style.transform = "translateY(-25vh)";
+        // slides[0].style.opacity = "0";
+        // slides[0].style.transition = "all 0.35s ease-in";
+        // slides[1].style.transform = "translateY(-70vh)";
+        // slides[1].style.opacity = "1";
+        // slides[1].style.transition = "all 0.25s ease-in";
+        // slides[2].style.transform = "translateY(-165vh)";
+        // break;
+        // case 2:
+        // slides[0].style.transform = "translateY(-25vh)";
+        // slides[1].style.transform = "translateY(-95vh)";
+        // slides[1].style.opacity = "0";
+        // slides[1].style.transition = "all 0.35s ease-in";
+        // slides[2].style.transform = "translateY(-140vh)";
+        // slides[2].style.transition = "all 0.25s ease-in";
+        // slides[2].style.opacity = "1";
+        // break;
+        // default:
+        // slides[0].style.transform = "translateY(0vh)";
+        // slides[0].style.opacity = "1";
+        // slides[0].style.transition = "all 0.25s ease-in";
+        // slides[1].style.transform = "translateY(-95vh)";
+        // slides[1].style.opacity = "0";
+        // slides[2].style.transform = "translateY(-165vh)";
+        // slides[2].style.transition = "all 0.35s ease-in";
+        // slides[2].style.opacity = "0";   
+
         case 1:
-        slides[0].style.transform = "translateY(-25vh)";
+        slides[0].style.transform = "translateY(-10vh)";
         slides[0].style.opacity = "0";
         slides[0].style.transition = "all 0.35s ease-in";
         slides[1].style.transform = "translateY(-70vh)";
         slides[1].style.opacity = "1";
-        slides[1].style.transition = "all 0.25s ease-in";
-        slides[2].style.transform = "translateY(-165vh)";
+        slides[1].style.transition = "all 0.25s cubic-bezier(0, 0.76, 0.61, 0.62)";
+        slides[2].style.transform = "translateY(-150vh)";
         break;
         case 2:
-        slides[0].style.transform = "translateY(-25vh)";
-        slides[1].style.transform = "translateY(-95vh)";
+        slides[0].style.transform = "translateY(-10vh)";
+        slides[1].style.transform = "translateY(-80vh)";
         slides[1].style.opacity = "0";
         slides[1].style.transition = "all 0.35s ease-in";
         slides[2].style.transform = "translateY(-140vh)";
-        slides[2].style.transition = "all 0.25s ease-in";
+        slides[2].style.transition = "all 0.25s cubic-bezier(0, 0.76, 0.61, 0.62)";
         slides[2].style.opacity = "1";
         break;
         default:
         slides[0].style.transform = "translateY(0vh)";
         slides[0].style.opacity = "1";
-        slides[0].style.transition = "all 0.25s ease-in";
-        slides[1].style.transform = "translateY(-95vh)";
+        slides[0].style.transition = "all 0.25s cubic-bezier(0, 0.76, 0.61, 0.62)";
+        slides[1].style.transform = "translateY(-80vh)";
         slides[1].style.opacity = "0";
-        slides[2].style.transform = "translateY(-165vh)";
+        slides[2].style.transform = "translateY(-150vh)";
         slides[2].style.transition = "all 0.35s ease-in";
         slides[2].style.opacity = "0";   
     }
