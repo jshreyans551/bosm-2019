@@ -315,7 +315,7 @@ function slidedown()
 }
 
 var url = 'src/images/contacts/';
-var profpic = ["cosaccan-1.png","cosaccan-2.png","cosaccan-3.png","cosaccan-4.png","cosaccan-5.png","cosaccan-6.png","cosaccan-7.png","cosaccan-5.png","cosaccan-5.png"]
+var profpic = ["cosaccan-1.png","cosaccan-2.png","cosaccan-3.png","cosaccan-4.png","cosaccan-5.jpg","cosaccan-6.png","cosaccan-7.jpg","cosaccan-5.png","cosaccan-5.png"]
 var pic = document.getElementsByClassName("pic");
 console.log(pic);
 for(var i =0;i<9;i++)

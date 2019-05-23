@@ -429,7 +429,7 @@ html {
 
 .slide > .info {
   height: 40vh;
-  width: 190px;
+  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -439,14 +439,15 @@ html {
 }
 
 .info > .pic {
-  height: 190px;
-  width: 190px;
+  height: 230px;
+  width: 230px;
   border-radius: 50%;
   border: 2px solid white;
   /* background-image: url("cosaccan-5.png.png");     */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 10px;
 }
 
 .info > .description {
@@ -458,11 +459,13 @@ html {
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  font-size: 1.2em;
 }
 
 .info > .description p {
   margin: 0;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
+  margin-bottom: 5px;
 }
 
 .slider-arrows {
