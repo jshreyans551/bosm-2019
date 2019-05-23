@@ -228,6 +228,8 @@ function slideup()
         flag = 0;
     }
     window.removeEventListener("keydown",keyMove);
+    contact.removeEventListener("touchstart", startTouch, false);
+    contact.removeEventListener("touchmove", moveTouch, false);
     switch(flag)
     {
         case 1:
@@ -258,7 +260,11 @@ function slideup()
         slides[2].style.transition = "all 0.35s ease-in";
         slides[2].style.opacity = "0";   
     }
-    setTimeout(()=>{window.addEventListener("keydown",keyMove)},350);
+    setTimeout(()=>{
+        window.addEventListener("keydown",keyMove)
+        contact.addEventListener("touchstart", startTouch, false);
+        contact.addEventListener("touchmove", moveTouch, false);
+    },350);
 }
 
 function slidedown()
@@ -269,6 +275,8 @@ function slidedown()
         flag = 2;
     }
     window.removeEventListener("keydown",keyMove);
+    contact.removeEventListener("touchstart", startTouch, false);
+    contact.removeEventListener("touchmove", moveTouch, false);
     switch(flag)
     {
         case 1:
@@ -298,7 +306,12 @@ function slidedown()
         slides[2].style.transform = "translateY(-165vh)";
         slides[1].style.transition = "all 0.35s ease-in";
     }
-    setTimeout(()=>{window.addEventListener("keydown",keyMove)},350);
+    setTimeout(()=>{
+        window.addEventListener("keydown",keyMove)
+        contact.addEventListener("touchstart", startTouch, false);
+        contact.addEventListener("touchmove", moveTouch, false);
+    },350);
+        
 }
 
 var url = 'src/images/contacts/';
@@ -317,7 +330,46 @@ function keyMove(){
         slidedown();
     }
 }
+var initialX = null;
+var initialY = null;
+ 
+function startTouch(e) {
+  initialX = e.touches[0].clientX;
+  initialY = e.touches[0].clientY;
+};
+ 
+function moveTouch(e) {
+  if (initialX === null) {
+    return;
+  }
+ 
+  if (initialY === null) {
+    return;
+  }
+ 
+  var currentX = e.touches[0].clientX;
+  var currentY = e.touches[0].clientY;
+ 
+  var diffX = initialX - currentX;
+  var diffY = initialY - currentY;
+ 
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    // sliding horizontally
+    if (diffX > 0) {
+      // swiped left
+      slideup();
+    } else {
+      // swiped right
+      slidedown();
+    }  
+  } 
+  initialX = null;
+  initialY = null;
+   
+  e.preventDefault();
+};
+window.addEventListener("keydown",keyMove);
 var contact = document.getElementsByClassName("contact-us")[0];
-contact.addEventListener("keydown",keyMove);
-contact.onkeydown = keyMove();
+contact.addEventListener("touchstart", startTouch, false);
+contact.addEventListener("touchmove", moveTouch, false);
   // ----------------------------------------------------------------------
