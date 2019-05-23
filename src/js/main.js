@@ -323,6 +323,8 @@ for(var i =0;i<9;i++)
     pic[i].style.backgroundImage = "url(" + url + profpic[i] + ")";
 
 }
+document.getElementsByClassName("logo")[0].style.backgroundImage = "url('src/images/White_mandark-min.png')" ;
+
 function keyMove(){
     if (window.event.key == "s" || window.event.key == "a" || window.event.key == "ArrowDown" || window.event.key == "ArrowLeft"){
        slideup();
