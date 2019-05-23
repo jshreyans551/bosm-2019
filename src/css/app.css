@@ -428,7 +428,7 @@ html {
 }
 
 .slide > .info {
-  height: 40vh;
+  height: 45vh;
   width: 250px;
   display: flex;
   justify-content: center;
@@ -439,8 +439,8 @@ html {
 }
 
 .info > .pic {
-  height: 230px;
-  width: 230px;
+  height: 210px;
+  width: 210px;
   border-radius: 50%;
   border: 2px solid white;
   /* background-image: url("cosaccan-5.png.png");     */
