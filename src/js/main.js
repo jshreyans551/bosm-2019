@@ -37,7 +37,7 @@ function updateCountdown() {
 //     images = ['controls.png', 'spons.png', 'ss.png', 'jss.png', 'dvm.png', 'dvm.png','dvm.png', 'dvm.png', 'dvm.png'];
     
 //     num = contact_names.length;
-
+    
 // for (let i = 0; i < num; i++) {
 //     let contact = document.createElement('div');
 //     contact.classList.add("contact");

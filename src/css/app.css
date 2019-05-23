@@ -495,6 +495,15 @@ html {
   display: none;
 }
 
+.up-slide:hover{
+  cursor: pointer;
+}
+
+.down-slide:hover {
+  cursor: pointer;
+}
+
+
 /* ---------------------------------mobile view-------------------------------------- */
 
 @media (max-width: 500px) {
