@@ -1,3 +1,4 @@
+console.log("MADE WITH LOVE FROM DVM");
 let player = document.getElementById("player");
 
 if (window.innerWidth >= 500) {
