@@ -12,7 +12,7 @@ if (window.innerWidth >= 500) {
 // -------------------------- DAYS COUNTDOWN -------------------------------
 
 function updateCountdown() {
-    const final_date = new Date("Sep 24, 2019 23:59:59").getTime();
+    const final_date = new Date("Sep 13, 2019 23:59:59").getTime();
     let now = new Date().getTime();
     let distance = final_date - now;
 
