@@ -222,11 +222,12 @@ var flag = 0;
 var slides = document.getElementsByClassName("slide");
 function slideup()
 {
-    flag++
+    flag++;
     if(flag==3)
     {
         flag = 0;
     }
+    window.removeEventListener("keydown",keyMove);
     switch(flag)
     {
         case 1:
@@ -257,15 +258,17 @@ function slideup()
         slides[2].style.transition = "all 0.35s ease-in";
         slides[2].style.opacity = "0";   
     }
+    setTimeout(()=>{window.addEventListener("keydown",keyMove)},350);
 }
 
 function slidedown()
 {
-    flag--
+    flag--;
     if(flag < 0)
     {
         flag = 2;
     }
+    window.removeEventListener("keydown",keyMove);
     switch(flag)
     {
         case 1:
@@ -295,6 +298,7 @@ function slidedown()
         slides[2].style.transform = "translateY(-165vh)";
         slides[1].style.transition = "all 0.35s ease-in";
     }
+    setTimeout(()=>{window.addEventListener("keydown",keyMove)},350);
 }
 
 var url = 'src/images/contacts/';
@@ -306,4 +310,14 @@ for(var i =0;i<9;i++)
     pic[i].style.backgroundImage = "url(" + url + profpic[i] + ")";
 
 }
+function keyMove(){
+    if (window.event.key == "s" || window.event.key == "a" || window.event.key == "ArrowDown" || window.event.key == "ArrowLeft"){
+       slideup();
+    } else if(window.event.key == " " || window.event.key == "w" || window.event.key == "d" || window.event.key == "ArrowUp" || window.event.key == "ArrowRight"){
+        slidedown();
+    }
+}
+var contact = document.getElementsByClassName("contact-us")[0];
+contact.addEventListener("keydown",keyMove);
+contact.onkeydown = keyMove();
   // ----------------------------------------------------------------------
