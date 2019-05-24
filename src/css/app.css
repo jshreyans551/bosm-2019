@@ -428,7 +428,7 @@ html {
 }
 
 .slide > .info {
-  height: 45vh;
+  height: 55vh;
   width: 300px;
   display: flex;
   justify-content: center;

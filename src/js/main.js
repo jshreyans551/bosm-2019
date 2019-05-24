@@ -277,8 +277,8 @@ var profpic = [
   "recnacc.jpg",
   "pcr.png",
   "ss.png",
-  "jss.png",
-  "dvm.jpg",
+  "jss1.png",
+  "jss2.png",
   "dvm.jpg",
   "dvm.jpg"
 ];
