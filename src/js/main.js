@@ -2,7 +2,7 @@
 // --------
 
 console.log("%cMade with LOVE :)", "color: red; font-size: x-large");
-console.log("%c               - By DVM", "color: blue; font-size: x-large");
+console.log("%c               - By DVM", "color: green; font-size: x-large");
 
 // --------
 // --------
