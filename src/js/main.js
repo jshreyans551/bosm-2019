@@ -1,77 +1,34 @@
-console.log("MADE WITH LOVE FROM DVM");
+// --------
+// --------
+
+console.log("%cMade with LOVE :)", "color: red; font-size: x-large");
+console.log("%c               - By DVM", "color: blue; font-size: x-large");
+
+// --------
+// --------
+
 let player = document.getElementById("player");
 
 if (window.innerWidth >= 500) {
-    document.onmousemove = function(event) {
-        let x = 50 + (event.clientX * 100 / window.innerHeight)/100 + "%"
-        let y = 50 + (event.clientY * 100 / window.innerHeight)/100 + "%"
-        player.style.transform = "translate(-"+x+",-"+y+")";
-    }
+  document.onmousemove = function(event) {
+    let x = 50 + (event.clientX * 100) / window.innerHeight / 100 + "%";
+    let y = 50 + (event.clientY * 100) / window.innerHeight / 100 + "%";
+    player.style.transform = "translate(-" + x + ",-" + y + ")";
+  };
 }
 
 // -------------------------- DAYS COUNTDOWN -------------------------------
 
 function updateCountdown() {
-    const final_date = new Date("Sep 13, 2019 23:59:59").getTime();
-    let now = new Date().getTime();
-    let distance = final_date - now;
+  const final_date = new Date("Sep 12, 2019 23:59:59").getTime();
+  let now = new Date().getTime();
+  let distance = final_date - now;
 
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    // let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  // let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-    document.getElementById("daysLeft").innerHTML = days + " Days" + " Left";
+  document.getElementById("daysLeft").innerHTML = days + " Days" + " Left";
 }
-
-// ------------------------ CONTACT PAGE -------------------------------
-
-// const wrapper = document.getElementsByClassName("contact-wrapper")[0];
-
-//     contact_names = ['Raihan Riaz','Amol Dalal','Mayank Kulkarni','Mansi Mittal','Divyam Goel','Megh Thakkar','Megh Thakkar','Megh Thakkar', 'Megh Thakkar'];
-
-//     contact_posts = ['Online Registrations','Sponsorships','Sports Secretary','JointSports Secretary','Online Registrations','Online Registrations','OnlineRegistrations','Online Registrations','Online Registrations'];
-
-//     contact_phone = ['+91-9989401360','+91-7020141770','+91-9929855583','+91-9602775333','99999-99999','99999-99999','99999-99999','99999-99999','99999-99999'];
-
-//     contact_mail = ['webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com','webmaster@gmail.com'];
-
-//     imgPath = "src/images/contacts/cosaccan-";
-//     images = ['controls.png', 'spons.png', 'ss.png', 'jss.png', 'dvm.png', 'dvm.png','dvm.png', 'dvm.png', 'dvm.png'];
-    
-//     num = contact_names.length;
-    
-// for (let i = 0; i < num; i++) {
-//     let contact = document.createElement('div');
-//     contact.classList.add("contact");
-//     //image
-//         let image = document.createElement('img');
-//         image.classList.add("contacts-image");
-//         image.src = imgPath + (i+1) + ".png";
-//     //name
-//         let name = document.createElement('div');
-//         name.classList.add("contacts-text");
-//         name.innerHTML = contact_names[i];
-//     //post
-//         let post = document.createElement('div');
-//         post.classList.add("contacts-text");
-//         post.innerHTML = contact_posts[i];
-//     //phone
-//         let phone = document.createElement('div');
-//         phone.classList.add("contacts-text");
-//         phone.innerHTML = contact_phone[i];
-//     //email
-//         let mail = document.createElement('div');
-//         mail.classList.add("contacts-text");
-//         mail.innerHTML = contact_mail[i];
-//     // add elements to contact
-//     contact.appendChild(image);
-//     contact.appendChild(name);
-//     contact.appendChild(post); 
-//     contact.appendChild(phone);
-//     contact.appendChild(mail);
-//     // append contact to DOM
-//     wrapper.appendChild(contact);
-// }
-// --------------------------- CONTACTS PAGE END -------------------------------
 
 // -------------------------------back-text flicker animation-----------------------------
 
@@ -80,282 +37,300 @@ setInterval(flickerAnimate, 5000);
 let flickerIndex = 0;
 
 function flickerAnimate() {
-    let backText = document.querySelector(".back-text");
-    if(flickerIndex < 2)
-        flickerIndex++;
-    else
-        flickerIndex = 0;
+  let backText = document.querySelector(".back-text");
+  if (flickerIndex < 2) flickerIndex++;
+  else flickerIndex = 0;
 
-    backText.style.animation = "flicker 0.75s ease 3 forwards";
-    let flickerData = ['./src/images/GRIT.png', './src/images/GUTS.png', './src/images/GLORY.png'];
+  backText.style.animation = "flicker 0.75s ease 3 forwards";
+  let flickerData = [
+    "./src/images/GRIT.png",
+    "./src/images/GUTS.png",
+    "./src/images/GLORY.png"
+  ];
 
-    setTimeout(function() {
-        backText.src = flickerData[flickerIndex];
-        backText.style.animation = "none";
-    }, 1875);
+  setTimeout(function() {
+    backText.src = flickerData[flickerIndex];
+    backText.style.animation = "none";
+  }, 1875);
 }
 
 // -------------------------------nav-bar-----------------------------
 
-
-
 // Change margin if browser is Firefox
 
 if (!!navigator.userAgent.match(/firefox/i)) {
-    for(var i = 0; i < document.querySelectorAll(".one").length; i++ )
-        document.querySelectorAll(".one")[i].classList.add("ff");
-    for(var i = 0; i < document.querySelectorAll(".two").length; i++ )
-        document.querySelectorAll(".two")[i].classList.add("ff");
-    for(var i = 0; i < document.querySelectorAll(".one").length; i++ )
-        document.querySelectorAll(".three")[i].classList.add("ff");
-    for(var i = 0; i < document.querySelectorAll(".one").length; i++ )
-        document.querySelectorAll(".four")[i].classList.add("ff");
-  }
-
-  
-window.onload = function(){
-    //    document.getElementsByClassName('loader')[0].style.animation = "fadeOut 1s ease-in-out";
-    // //   document.getElementsByClassName('bosm-2019')[0].style.animation = "fadeOut 1s ease-in-out";
-    //   setTimeout(() => {
-    //    document.getElementsByClassName('loader')[0].style.display = "none";
-    // //   document.getElementsByClassName('bosm-2019')[0].style.display = "none";
-    //   document.getElementsByClassName('loaderlogo')[0].style.animation = "fadeIn 1s ease-in";
-    //   }, 800);
-    //   setTimeout(() => {
-    //      document.getElementsByClassName('loader_wraper')[0].style.animation = "fadeOut 1s ease-in";
-    // }, 1000);
-
-    let loader = document.getElementsByClassName('loader')[0];
-    let loaderWraper = document.getElementsByClassName('loader_wraper')[0];
-
-    loader.style.animation = "fadeOut 1s ease-in-out";
-      setTimeout(() => {
-       loader.style.display = "none";
-      }, 4500);
-      setTimeout(() => {
-         loaderWraper.style.animation = "fadeOut 1s ease-in";
-    }, 4500);
-    
-    setTimeout(() => {
-        document.getElementsByClassName('nav-bar')[0].style.display = "flex";
-        document.getElementsByClassName('sidebar')[0].style.display = "flex";
-        if(window.innerWidth > 500)
-        document.getElementsByClassName('navigator')[0].style.display = "flex";
-        // document.getElementsByClassName('loader_wraper')[0].style.display = "none";
-        if(window.innerWidth < 500)
-        {
-            document.getElementsByClassName('navigator')[0].style.display = "none";
-        }
-    }, 4500);
-    updateCountdown();
+  for (var i = 0; i < document.querySelectorAll(".one").length; i++)
+    document.querySelectorAll(".one")[i].classList.add("ff");
+  for (var i = 0; i < document.querySelectorAll(".two").length; i++)
+    document.querySelectorAll(".two")[i].classList.add("ff");
+  for (var i = 0; i < document.querySelectorAll(".one").length; i++)
+    document.querySelectorAll(".three")[i].classList.add("ff");
+  for (var i = 0; i < document.querySelectorAll(".one").length; i++)
+    document.querySelectorAll(".four")[i].classList.add("ff");
 }
 
-  function changeopa(i)
-  {
-      document.getElementsByClassName("hover-link")[i].style.opacity = "0.4";
-  }
+window.onload = function() {
+  //    document.getElementsByClassName('loader')[0].style.animation = "fadeOut 1s ease-in-out";
+  // //   document.getElementsByClassName('bosm-2019')[0].style.animation = "fadeOut 1s ease-in-out";
+  //   setTimeout(() => {
+  //    document.getElementsByClassName('loader')[0].style.display = "none";
+  // //   document.getElementsByClassName('bosm-2019')[0].style.display = "none";
+  //   document.getElementsByClassName('loaderlogo')[0].style.animation = "fadeIn 1s ease-in";
+  //   }, 800);
+  //   setTimeout(() => {
+  //      document.getElementsByClassName('loader_wraper')[0].style.animation = "fadeOut 1s ease-in";
+  // }, 1000);
 
-  function decopa(i)
-  {
-    document.getElementsByClassName("hover-link")[i].style.opacity = "0";
-  }
+  let loader = document.getElementsByClassName("loader")[0];
+  let loaderWraper = document.getElementsByClassName("loader_wraper")[0];
 
-  // ------------------------ REGISTER PAGE -------------------------------
+  loader.style.animation = "fadeOut 1s ease-in-out";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 4500);
+  setTimeout(() => {
+    loaderWraper.style.animation = "fadeOut 1s ease-in";
+  }, 4500);
 
-  function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  }
-  function validatePhoneNo(phone){
-    var phoneNum = phone.replace(/[^\d]/g, '');
-    if(phoneNum.length > 6 && phoneNum.length < 11) {  return true;  }else{return false;}
-  }
-
-  function getData(){
-      var firstName = document.getElementById("first-name").value;
-      var lastName = document.getElementById("last-name").value;
-      var email = document.getElementById("email").value;
-      var contactNo = document.getElementById("contact-number").value;
-      var collegeName = document.getElementById("college-name").value;
-      if(firstName == "" || lastName == "" || email == "" || contactNo == "" || collegeName == ""){
-        alert("Please fill all mentioned fields");
-        return;
-      }
-      if(!validateEmail(email)){
-          alert("Please enter valid email address");
-          return;
-      }
-      if(!validatePhoneNo(contactNo)){
-        alert("Please enter valid phoneNo");
-        return;
+  setTimeout(() => {
+    document.getElementsByClassName("nav-bar")[0].style.display = "flex";
+    document.getElementsByClassName("sidebar")[0].style.display = "flex";
+    if (window.innerWidth > 500)
+      document.getElementsByClassName("navigator")[0].style.display = "flex";
+    // document.getElementsByClassName('loader_wraper')[0].style.display = "none";
+    if (window.innerWidth < 500) {
+      document.getElementsByClassName("navigator")[0].style.display = "none";
     }
-     sendRequest(firstName,lastName,collegeName,email,contactNo);
-  
+  }, 4500);
+  updateCountdown();
+};
+
+function changeopa(i) {
+  document.getElementsByClassName("hover-link")[i].style.opacity = "0.4";
 }
-  var submitButton = document.getElementsByClassName("button-logo")[0];
-  submitButton.addEventListener("click",function(){
-    getData();
+
+function decopa(i) {
+  document.getElementsByClassName("hover-link")[i].style.opacity = "0";
+}
+
+// ------------------------ REGISTER PAGE -------------------------------
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+function validatePhoneNo(phone) {
+  var phoneNum = phone.replace(/[^\d]/g, "");
+  if (phoneNum.length > 6 && phoneNum.length < 11) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function getData() {
+  var firstName = document.getElementById("first-name").value;
+  var lastName = document.getElementById("last-name").value;
+  var email = document.getElementById("email").value;
+  var contactNo = document.getElementById("contact-number").value;
+  var collegeName = document.getElementById("college-name").value;
+  if (
+    firstName == "" ||
+    lastName == "" ||
+    email == "" ||
+    contactNo == "" ||
+    collegeName == ""
+  ) {
+    alert("Please fill all mentioned fields");
+    return;
+  }
+  if (!validateEmail(email)) {
+    alert("Please enter valid email address");
+    return;
+  }
+  if (!validatePhoneNo(contactNo)) {
+    alert("Please enter valid phoneNo");
+    return;
+  }
+  sendRequest(firstName, lastName, collegeName, email, contactNo);
+}
+var submitButton = document.getElementsByClassName("button-logo")[0];
+submitButton.addEventListener("click", function() {
+  getData();
+});
+function sendRequest(firstName, lastName, college, email, phoneNo) {
+  var data = $.ajax({
+    type: "POST",
+    url: "/bits-bosm/registrations/introreg",
+    data: {
+      firstName: firstName,
+      lasname: lastName,
+      college: college,
+      email: email,
+      phone: phoneNo
+    },
+    success: function(msg, status) {
+      if (status == "1") {
+        alert("Successfully Registered");
+      } else {
+        alert("Not Registered-\n" + msg);
+      }
+    }
   });
-  function sendRequest(firstName,lastName,college,email,phoneNo){
-    var data = $.ajax( {
-        type: 'POST',
-        url: '/bits-bosm/registrations/introreg',
-        data: {
-             "firstName" : firstName,
-             "lasname":lastName,
-             "college":college,
-             "email":email,
-             "phone":phoneNo
-        },
-        success: function(msg,status) { 
-            if(status == "1"){
-                alert("Successfully Registered");
-            }
-            else{
-                alert("Not Registered-\n"+msg)
-            }
-        }
-    });
 }
 
 // ------------------------ Contact Carousel -------------------------------
 var flag = 0;
 var slides = document.getElementsByClassName("slide");
-function slideup()
-{
-    flag++;
-    if(flag==3)
-    {
-        flag = 0;
-    }
-    window.removeEventListener("keydown",keyMove);
-    contact.removeEventListener("touchstart", startTouch, false);
-    contact.removeEventListener("touchmove", moveTouch, false);
-    switch(flag)
-    {
-        case 1:
-        slides[0].style.transform = "translateY(-25vh)";
-        slides[0].style.opacity = "0";
-        slides[0].style.transition = "all 0.35s ease-in";
-        slides[1].style.transform = "translateY(-70vh)";
-        slides[1].style.opacity = "1";
-        slides[1].style.transition = "all 0.25s ease-in";
-        slides[2].style.transform = "translateY(-165vh)";
-        break;
-        case 2:
-        slides[0].style.transform = "translateY(-25vh)";
-        slides[1].style.transform = "translateY(-95vh)";
-        slides[1].style.opacity = "0";
-        slides[1].style.transition = "all 0.35s ease-in";
-        slides[2].style.transform = "translateY(-140vh)";
-        slides[2].style.transition = "all 0.25s ease-in";
-        slides[2].style.opacity = "1";
-        break;
-        default:
-        slides[0].style.transform = "translateY(0vh)";
-        slides[0].style.opacity = "1";
-        slides[0].style.transition = "all 0.25s ease-in";
-        slides[1].style.transform = "translateY(-95vh)";
-        slides[1].style.opacity = "0";
-        slides[2].style.transform = "translateY(-165vh)";
-        slides[2].style.transition = "all 0.35s ease-in";
-        slides[2].style.opacity = "0";   
-    }
-    setTimeout(()=>{
-        window.addEventListener("keydown",keyMove)
-        contact.addEventListener("touchstart", startTouch, false);
-        contact.addEventListener("touchmove", moveTouch, false);
-    },350);
+function slideup() {
+  flag++;
+  if (flag == 3) {
+    flag = 0;
+  }
+  window.removeEventListener("keydown", keyMove);
+  contact.removeEventListener("touchstart", startTouch, false);
+  contact.removeEventListener("touchmove", moveTouch, false);
+  switch (flag) {
+    case 1:
+      slides[0].style.transform = "translateY(-25vh)";
+      slides[0].style.opacity = "0";
+      slides[0].style.transition = "all 0.35s ease-in";
+      slides[1].style.transform = "translateY(-70vh)";
+      slides[1].style.opacity = "1";
+      slides[1].style.transition = "all 0.25s ease-in";
+      slides[2].style.transform = "translateY(-165vh)";
+      break;
+    case 2:
+      slides[0].style.transform = "translateY(-25vh)";
+      slides[1].style.transform = "translateY(-95vh)";
+      slides[1].style.opacity = "0";
+      slides[1].style.transition = "all 0.35s ease-in";
+      slides[2].style.transform = "translateY(-140vh)";
+      slides[2].style.transition = "all 0.25s ease-in";
+      slides[2].style.opacity = "1";
+      break;
+    default:
+      slides[0].style.transform = "translateY(0vh)";
+      slides[0].style.opacity = "1";
+      slides[0].style.transition = "all 0.25s ease-in";
+      slides[1].style.transform = "translateY(-95vh)";
+      slides[1].style.opacity = "0";
+      slides[2].style.transform = "translateY(-165vh)";
+      slides[2].style.transition = "all 0.35s ease-in";
+      slides[2].style.opacity = "0";
+  }
+  setTimeout(() => {
+    window.addEventListener("keydown", keyMove);
+    contact.addEventListener("touchstart", startTouch, false);
+    contact.addEventListener("touchmove", moveTouch, false);
+  }, 350);
 }
 
-function slidedown()
-{
-    flag--;
-    if(flag < 0)
-    {
-        flag = 2;
-    }
-    window.removeEventListener("keydown",keyMove);
-    contact.removeEventListener("touchstart", startTouch, false);
-    contact.removeEventListener("touchmove", moveTouch, false);
-    switch(flag)
-    {
-        case 1:
-        slides[0].style.transform = "translateY(-25vh)";
-        slides[1].style.transition = "all 0.25s ease-in";
-        slides[1].style.transform = "translateY(-70vh)";
-        slides[1].style.opacity = "1";
-        slides[2].style.transform = "translateY(-165vh)";
-        slides[2].style.transition = "all 0.35s ease-in";
-        slides[2].style.opacity = "0";
-        break;
-        case 2:
-        slides[0].style.transform = "translateY(-25vh)";
-        slides[1].style.transform = "translateY(-90vh)";
-        slides[0].style.transition = "all 0.35s ease-in";
-        slides[0].style.opacity = "0";
-        slides[2].style.transform = "translateY(-140vh)";
-        slides[2].style.opacity = "1";
-        slides[2].style.transition = "all 0.25s ease-in";
-        break;
-        default:
-        slides[0].style.transform = "translateY(0vh)";
-        slides[0].style.opacity = "1";
-        slides[0].style.transition = "all 0.25s ease-in";
-        slides[1].style.transform = "translateY(-95vh)";
-        slides[1].style.opacity = "0";
-        slides[2].style.transform = "translateY(-165vh)";
-        slides[1].style.transition = "all 0.35s ease-in";
-    }
-    setTimeout(()=>{
-        window.addEventListener("keydown",keyMove)
-        contact.addEventListener("touchstart", startTouch, false);
-        contact.addEventListener("touchmove", moveTouch, false);
-    },350);
-        
+function slidedown() {
+  flag--;
+  if (flag < 0) {
+    flag = 2;
+  }
+  window.removeEventListener("keydown", keyMove);
+  contact.removeEventListener("touchstart", startTouch, false);
+  contact.removeEventListener("touchmove", moveTouch, false);
+  switch (flag) {
+    case 1:
+      slides[0].style.transform = "translateY(-25vh)";
+      slides[1].style.transition = "all 0.25s ease-in";
+      slides[1].style.transform = "translateY(-70vh)";
+      slides[1].style.opacity = "1";
+      slides[2].style.transform = "translateY(-165vh)";
+      slides[2].style.transition = "all 0.35s ease-in";
+      slides[2].style.opacity = "0";
+      break;
+    case 2:
+      slides[0].style.transform = "translateY(-25vh)";
+      slides[1].style.transform = "translateY(-90vh)";
+      slides[0].style.transition = "all 0.35s ease-in";
+      slides[0].style.opacity = "0";
+      slides[2].style.transform = "translateY(-140vh)";
+      slides[2].style.opacity = "1";
+      slides[2].style.transition = "all 0.25s ease-in";
+      break;
+    default:
+      slides[0].style.transform = "translateY(0vh)";
+      slides[0].style.opacity = "1";
+      slides[0].style.transition = "all 0.25s ease-in";
+      slides[1].style.transform = "translateY(-95vh)";
+      slides[1].style.opacity = "0";
+      slides[2].style.transform = "translateY(-165vh)";
+      slides[1].style.transition = "all 0.35s ease-in";
+  }
+  setTimeout(() => {
+    window.addEventListener("keydown", keyMove);
+    contact.addEventListener("touchstart", startTouch, false);
+    contact.addEventListener("touchmove", moveTouch, false);
+  }, 350);
 }
 
-var url = 'src/images/contacts/';
-var profpic = ["cosaccan-1.png","cosaccan-2.png","cosaccan-3.png","cosaccan-4.png","cosaccan-5.jpg","cosaccan-6.png","cosaccan-7.jpg","cosaccan-5.png","cosaccan-5.png"]
+var url = "src/images/contacts/";
+// var profpic = ["cosaccan-1.png","cosaccan-2.png","cosaccan-3.png","cosaccan-4.png","cosaccan-5.jpg","cosaccan-6.png","cosaccan-7.jpg","cosaccan-5.png","cosaccan-5.png"];
+var profpic = [
+  "controls.png",
+  "spons.png",
+  "recnacc.jpg",
+  "pcr.png",
+  "ss.png",
+  "jss.png",
+  "dvm.jpg",
+  "dvm.jpg",
+  "dvm.jpg"
+];
 var pic = document.getElementsByClassName("pic");
-console.log(pic);
-for(var i =0;i<9;i++)
-{
-    pic[i].style.backgroundImage = "url(" + url + profpic[i] + ")";
-
+// console.log(pic);
+for (var i = 0; i < 9; i++) {
+  pic[i].style.backgroundImage = "url(" + url + profpic[i] + ")";
 }
-document.getElementsByClassName("logo")[0].style.backgroundImage = "url('src/images/White_mandark-min.png')" ;
+document.getElementsByClassName("logo")[0].style.backgroundImage =
+  "url('src/images/White_mandark-min.png')";
 
-function keyMove(){
-    if (window.event.key == "s" || window.event.key == "a" || window.event.key == "ArrowDown" || window.event.key == "ArrowLeft"){
-       slideup();
-    } else if(window.event.key == " " || window.event.key == "w" || window.event.key == "d" || window.event.key == "ArrowUp" || window.event.key == "ArrowRight"){
-        slidedown();
-    }
+function keyMove() {
+  if (
+    window.event.key == "s" ||
+    window.event.key == "a" ||
+    window.event.key == "ArrowDown" ||
+    window.event.key == "ArrowLeft"
+  ) {
+    slidedown();
+  } else if (
+    window.event.key == " " ||
+    window.event.key == "w" ||
+    window.event.key == "d" ||
+    window.event.key == "ArrowUp" ||
+    window.event.key == "ArrowRight"
+  ) {
+    slideup();
+  }
 }
 var initialX = null;
 var initialY = null;
- 
+
 function startTouch(e) {
   initialX = e.touches[0].clientX;
   initialY = e.touches[0].clientY;
-};
- 
+}
+
 function moveTouch(e) {
   if (initialX === null) {
     return;
   }
- 
+
   if (initialY === null) {
     return;
   }
- 
+
   var currentX = e.touches[0].clientX;
   var currentY = e.touches[0].clientY;
- 
+
   var diffX = initialX - currentX;
   var diffY = initialY - currentY;
- 
+
   if (Math.abs(diffX) > Math.abs(diffY)) {
     // sliding horizontally
     if (diffX > 0) {
@@ -364,15 +339,15 @@ function moveTouch(e) {
     } else {
       // swiped right
       slidedown();
-    }  
-  } 
+    }
+  }
   initialX = null;
   initialY = null;
-   
+
   e.preventDefault();
-};
-window.addEventListener("keydown",keyMove);
+}
+window.addEventListener("keydown", keyMove);
 var contact = document.getElementsByClassName("contact-us")[0];
 contact.addEventListener("touchstart", startTouch, false);
 contact.addEventListener("touchmove", moveTouch, false);
-  // ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
