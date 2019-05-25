@@ -84,23 +84,15 @@ window.onload = function() {
   let loader = document.getElementsByClassName("loader")[0];
   let loaderWraper = document.getElementsByClassName("loader_wraper")[0];
   let contentWraper = document.getElementsByClassName("content-wrapper")[0];
-  contentWraper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for contenton loading
+  contentWraper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
 
-  loader.style.animation = "fadeOut 1s ease-in-out";
   setTimeout(() => {
-    loader.style.display = "none";
-  }, 4500);
-  setTimeout(() => {
-    loaderWraper.style.animation = "fadeOut 1s ease-in";
+    loader.style.display="none";
     contentWraper.style.opacity = 1;
-  }, 4500);
-
-  setTimeout(() => {
     document.getElementsByClassName("nav-bar")[0].style.display = "flex";
     document.getElementsByClassName("sidebar")[0].style.display = "flex";
     if (window.innerWidth > 500)
       document.getElementsByClassName("navigator")[0].style.display = "flex";
-    // document.getElementsByClassName('loader_wraper')[0].style.display = "none";
     if (window.innerWidth < 500) {
       document.getElementsByClassName("navigator")[0].style.display = "none";
     }
