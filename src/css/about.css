@@ -67,6 +67,11 @@
     cursor: pointer;
 }
 
+.watch_teaser a{
+    color:inherit;
+    text-decoration: none;
+}
+
 .watch_teaser:hover
 {
     background-color: white;
