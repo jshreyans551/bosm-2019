@@ -9,8 +9,11 @@ html {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: #3175ff;
 }
-
+.content-wrapper{
+  opacity: 0;
+}
 ::-webkit-scrollbar {
   display: none;
 }

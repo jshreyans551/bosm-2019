@@ -83,6 +83,8 @@ window.onload = function() {
 
   let loader = document.getElementsByClassName("loader")[0];
   let loaderWraper = document.getElementsByClassName("loader_wraper")[0];
+  let contentWraper = document.getElementsByClassName("content-wrapper")[0];
+  contentWraper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for contenton loading
 
   loader.style.animation = "fadeOut 1s ease-in-out";
   setTimeout(() => {
@@ -90,6 +92,7 @@ window.onload = function() {
   }, 4500);
   setTimeout(() => {
     loaderWraper.style.animation = "fadeOut 1s ease-in";
+    contentWraper.style.opacity = 1;
   }, 4500);
 
   setTimeout(() => {
