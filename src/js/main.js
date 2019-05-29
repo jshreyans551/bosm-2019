@@ -179,7 +179,7 @@ var flag = 0;
 var slides = document.getElementsByClassName("slide");
 function slideup() {
   flag++;
-  if (flag == 3) {
+  if (flag == 2) {
     flag = 0;
   }
   window.removeEventListener("keydown", keyMove);
@@ -190,19 +190,9 @@ function slideup() {
       slides[0].style.transform = "translateY(-25vh)";
       slides[0].style.opacity = "0";
       slides[0].style.transition = "all 0.35s ease-in";
-      slides[1].style.transform = "translateY(-70vh)";
+      slides[1].style.transform = (window.innerWidth < 1050)?"translateY(-77vh)":"translateY(-70vh)";
       slides[1].style.opacity = "1";
       slides[1].style.transition = "all 0.25s ease-in";
-      slides[2].style.transform = "translateY(-165vh)";
-      break;
-    case 2:
-      slides[0].style.transform = "translateY(-25vh)";
-      slides[1].style.transform = "translateY(-95vh)";
-      slides[1].style.opacity = "0";
-      slides[1].style.transition = "all 0.35s ease-in";
-      slides[2].style.transform = "translateY(-140vh)";
-      slides[2].style.transition = "all 0.25s ease-in";
-      slides[2].style.opacity = "1";
       break;
     default:
       slides[0].style.transform = "translateY(0vh)";
@@ -210,9 +200,6 @@ function slideup() {
       slides[0].style.transition = "all 0.25s ease-in";
       slides[1].style.transform = "translateY(-95vh)";
       slides[1].style.opacity = "0";
-      slides[2].style.transform = "translateY(-165vh)";
-      slides[2].style.transition = "all 0.35s ease-in";
-      slides[2].style.opacity = "0";
   }
   setTimeout(() => {
     window.addEventListener("keydown", keyMove);
@@ -224,7 +211,7 @@ function slideup() {
 function slidedown() {
   flag--;
   if (flag < 0) {
-    flag = 2;
+    flag = 1;
   }
   window.removeEventListener("keydown", keyMove);
   contact.removeEventListener("touchstart", startTouch, false);
@@ -233,20 +220,9 @@ function slidedown() {
     case 1:
       slides[0].style.transform = "translateY(-25vh)";
       slides[1].style.transition = "all 0.25s ease-in";
-      slides[1].style.transform = "translateY(-70vh)";
+      slides[1].style.transform = (window.innerWidth < 1050)?"translateY(-77vh)":"translateY(-70vh)";
       slides[1].style.opacity = "1";
-      slides[2].style.transform = "translateY(-165vh)";
-      slides[2].style.transition = "all 0.35s ease-in";
-      slides[2].style.opacity = "0";
-      break;
-    case 2:
-      slides[0].style.transform = "translateY(-25vh)";
-      slides[1].style.transform = "translateY(-90vh)";
-      slides[0].style.transition = "all 0.35s ease-in";
       slides[0].style.opacity = "0";
-      slides[2].style.transform = "translateY(-140vh)";
-      slides[2].style.opacity = "1";
-      slides[2].style.transition = "all 0.25s ease-in";
       break;
     default:
       slides[0].style.transform = "translateY(0vh)";
@@ -254,7 +230,6 @@ function slidedown() {
       slides[0].style.transition = "all 0.25s ease-in";
       slides[1].style.transform = "translateY(-95vh)";
       slides[1].style.opacity = "0";
-      slides[2].style.transform = "translateY(-165vh)";
       slides[1].style.transition = "all 0.35s ease-in";
   }
   setTimeout(() => {

@@ -431,8 +431,8 @@ html {
 }
 
 .slide > .info {
-  height: 55vh;
-  width: 300px;
+  height: 40vh;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -442,8 +442,8 @@ html {
 }
 
 .info > .pic {
-  height: 240px;
-  width: 240px;
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
   border: 2px solid white;
   /* background-image: url("cosaccan-5.png.png");     */
@@ -462,13 +462,14 @@ html {
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 .info > .description p {
   margin: 0;
   /* font-size: 1.2em; */
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .slider-arrows {
@@ -774,7 +775,7 @@ html {
   }
 
   .slider {
-    height: 70vh;
+    height: 79vh;
     width: 100%;
     display: inline;
     /* border: 1px solid black; */
@@ -782,7 +783,7 @@ html {
     overflow: hidden;
   }
   .slider > .slide {
-    height: 100%;
+    height: 79vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -803,7 +804,7 @@ html {
   }
 
   .slide > .info {
-    height: 33vh;
+    height: 26vh;
     width: 173px;
     display: flex;
     justify-content: center;
@@ -814,10 +815,10 @@ html {
   }
 
   .info > .pic {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     border: 2px solid white;
     /* background-image: url("cosaccan-5.png.png");     */
     background-position: center;
@@ -834,6 +835,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    font-size: 0.95em;
   }
 
   .info > .description p {
@@ -847,8 +849,8 @@ html {
   }
 
   .slider-arrows {
-    height: 50px;
-    width: 100px;
+    height: 5.5vh;
+    width: 11vh;
     border: 1px solid white;
     display: flex;
     justify-content: space-evenly;
@@ -918,7 +920,8 @@ html {
   }
 
   .slider {
-    margin-top: 6vh;
+    margin-top: 4vh;
+    height: 87vh;
   }
 
   .slide > .info {
@@ -941,8 +944,8 @@ html {
   }
 
   .slider-arrows {
-    height: 40px;
-    width: 80px;
+    height: 35px;
+    width: 70px;
   }
 
   .slider-arrows a {
@@ -980,7 +983,7 @@ html {
   }
 }
 
-@media (max-width: 1050px) and (min-width: 815px) {
+@media (max-width: 1050px) and (min-width: 750px) {
   .back-text {
     height: 50%;
   }
@@ -989,6 +992,10 @@ html {
   }
   .contact {
     height: 26vh;
+  }
+  .slider{
+    height: 80vh;
+    margin-top: 6vh;
   }
 }
 
