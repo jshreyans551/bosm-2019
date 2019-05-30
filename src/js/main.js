@@ -158,7 +158,7 @@ function sendRequest(firstName, lastName, college, email, phoneNo) {
     type: "POST",
     url: "/registrations/introreg/",
     data: {
-      firstName: firstName,
+      firstname: firstName,
       lastname: lastName,
       college: college,
       email: email,
