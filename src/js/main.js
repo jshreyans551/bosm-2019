@@ -156,7 +156,7 @@ submitButton.addEventListener("click", function() {
 function sendRequest(firstName, lastName, college, email, phoneNo) {
   var data = $.ajax({
     type: "POST",
-    url: "/bits-bosm/registrations/introreg",
+    url: "/registrations/introreg",
     data: {
       firstName: firstName,
       lasname: lastName,
