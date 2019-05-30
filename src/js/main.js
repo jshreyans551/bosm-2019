@@ -165,10 +165,10 @@ function sendRequest(firstName, lastName, college, email, phoneNo) {
       phone: phoneNo
     },
     success: function(msg, status) {
-      if (status == "1") {
+      if (msg.status == "1") {
         alert("Successfully Registered");
       } else {
-        alert("Not Registered-\n" + msg);
+        alert("Not Registered-\n" + msg.message);
       }
     }
   });
