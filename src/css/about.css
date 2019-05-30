@@ -32,7 +32,6 @@
     /* margin-left: 12vw; */
     height: 80vh;
     width: 50vw;
-    justify-content: space-around;
     align-items: center;
     color: white;
     font-family: 'BigNoodleTitling';
@@ -46,11 +45,10 @@
 }
 .about p{
     width: 40vw;
-    height: 35vh;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.25em;
     text-align: center;
-    margin-bottom: 5vh;
+    margin-bottom: 0;
     /* line-height: 1.5em; */
 }
 .watch_teaser{
@@ -65,6 +63,7 @@
     font-size: 33px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    margin-top: 7.5vh;
 }
 
 .watch_teaser a{
@@ -79,13 +78,27 @@
     border: 2px solid #FF156A;
 }
 
+
+@media (max-width: 800px) {
+    .about p {
+        width: 50vw;
+    }
+    .watch_teaser {
+        margin-top: 5vh;
+    }
+    .about h1 {
+        margin-bottom: 0;
+    }
+}
+
 @media (max-width:500px)
 {
     .about p
     {
-        font-size: 1em;
-        width: 80vw;
+        font-size: 0.85em;
+        width: 85vw;
         text-align: center;
+        margin-top: 0.75em;
     }
 
     .about
@@ -95,29 +108,33 @@
 
     .about h1 
     {   
-        font-size: 40px;
-        margin-bottom: -3vh;
+        font-size: 2.25em;
+        margin-bottom: -1vh;
+    }
+    .watch_teaser {
+        margin-top: 3vh;
     }
 }
 
-@media (max-width:370px)
+@media (max-width:350px)
 {
     .about p
     {
-        font-size: 0.7em;
-        width: 80vw;
+        font-size: 0.75em;
+        /* width: 90vw; */
         text-align: center;
     }
 
     .about h1 
     {
         font-size: 20px;
-        margin-bottom: -8vh;
+        margin-bottom: 0;
+        margin-top: 5vh;
     }
 
     .watch_teaser
     {
-        margin-top: -15vh;
+        margin-top: 0.75em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -129,8 +146,8 @@
 
 @media (max-width:1050px) and (min-width:815px)
 {
-.about p 
-{
-    font-size: 1.7em;
-}
+    .about p 
+    {
+        font-size: 1.7em;
+    }
 }
