@@ -509,6 +509,11 @@ html {
 
 
 /* ---------------------------------mobile view-------------------------------------- */
+@media (max-width:1000px){
+  .slide > .info{
+    height: 40vh;
+  }
+}
 
 @media (max-width: 500px) {
   .nav-bar > .links {
@@ -999,11 +1004,7 @@ html {
   }
 
 }
-  @media (max-width:1000px){
-  .slide > .info{
-    height: 40vh;
-  }
-}
+ 
 /* -----------------------------------animation---------------------------------- */
 
 @keyframes anim {
