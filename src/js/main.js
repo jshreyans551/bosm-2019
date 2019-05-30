@@ -159,7 +159,7 @@ function sendRequest(firstName, lastName, college, email, phoneNo) {
     url: "/registrations/introreg/",
     data: {
       firstName: firstName,
-      lasname: lastName,
+      lastname: lastName,
       college: college,
       email: email,
       phone: phoneNo
