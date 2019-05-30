@@ -167,7 +167,7 @@
     }
 
     .register h1{
-        font-size: 50px;
+        font-size: 2.25em;
     }
     .register input, .register input::placeholder{
         font-size: 20px;
@@ -188,7 +188,7 @@ input:focus {
     outline:none;
 }
 
-@media (max-width:370px){
+@media (max-width:350px){
     .register{
         margin-top: 10.5vw;
     }
