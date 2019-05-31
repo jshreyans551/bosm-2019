@@ -935,8 +935,8 @@ html {
   }
 
   .slide > .info > .pic {
-    height: 65px;
-    width: 65px;
+    height: 60px;
+    width: 60px;
   }
 
   .slide > .info > .description {
@@ -945,7 +945,7 @@ html {
   }
 
   .slide > .info > .description p {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .slider-arrows {
