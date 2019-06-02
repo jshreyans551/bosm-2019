@@ -121,7 +121,7 @@ html {
   background-position: center;
   background-size: cover;
   margin-top: 5px;
-  height: 95px;
+  height: 90px;
   width: 95px;
   cursor: pointer;
 }
@@ -609,7 +609,7 @@ html {
   }
 
   .logo {
-    height: 60px;
+    height: 56.5px;
     width: 60px;
   }
 

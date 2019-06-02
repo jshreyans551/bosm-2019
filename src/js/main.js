@@ -283,7 +283,7 @@ for (var i = 0; i < 9; i++) {
   pic[i].style.backgroundImage = "url(" + url + profpic[i] + ")";
 }
 document.getElementsByClassName("logo")[0].style.backgroundImage =
-  "url('src/images/White_mandark-min.png')";
+  "url('src/images/favicon.png')";
 
 function keyMove() {
   if (
