@@ -249,8 +249,8 @@ var profpic = [
   "ss.png",
   "jss1.png",
   "jss2.png",
-  "dvm.jpg",
-  "jss.jpg"
+  "jss.jpg",
+  "dvm.jpg"
 ];
 var pic = document.getElementsByClassName("pic");
 // console.log(pic);
