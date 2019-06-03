@@ -8,7 +8,7 @@ var last_page = 4;
 var play = false;
 var sY, dY;
 var isMenuOpen = 0;
-const color = ["#3175FF", "#FF156A", "#FFBB00", "#272C52"];
+const color = ["#3175FF", "#FE2D66", "#FFD153", "#272C52"];
 
 
 wraper.addEventListener('wheel', scrollY);
