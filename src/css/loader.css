@@ -43,13 +43,13 @@ body
 }
 
 #c1{
-    transform:translateX(27px);
+    transform:translateX(34px);
 }
 #c3{
-    transform:translateX(17px);
+    transform:translateX(14px);
 }
 #c2{
-    transform: translate(20px,15px);
+    transform: translate(23px,14px);
 }
 #black{
     position: absolute;
@@ -75,7 +75,13 @@ body
 	font-family: bigNoodleTilting;
 }
 .blue-man{
-	transform:translate(-635.17px,-138.18px) 
+	transform:translate(-589.17px,-138.18px) 
+}
+.red-jumper{
+	transform:translate(-590.17px, -138.18px);	
+}
+.green-man{
+	transform:translate(-575.17px,-138.18px);
 }
 
 /* .loader-1 {
@@ -104,7 +110,7 @@ body
 		transform: translate(-3.5vw,7vw) scale(2.1);
 	}
 	.blue-man{
-		transform:translate(-613.17px,-138.18px) 
+		transform:translate(-580.17px,-138.18px) 
 	}
 }
 
