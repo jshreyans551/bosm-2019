@@ -74,6 +74,9 @@ body
 	align-items: center;
 	font-family: bigNoodleTilting;
 }
+.blue-man{
+	transform:translate(-635.17px,-138.18px) 
+}
 
 /* .loader-1 {
 	width: 100vw;
@@ -99,6 +102,9 @@ body
 	#black{
 		transform-origin: 46% 50%;
 		transform: translate(-3.5vw,7vw) scale(2.1);
+	}
+	.blue-man{
+		transform:translate(-613.17px,-138.18px) 
 	}
 }
 
