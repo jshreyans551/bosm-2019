@@ -78,10 +78,11 @@ body
 	transform:translate(-589.17px,-138.18px) 
 }
 .red-jumper{
-	transform:translate(-590.17px, -138.18px);	
+	transform:translate(-590.17px,-132.18px);	
+
 }
 .green-man{
-	transform:translate(-575.17px,-138.18px);
+	transform:translate(-575.17px,-143.18px);
 }
 
 /* .loader-1 {
@@ -111,6 +112,12 @@ body
 	}
 	.blue-man{
 		transform:translate(-580.17px,-138.18px) 
+	}
+	.red-jumper{
+		transform: translate(-588.17px,-159.18px);	
+	}
+	.hill{
+		transform: translate(-609.17px,-127.18px);
 	}
 }
 
