@@ -99,6 +99,7 @@ body
 	#heading{
 		top:30vh;
 		font-size: 2em;
+		transform: translateX(-0.2vw);
 	}
 
 	.loader-1 {
