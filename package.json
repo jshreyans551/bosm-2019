@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/dvm-bitspilani/bosm-2019/issues"
   },
-  "homepage": "https://github.com/dvm-bitspilani/bosm-2019#readme"
+  "homepage": "https://github.com/dvm-bitspilani/bosm-2019#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
 }
